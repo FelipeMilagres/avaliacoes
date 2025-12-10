@@ -1,15 +1,7 @@
-CONSIDERAÇÃO FINAL – DESAFIO API – FELIPE EDUARDO
-A automação de API do Felipe demonstra boa senioridade técnica: a execução é estável e reproduzível, o código possui boa organização e os testes validam corretamente o fluxo principal da API com autenticação real, passando tanto localmente quanto em pipeline de CI. Trata-se de uma entrega consistente, funcional e alinhada às melhores práticas para cobertura de CRUD.
+A entrega do Rafael demonstra boa organização da estrutura de testes, comandos customizados bem definidos e uma documentação clara sobre o que foi desenvolvido. Esses pontos mostram que ele possui conhecimento consistente sobre automação de API com Cypress.
 
-Entretanto, ainda não explora toda a profundidade esperada em uma avaliação com foco avançado: faltam cenários negativos mais variados, validações mais rígidas de contrato e exploração de aspectos de segurança, como headers, formatos inválidos e verificações de tipo e limites. Assim, o desafio é considerado Aprovado com ressalvas, pois evidencia competência sólida, mas ainda com margem para aprofundamento.
+Apesar disso, a execução prática do projeto revela problemas importantes. O módulo de Produtos apresenta falhas recorrentes relacionadas à autenticação, indicando que os testes não foram validados completamente antes da entrega. No módulo de Carrinhos, muitos cenários estão marcados como pendentes e, por isso, não contribuem efetivamente para a cobertura da aplicação. Além disso, o processo de geração de relatórios não é finalizado com sucesso, o que impede a visualização completa das evidências de teste.
 
-CONSIDERAÇÃO FINAL – DESAFIO MOBILE – FELIPE EDUARDO
-A automação mobile do Felipe apresenta uma solução bem estruturada, com Page Objects adequados, cenários relevantes, massivas validações e relatórios funcionais. Os 13 testes executaram com sucesso, indicando estabilidade técnica e boa compreensão do framework e do fluxo do aplicativo. A entrega demonstra domínio claro do stack de automação mobile utilizado.
+A automação não roda totalmente de forma bem-sucedida sem correções adicionais, o que compromete a reprodutibilidade da solução. Esse aspecto é essencial para caracterizar maturidade na entrega de testes automatizados. Ainda que o código seja bem estruturado e de fácil leitura, a confiabilidade do resultado final não está garantida.
 
-Como pontos de evolução, destacam-se: ausência de recursos mais avançados na suíte, como data-driven testing, integração com dispositivos reais e CI para execução automatizada; e algumas oportunidades de melhoria em evidências de falhas. Ainda assim, o nível apresentado é forte e consistente para o desafio. Portanto, o resultado é Aprovado com ressalvas, mais por oportunidades de evolução do que por falhas técnicas.
-
-TEXTO FINAL – CARD PAI (DECISÃO DE APROVAÇÃO PARA ENTREVISTA TÉCNICA)
-
-Com base na análise completa dos desafios de API e Mobile, o candidato demonstrou domínio técnico, organização de código, boa cobertura funcional e execução estável das automações. Embora existam pontos de evolução para aumentar a robustez, especialmente em cenários negativos e integração contínua no projeto mobile, as entregas atendem às expectativas da avaliação, evidenciam senioridade e capacidade de atuação prática em automação de testes.
-
-Diante do desempenho apresentado, o candidato está aprovado para avançar para a etapa de entrevista técnica.
+Considerando a avaliação completa, é possível afirmar que a solução tem potencial e uma base técnica bem construída, mas não alcança o nível de estabilidade e completude esperado para aprovação neste desafio. Por esse motivo, o resultado final é de reprovação.

@@ -1,16 +1,9 @@
-A solução entregue demonstra boa organização, uso correto de Page Object, cenários escritos de forma clara e entendimento dos fluxos principais de login e cadastro. Porém, apesar dessa base positiva, o desafio não atende plenamente ao que foi solicitado.
+O candidato não entregou o desafio de automação mobile, não atendendo ao escopo completo da etapa técnica prevista para a posição.
 
-A suíte não está executável no estado atual: falta o arquivo de hooks para inicialização do driver, a URL do Appium está configurada de forma incorreta, e o runner contém um filtro de tags que impede a execução dos cenários. Também não foram entregues os dez cenários mínimos pedidos, não há captura automática de evidências e não foi criada a pipeline de CI/CD solicitada. Esses pontos fazem com que requisitos essenciais do enunciado não sejam cumpridos.
+No desafio de API, apesar de ter apresentado uma estrutura inicial funcional, o projeto não atendeu aos critérios mínimos definidos na heurística de avaliação. A suíte não atingiu a cobertura esperada, apresentou falha em cenário crítico (login), dependia de ajustes manuais significativos para execução e não continha documentação mínima para reprodutibilidade. Adicionalmente, não houve implementação de pipeline de CI nem gestão adequada de massas de teste.
 
-Diante disso, considerando o que o desafio pedia e o que foi efetivamente entregue, a classificação adequada é Reprovado. A estrutura é promissora e demonstra conhecimento, mas a solução não satisfaz os critérios mínimos obrigatórios para aprovação.
+Diante desses pontos, o candidato foi reprovado no desafio de API.
 
+Após a devolutiva técnica, o próprio candidato optou por desistir do processo seletivo.
 
-
-
-O candidato demonstrou uma boa base técnica no desafio de API ao estruturar o projeto com clareza, separar adequadamente as camadas e implementar cenários positivos e negativos que cobrem os principais fluxos de autenticação e manipulação de recursos. A solução evidencia entendimento do uso de tokens, construção de massa e validações coerentes de respostas. Entretanto, a cobertura não alcançou o nível esperado pela heurística PREDADOR e a execução exigiu ajustes manuais para rodar de forma correta, o que aponta falta de autonomia e estabilidade na suíte. Ainda assim, a arquitetura sólida e a correta aplicação de conceitos justificaram a classificação como aprovado com ressalvas.
-
-No desafio mobile, embora a organização estrutural seja consistente e os cenários escritos com clareza, a solução entregue não é executável e não atende aos requisitos essenciais. A ausência do arquivo de inicialização do driver, a configuração incorreta da URL do Appium, a filtragem incorreta de cenários no runner, a falta de coleta de evidências e a não entrega da quantidade mínima de cenários indicam que a automação não estava pronta para validação prática. Esses problemas inviabilizam a reprodução do teste e comprometem diretamente a qualidade da entrega.
-
-Considerando ambos os desafios, observa-se que o candidato possui bom entendimento conceitual e sabe estruturar projetos de automação, mas ainda não demonstra domínio suficiente para entregar soluções completas, estáveis e autônomas conforme as expectativas da vaga. A falta de conformidade do desafio mobile com requisitos básicos tem peso significativo na avaliação final.
-
-Diante disso, o candidato não está apto para avançar para a entrevista técnica neste momento.
+Status final: Reprovado – candidato desistente.

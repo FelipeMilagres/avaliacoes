@@ -1,16 +1,15 @@
-API — https://github.com/PedroFigueiredoSanches/DesafioCarrefour
+CONSIDERAÇÃO FINAL – DESAFIO API – FELIPE EDUARDO
+A automação de API do Felipe demonstra boa senioridade técnica: a execução é estável e reproduzível, o código possui boa organização e os testes validam corretamente o fluxo principal da API com autenticação real, passando tanto localmente quanto em pipeline de CI. Trata-se de uma entrega consistente, funcional e alinhada às melhores práticas para cobertura de CRUD.
 
-A automação cobre operações básicas de CRUD, porém ainda distante de uma validação robusta quando analisada pela heurística PREDADOR. Embora exista a intenção de testar exceções, parte relevante das asserções negativas está comentada, o que impede a validação real de cenários de erro. Há pouca exploração de autenticação, parâmetros inválidos, headers e contrato das respostas.
-Além disso, a execução falhou exatamente como entregue, sendo necessário ajuste para que os testes rodassem localmente, indicando falta de reprodutibilidade.
-Em síntese: entrega funcional, mas com baixa robustez técnica e cobertura limitada para os padrões esperados em testes de API com maior maturidade. Resultado final: reprovado.
+Entretanto, ainda não explora toda a profundidade esperada em uma avaliação com foco avançado: faltam cenários negativos mais variados, validações mais rígidas de contrato e exploração de aspectos de segurança, como headers, formatos inválidos e verificações de tipo e limites. Assim, o desafio é considerado Aprovado com ressalvas, pois evidencia competência sólida, mas ainda com margem para aprofundamento.
 
-Mobile — https://github.com/PedroFigueiredoSanches/DesafioCarrefourMobile
+CONSIDERAÇÃO FINAL – DESAFIO MOBILE – FELIPE EDUARDO
+A automação mobile do Felipe apresenta uma solução bem estruturada, com Page Objects adequados, cenários relevantes, massivas validações e relatórios funcionais. Os 13 testes executaram com sucesso, indicando estabilidade técnica e boa compreensão do framework e do fluxo do aplicativo. A entrega demonstra domínio claro do stack de automação mobile utilizado.
 
-Entrega tecnicamente muito bem estruturada: POM organizado, uso de massa de dados, Allure, BrowserStack, CI, e interações avançadas (gestos, navegação completa no app). O código é limpo e demonstra domínio claro de automação mobile com WebdriverIO + Appium.
-A única ressalva relevante está na reprodutibilidade: o repositório não inclui o binário do aplicativo, exigindo preparo manual para executar a suíte em um ambiente limpo.
-Resumo: solução forte e tecnicamente consistente, mas com ponto de atenção relacionado à experiência de execução e maturidade no empacotamento do projeto. Resultado final: aprovado com ressalvas.
+Como pontos de evolução, destacam-se: ausência de recursos mais avançados na suíte, como data-driven testing, integração com dispositivos reais e CI para execução automatizada; e algumas oportunidades de melhoria em evidências de falhas. Ainda assim, o nível apresentado é forte e consistente para o desafio. Portanto, o resultado é Aprovado com ressalvas, mais por oportunidades de evolução do que por falhas técnicas.
 
+TEXTO FINAL – CARD PAI (DECISÃO DE APROVAÇÃO PARA ENTREVISTA TÉCNICA)
 
-Após análise completa dos dois desafios técnicos enviados pelo candidato, concluímos que os critérios mínimos para avanço no processo não foram atendidos. O desafio de automação de API foi reprovado devido à baixa robustez técnica, falhas de execução e ausência de validações essenciais. Embora o desafio mobile tenha apresentado boa qualidade, o desempenho insuficiente em uma das entregas impede a aprovação global do candidato nesta etapa.
+Com base na análise completa dos desafios de API e Mobile, o candidato demonstrou domínio técnico, organização de código, boa cobertura funcional e execução estável das automações. Embora existam pontos de evolução para aumentar a robustez, especialmente em cenários negativos e integração contínua no projeto mobile, as entregas atendem às expectativas da avaliação, evidenciam senioridade e capacidade de atuação prática em automação de testes.
 
-Por causa disso, o candidato não avançará para a entrevista técnica.
+Diante do desempenho apresentado, o candidato está aprovado para avançar para a etapa de entrevista técnica.

@@ -1,0 +1,11 @@
+API — https://github.com/PedroFigueiredoSanches/DesafioCarrefour
+
+A automação cobre operações básicas de CRUD, porém ainda distante de uma validação robusta quando analisada pela heurística PREDADOR. Embora exista a intenção de testar exceções, parte relevante das asserções negativas está comentada, o que impede a validação real de cenários de erro. Há pouca exploração de autenticação, parâmetros inválidos, headers e contrato das respostas.
+Além disso, a execução falhou exatamente como entregue, sendo necessário ajuste para que os testes rodassem localmente, indicando falta de reprodutibilidade.
+Em síntese: entrega funcional, mas com baixa robustez técnica e cobertura limitada para os padrões esperados em testes de API com maior maturidade. Resultado final: reprovado.
+
+Mobile — https://github.com/PedroFigueiredoSanches/DesafioCarrefourMobile
+
+Entrega tecnicamente muito bem estruturada: POM organizado, uso de massa de dados, Allure, BrowserStack, CI, e interações avançadas (gestos, navegação completa no app). O código é limpo e demonstra domínio claro de automação mobile com WebdriverIO + Appium.
+A única ressalva relevante está na reprodutibilidade: o repositório não inclui o binário do aplicativo, exigindo preparo manual para executar a suíte em um ambiente limpo.
+Resumo: solução forte e tecnicamente consistente, mas com ponto de atenção relacionado à experiência de execução e maturidade no empacotamento do projeto. Resultado final: aprovado com ressalvas.

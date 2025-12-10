@@ -9,3 +9,8 @@ Mobile — https://github.com/PedroFigueiredoSanches/DesafioCarrefourMobile
 Entrega tecnicamente muito bem estruturada: POM organizado, uso de massa de dados, Allure, BrowserStack, CI, e interações avançadas (gestos, navegação completa no app). O código é limpo e demonstra domínio claro de automação mobile com WebdriverIO + Appium.
 A única ressalva relevante está na reprodutibilidade: o repositório não inclui o binário do aplicativo, exigindo preparo manual para executar a suíte em um ambiente limpo.
 Resumo: solução forte e tecnicamente consistente, mas com ponto de atenção relacionado à experiência de execução e maturidade no empacotamento do projeto. Resultado final: aprovado com ressalvas.
+
+
+Após análise completa dos dois desafios técnicos enviados pelo candidato, concluímos que os critérios mínimos para avanço no processo não foram atendidos. O desafio de automação de API foi reprovado devido à baixa robustez técnica, falhas de execução e ausência de validações essenciais. Embora o desafio mobile tenha apresentado boa qualidade, o desempenho insuficiente em uma das entregas impede a aprovação global do candidato nesta etapa.
+
+Por causa disso, o candidato não avançará para a entrevista técnica.

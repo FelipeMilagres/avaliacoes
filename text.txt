@@ -1,9 +1,7 @@
-O candidato não entregou o desafio de automação mobile, não atendendo ao escopo completo da etapa técnica prevista para a posição.
+A solução entregue pelo Wagner demonstra boa qualidade técnica. O projeto é organizado, os testes são estáveis e todas as operações essenciais do serviço são validadas, incluindo criação, consulta, alteração e exclusão de usuários. Há domínio claro das ferramentas utilizadas, boa padronização de código, uso correto de contratos e massa dinâmica, o que mostra maturidade na construção da suíte.
 
-No desafio de API, apesar de ter apresentado uma estrutura inicial funcional, o projeto não atendeu aos critérios mínimos definidos na heurística de avaliação. A suíte não atingiu a cobertura esperada, apresentou falha em cenário crítico (login), dependia de ajustes manuais significativos para execução e não continha documentação mínima para reprodutibilidade. Adicionalmente, não houve implementação de pipeline de CI nem gestão adequada de massas de teste.
+A heurística PREDADOR, utilizada como referência oficial para avaliação dos desafios, orienta uma cobertura mais profunda, explorando comportamentos inesperados, cenários limite e validações negativas amplas. Embora o candidato tenha entregue uma cobertura funcional sólida, a solução permanece em um nível mais conservador e não avança para testes que realmente estressem a API. Isso faz com que a entrega não alcance o nível de profundidade esperado pela heurística.
 
-Diante desses pontos, o candidato foi reprovado no desafio de API.
+Além disso, alguns requisitos solicitados não foram plenamente atendidos, como a ausência do pipeline de execução, o que reduz a completude da entrega e a prontidão do projeto para um fluxo real de integração contínua. Mesmo com boa arquitetura e código bem estruturado, esses pontos impedem uma aprovação total.
 
-Após a devolutiva técnica, o próprio candidato optou por desistir do processo seletivo.
-
-Status final: Reprovado – candidato desistente.
+Diante do conjunto, o desafio é avaliado como aprovado com ressalvas, pois demonstra boa base técnica e consistência, mas não cumpre integralmente o escopo solicitado nem alcança a profundidade exigida pela heurística utilizada no processo avaliativo.

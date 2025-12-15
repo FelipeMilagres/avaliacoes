@@ -1,41 +1,7 @@
-Fundamentos de Testes
-1 Qual é o principal objetivo do teste de software em um produto digital
-2 Por que não é viável testar todas as combinações possíveis de um sistema
-3 Qual a diferença entre um erro humano um defeito no software e uma falha em execução
-4 Como você define qualidade de software sob a perspectiva de testes
-5 Em que momento do ciclo de desenvolvimento o teste deveria começar e por quê
+O candidato entregou uma automação de testes de API cobrindo os principais fluxos solicitados no desafio, como login e operações completas de CRUD do recurso de usuários. A solução demonstra domínio do Cypress para testes de API, com uso correto dos verbos HTTP, validação de status codes e mensagens de resposta, além de uma organização clara dos cenários por funcionalidade. A presença de documentação e pipeline de CI reforça a preocupação com entrega completa.
 
-Princípios de Teste
-6 Por que executar o mesmo conjunto de testes repetidamente tende a perder eficácia ao longo do tempo
-7 Como a maior parte dos defeitos costuma se concentrar em áreas específicas do sistema
-8 Por que o sucesso de um teste não é a ausência de defeitos encontrados
-9 Por que a estratégia de testes precisa variar de acordo com o tipo de sistema
-10 Dê um exemplo prático de como testes antecipados reduzem risco
+Durante a execução, a suíte não obteve sucesso total. Cenários de atualização com e-mail duplicados falharam por falta de uma pré-tratativa adequada do estado da base, evidenciando dependência de dados previamente existentes. Isso indica fragilidade no controle do setup e na garantia de independência entre os cenários.
 
-Níveis de Teste
-11 Qual a diferença entre validar uma funcionalidade isolada e validar um fluxo completo
-12 Como testes em diferentes camadas do sistema se complementam
-13 Quais riscos surgem quando testes de integração são negligenciados
-14 Em que momento testes de aceitação agregam mais valor
-15 Como você decide em qual nível um defeito deveria ser detectado
+Outro ponto de atenção é a não utilização de commands personalizados do Cypress. As requisições e validações são feitas diretamente nos testes, gerando repetição de código e reduzindo a legibilidade e a manutenção da suíte. A ausência de abstrações para operações comuns como login e criação de usuários limita a maturidade da automação e sua capacidade de evolução.
 
-Tipos de Teste
-16 Qual a diferença entre validar comportamento funcional e avaliar características como performance ou usabilidade
-17 Quando um teste de regressão se torna essencial em um projeto
-18 O que caracteriza um conjunto mínimo de testes para validar uma entrega
-19 Por que cenários negativos são tão importantes quanto os positivos
-20 Em quais situações testes exploratórios são mais eficazes que testes roteirizados
-
-Técnicas de Projeto de Teste
-21 Como agrupar entradas similares pode reduzir esforço sem perder cobertura
-22 Por que os limites de um campo costumam ser mais propensos a falhas
-23 Como decisões condicionais complexas podem ser validadas de forma sistemática
-24 O que torna um caso de teste frágil ou pouco confiável
-25 Como você avalia se um conjunto de testes é realmente eficaz
-
-Gestão e Estratégia de Testes
-26 O que significa testar com foco em risco
-27 Como definir quando uma funcionalidade está pronta para ser testada
-28 Quais critérios indicam que os testes podem ser encerrados
-29 Como diferenciar impacto de urgência ao priorizar defeitos
-30 Quais métricas ajudam a entender a saúde de uma suíte de testes
+De forma geral, o desafio atende ao que foi solicitado no enunciado e demonstra uma base técnica em automação de testes de API. No entanto, ainda há pontos importantes de melhoria relacionados à organização, reutilização de código e controle de dados de teste. Com isso, o candidato é considerado aprovado com ressalvas, sendo recomendado tratar esses pontos de melhoria na entrevista.

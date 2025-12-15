@@ -1,200 +1,41 @@
-Desafio DO
-
-API 
-
-✅ Automação e Cobertura
-
-⬜ O conjunto de testes automatizados garante 100% de cobertura para a API?
-
-Status: ❌ Não atendido
-Comentário:
-Apesar de todos os endpoints principais estarem cobertos, a automação não garante 100% de cobertura real. Existem testes redundantes, cenários permissivos (aceitando múltiplos status como sucesso) e ausência de validações mais profundas de contrato e regras de negócio. A cobertura é ampla, mas não total nem rigorosamente validada.
-
-☑️ A solução demonstra um bom entendimento da arquitetura RESTful?
-
-Status: ✅ Atendido
-Comentário:
-Os testes utilizam corretamente verbos HTTP, status codes esperados, recursos (/usuarios, /usuarios/{id}, /login) e fluxo CRUD. Há bom entendimento de conceitos REST, incluindo autenticação e diferenciação entre operações públicas e protegidas.
-
-☑️ Existem testes para cenários de falha (ex.: status codes 4xx e 5xx)?
-
-Status: ✅ Atendido
-Comentário:
-Foram implementados diversos cenários negativos: dados inválidos, campos obrigatórios, email duplicado, login inválido, token inválido/expirado e busca por IDs inexistentes. A quantidade e variedade de cenários atende bem ao esperado.
-
-☑️ A autenticação via token JWT está corretamente implementada nos testes?
-
-Status: ⚠️ Atendido com ressalvas
-Comentário:
-Existe implementação de login e uso de token, inclusive com utilitário dedicado. Contudo, há uso de token hardcoded no BaseTest, além de validações que aceitam comportamentos inconsistentes da API como sucesso, o que enfraquece a confiabilidade da autenticação nos testes.
-
-☑️ O código de automação é legível, modular e segue boas práticas?
-
-Status: ⚠️ Atendido com ressalvas
-Comentário:
-A estrutura é organizada (config, models, utils, tests), com bom uso de builders e utilitários. Entretanto, há inconsistência de padrões entre classes, duplicação de lógica e presença de testes de debug/fixed no projeto final, reduzindo a maturidade da entrega.
-
-⬜ Há um gerenciamento eficaz de dados de teste (ex.: payloads externos)?
-
-Status: ❌ Não atendido
-Comentário:
-Os dados de teste são gerados dinamicamente via Faker, o que é positivo, porém não há uso de payloads externos, arquivos de massa ou controle explícito de dados reutilizáveis. O gerenciamento é básico e todo embutido no código.
-
-✅ Integração e Relatórios
-☑️ Os testes estão integrados a uma pipeline de CI?
-
-Status: ✅ Atendido
-Comentário:
-Pipeline no GitHub Actions bem configurada, com múltiplos gatilhos (push, PR, schedule, manual), cache de dependências e execução automatizada dos testes.
-
-☑️ Relatórios são gerados e disponibilizados como artefato?
-
-Status: ✅ Atendido
-Comentário:
-Relatórios Allure e Surefire são gerados, versionados como artefatos e publicados no GitHub Pages, permitindo fácil acesso aos resultados.
-
-✅ Documentação e Entrega
-☑️ O código-fonte completo foi entregue via GitHub/GitLab?
-
-Status: ✅ Atendido
-Comentário:
-Todo o código-fonte, configurações, pipeline e scripts foram disponibilizados no repositório.
-
-☑️ A documentação descreve os testes implementados e casos cobertos?
-
-Status: ✅ Atendido
-Comentário:
-O README descreve endpoints, cenários positivos e negativos, organização dos testes e métricas de cobertura de forma clara.
-
-☑️ O README inclui instruções de configuração e execução?
-
-Status: ✅ Atendido
-Comentário:
-Há instruções detalhadas de instalação, execução local, execução por perfil, TestNG XML e uso do Allure, permitindo reprodutibilidade do projeto.
-
-
-Avaliação do desafio de API
-
-O candidato apresentou uma automação de testes de API funcional e estável, com execução completa e 100% de sucesso na suíte, incluindo geração de relatórios Allure e integração com pipeline de CI. A solução demonstra bom entendimento de arquitetura REST, uso adequado de verbos HTTP, validação de status codes, autenticação via JWT e cobertura de cenários positivos e negativos. A organização do projeto, a documentação e a capacidade de execução reforçam uma base técnica consistente em automação.
-
-Entretanto, foram identificados pontos que não foram plenamente atendidos, especialmente no que se refere à qualidade da cobertura dos testes. Apesar da execução bem-sucedida, parte dos cenários adota validações permissivas e aceita múltiplos comportamentos da API, reduzindo a efetividade na detecção de falhas reais. Adicionalmente, o uso de token hardcoded, a presença de artefatos de debug no código final e o gerenciamento de dados de teste restrito ao código indicam uma cobertura funcional, porém insuficiente do ponto de vista de robustez, confiabilidade e prontidão para ambientes produtivos.
-
-Diante disso, o candidato é aprovado com ressalvas, sendo recomendado para continuidade no processo seletivo, com aprofundamento técnico em entrevista para avaliar decisões arquiteturais, critérios de cobertura efetiva de testes e práticas de qualidade em cenários de maior criticidade.
-
-
-------------------------------------------------------------------------------------------
-
-Mobile
-
-✅ Construção dos Scripts e Boas Práticas
-
-☑️ Foram criados 10 cenários de teste que cobrem as principais funcionalidades do aplicativo?
-
-Status: ✅ Atendido
-Comentário:
-Foram implementados exatamente 10 cenários E2E distintos, cobrindo login, cadastro, navegação entre telas, formulários, webview, mensagens de erro, testes data-driven e fluxo end-to-end. A quantidade e a diversidade dos cenários atendem integralmente ao requisito do desafio.
-
-☑️ Os cenários de teste incluem Login/Cadastro, Navegação entre telas, Preenchimento de formulários e Verificação de mensagens de erro?
-
-Status: ✅ Atendido
-Comentário:
-Os testes contemplam todos os fluxos exigidos no enunciado, incluindo autenticação (login e signup), navegação via menu, interação com formulários, validação de mensagens de erro e cenários negativos, conforme evidenciado nos arquivos de spec e na execução apresentada.
-
-☑️ O padrão Page Object foi implementado corretamente, separando elementos e ações?
-
-Status: ⚠️ Atendido com ressalvas
-Comentário:
-O projeto aplica Page Object Model de forma clara, com classes por tela e reutilização via BaseScreen. Entretanto, há excesso de lógica defensiva, múltiplos fallbacks genéricos e responsabilidades misturadas em alguns page objects, o que reduz a clareza e a previsibilidade do comportamento dos testes.
-
-☑️ A solução utiliza um arquivo de dados (CSV, JSON) para data-driven testing?
-
-Status: ✅ Atendido
-Comentário:
-O arquivo users.json é utilizado para testes orientados a dados, principalmente nos cenários de login válido e inválido, atendendo ao requisito de parametrização de massa de teste.
-
-☑️ O código é reutilizável e demonstra a capacidade de escrever testes de forma eficiente?
-
-Status: ⚠️ Atendido com ressalvas
-Comentário:
-Existe boa reutilização por meio da classe base e dos page objects. Contudo, muitos testes adotam validações excessivamente permissivas (aceitando múltiplos comportamentos como sucesso), além de lógicas de fallback que mascaram falhas reais, reduzindo a eficiência e o valor diagnóstico da automação.
-
-☑️ O projeto está configurado para executar testes em emuladores de Android e iOS?
-
-Status: ✅ Atendido
-Comentário:
-Há configurações específicas para Android e iOS, além de documentação detalhada no README explicando como executar os testes em ambos os ambientes, atendendo plenamente ao critério.
-
-☑️ A solução integra-se com o BrowserStack para testes em dispositivos reais?
-
-Status: ✅ Atendido
-Comentário:
-Existe configuração dedicada para BrowserStack (wdio.bs.conf.js), uso de variáveis de ambiente e pipeline específica, demonstrando integração funcional para execução em dispositivos reais, conforme solicitado (opcional).
-
-✅ Geração de Evidências e Relatórios
-
-☑️ A captura automática de screenshots de falhas está configurada?
-
-Status: ✅ Atendido
-Comentário:
-O hook afterTest captura screenshots automaticamente em caso de falha, salvando evidências no diretório de reports e disponibilizando-as como artefato na pipeline.
-
-☑️ Foram gerados relatórios detalhados (Allure Report ou ExtentReport)?
-
-Status: ✅ Atendido
-Comentário:
-O projeto utiliza Allure Report de forma consistente, com geração local e em CI, atendendo ao requisito de visibilidade dos resultados de execução.
-
-☑️ Os relatórios incluem resumo dos testes, screenshots das falhas, logs de execução e informações do ambiente?
-
-Status: ✅ Atendido
-Comentário:
-Os relatórios Allure gerados incluem status dos testes, evidências visuais, logs e informações de execução, além de integração com pipeline para armazenamento como artefato.
-
-✅ Integração CI/CD
-
-☑️ A pipeline de CI/CD (GitLab CI/CD) foi configurada para automatizar a execução dos testes a cada commit ou merge request?
-
-Status: ✅ Atendido
-Comentário:
-Há pipelines funcionais tanto em GitHub Actions quanto em GitLab CI, com execução automatizada dos testes, geração de relatórios e upload de artefatos, demonstrando maturidade na integração contínua.
-
-☑️ A pipeline demonstra a capacidade de rodar os testes em ambientes diferentes?
-
-Status: ✅ Atendido
-Comentário:
-A solução contempla execução em emuladores Android, execução remota via BrowserStack e parametrização por variáveis de ambiente, evidenciando flexibilidade de ambientes.
-
-✅ Documentação e Entrega
-
-☑️ O código-fonte completo do projeto foi entregue via GitHub ou GitLab?
-
-Status: ✅ Atendido
-Comentário:
-Todo o código-fonte, configurações, pipelines, scripts e dados de teste foram entregues de forma completa no repositório.
-
-☑️ A documentação sobre a configuração do ambiente e execução dos testes está no README.md do projeto?
-
-Status: ✅ Atendido
-Comentário:
-O README é detalhado, cobre pré-requisitos, execução local, execução em CI/CD, uso de BrowserStack, geração de relatórios e troubleshooting, garantindo reprodutibilidade do projeto.
-
-
-Avaiação do desafio Mobile
-
-
-O candidato entregou uma automação de testes mobile que atende aos requisitos propostos no enunciado do desafio. Foram implementados 10 cenários de teste cobrindo login, cadastro, navegação entre telas, interação com formulários, validação de mensagens de erro, testes orientados a dados e um fluxo end-to-end, utilizando WebdriverIO com Appium e aplicando o padrão Page Object para organização do código.
-
-A solução está corretamente configurada para execução em Android e iOS, conta com integração a CI/CD, geração de evidências automáticas em falhas e relatórios detalhados via Allure, além de documentação clara no README que permite a reprodução do ambiente e da execução dos testes. Também há integração opcional com BrowserStack para execução em dispositivos reais, conforme sugerido no desafio.
-
-Como ponto de ressalva, observa-se que parte dos testes adota validações permissivas e estratégias excessivas de fallback, o que reduz o rigor das validações funcionais e pode mascarar falhas reais da aplicação. Além disso, há cenários instáveis e testes residuais que impactam a confiabilidade do fluxo end-to-end como evidência de estabilidade.
-
-Ainda assim, considerando o escopo solicitado, a cobertura funcional exigida, a estrutura do projeto, a integração com pipeline e a documentação entregue, o desafio mobile é considerado aprovado, com ressalvas técnicas que podem ser aprofundadas e discutidas em etapa de entrevista técnica.
-
-
-Texto geral 
-
-O candidato demonstrou boa capacidade técnica em automação de testes entregando soluções funcionais tanto para API quanto para mobile com estrutura organizada uso adequado das ferramentas propostas execução automatizada em pipeline de CI CD e geração de relatórios de evidência Os resultados indicam entendimento consistente dos fluxos de teste integração de ambientes e construção de automações executáveis de ponta a ponta
-
-Apesar de existirem pontos de maturidade a serem evoluídos como maior rigor nas validações redução de abordagens permissivas nos testes e melhorias no controle de dados e estabilidade dos cenários as entregas atendem ao que foi solicitado no enunciado e evidenciam uma base técnica sólida para evolução profissional
-
-Dessa forma o candidato é aprovado para entrevista técnica sendo recomendada a continuidade no processo seletivo com aprofundamento em critérios de validação decisões arquiteturais estabilidade das automações e práticas de qualidade aplicadas a ambientes produtivos
+Fundamentos de Testes
+1 Qual é o principal objetivo do teste de software em um produto digital
+2 Por que não é viável testar todas as combinações possíveis de um sistema
+3 Qual a diferença entre um erro humano um defeito no software e uma falha em execução
+4 Como você define qualidade de software sob a perspectiva de testes
+5 Em que momento do ciclo de desenvolvimento o teste deveria começar e por quê
+
+Princípios de Teste
+6 Por que executar o mesmo conjunto de testes repetidamente tende a perder eficácia ao longo do tempo
+7 Como a maior parte dos defeitos costuma se concentrar em áreas específicas do sistema
+8 Por que o sucesso de um teste não é a ausência de defeitos encontrados
+9 Por que a estratégia de testes precisa variar de acordo com o tipo de sistema
+10 Dê um exemplo prático de como testes antecipados reduzem risco
+
+Níveis de Teste
+11 Qual a diferença entre validar uma funcionalidade isolada e validar um fluxo completo
+12 Como testes em diferentes camadas do sistema se complementam
+13 Quais riscos surgem quando testes de integração são negligenciados
+14 Em que momento testes de aceitação agregam mais valor
+15 Como você decide em qual nível um defeito deveria ser detectado
+
+Tipos de Teste
+16 Qual a diferença entre validar comportamento funcional e avaliar características como performance ou usabilidade
+17 Quando um teste de regressão se torna essencial em um projeto
+18 O que caracteriza um conjunto mínimo de testes para validar uma entrega
+19 Por que cenários negativos são tão importantes quanto os positivos
+20 Em quais situações testes exploratórios são mais eficazes que testes roteirizados
+
+Técnicas de Projeto de Teste
+21 Como agrupar entradas similares pode reduzir esforço sem perder cobertura
+22 Por que os limites de um campo costumam ser mais propensos a falhas
+23 Como decisões condicionais complexas podem ser validadas de forma sistemática
+24 O que torna um caso de teste frágil ou pouco confiável
+25 Como você avalia se um conjunto de testes é realmente eficaz
+
+Gestão e Estratégia de Testes
+26 O que significa testar com foco em risco
+27 Como definir quando uma funcionalidade está pronta para ser testada
+28 Quais critérios indicam que os testes podem ser encerrados
+29 Como diferenciar impacto de urgência ao priorizar defeitos
+30 Quais métricas ajudam a entender a saúde de uma suíte de testes

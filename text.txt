@@ -1,7 +1,19 @@
-O candidato entregou uma automação funcional cobrindo os fluxos básicos de CRUD da API, com execução estável e utilização correta de autenticação via token JWT. A estrutura do projeto está organizada, com reaproveitamento de keywords e separação adequada entre recursos e testes, demonstrando domínio inicial do Robot Framework e do consumo de APIs REST.
+O candidato demonstrou bom conhecimento prático de automação mobile, com uso adequado de Page Object Model e implementação de cenários relevantes como login, formulários, swipe, drag & drop e WebView, evidenciando familiaridade com Appium e WebdriverIO.
 
-Entretanto, o desafio exigia explicitamente 100% de cobertura da API, o que não foi atingido. Foram implementados apenas cinco cenários básicos, limitados ao caminho feliz, sem validação de cenários negativos, falhas de autenticação, erros de contrato, respostas 4xx/5xx ou limites de requisição. Também não há evidências de integração com pipeline de CI nem geração de relatórios como artefato de pipeline, pontos considerados essenciais no enunciado.
+Entretanto, o desafio não foi aprovado porque o projeto não é executável: o arquivo de configuração wdio.android.conf.js está vazio, o que impede qualquer execução local ou em CI, descaracterizando a entrega como solução funcional. Soma-se a isso o excesso de dependências sem uso claro, indicando fragilidade na organização e na maturidade técnica da entrega.
 
-Dessa forma, apesar de demonstrar uma base técnica sólida e correta para testes de API, a entrega ficou aquém do nível esperado para aprovação, principalmente pela falta de profundidade, criticidade e abrangência dos testes.
+Apesar do potencial técnico apresentado, a ausência de um projeto minimamente operacional inviabiliza a aprovação do desafio mobile.
 
-Resultado final: Não aprovado.
+
+
+
+=============================================================
+
+
+
+
+Considerando os dois desafios avaliados (API e Mobile), o candidato não foi aprovado para avançar para a entrevista técnica.
+
+Apesar de demonstrar boa base conceitual em automação, organização de código e entendimento de padrões como Page Object, ambos os desafios ficaram aquém do esperado nos critérios essenciais de senioridade e completude. No desafio de API, a cobertura foi limitada a cenários básicos de CRUD, sem validações negativas, sem aprofundamento em contratos, regras de negócio ou estratégias mais robustas de teste, o que não atende à expectativa da cobertura solicitada no enunciado.
+
+No desafio mobile, embora exista uma boa quantidade de cenários e uma estrutura técnica coerente, o projeto não é executável, possui configuração ausente, dependências desnecessárias, não gera evidências nem relatórios e não atende aos requisitos de execução em ambiente controlado ou CI. Isso compromete diretamente a confiabilidade da entrega.

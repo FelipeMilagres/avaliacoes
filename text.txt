@@ -1,0 +1,19 @@
+O desafio de API demonstra que o candidato possui conhecimento básico de automação e entendimento do fluxo REST, cobrindo operações de CRUD com testes executáveis localmente e pipeline de CI funcional, incluindo geração de relatório como artefato, o que atende parcialmente aos critérios de integração e execução. Também é positivo o uso de estrutura organizada e a presença de commands no Cypress, indicando familiaridade com boas práticas da ferramenta, ainda que pouco exploradas nos testes.
+
+Entretanto, a solução apresenta apenas 5 testes, focados quase exclusivamente em cenários de sucesso, sem cobertura de falhas (4xx/5xx), sem exploração de limites, dados inválidos ou estresse da API, contrariando a heurística PREDADOR e o requisito de maior profundidade de validação. A autenticação via JWT não é efetivamente utilizada nas requisições protegidas, e as asserções são superficiais, validando mais status do que regras de negócio.
+
+Dessa forma, apesar de haver pontos favoráveis em execução e CI, o desafio não atende aos critérios de cobertura e qualidade esperados, sendo considerado reprovado para esta etapa, embora indique base técnica e potencial de evolução.
+
+
+
+O desafio mobile da Letícia apresenta boa maturidade técnica em automação, com uso correto de Page Object Model, aplicação de data-driven com JSON, cobertura consistente dos principais fluxos do app e cenários bem estruturados. Em termos de qualidade de código e estratégia de testes, é o projeto mais sólido entre os analisados até agora no contexto mobile.
+
+As principais lacunas estão relacionadas à infraestrutura de execução, como ausência de execução comprovada em iOS, falta de integração com BrowserStack e pipeline que não garante execução real em ambiente CI, além da ausência de documentação apresentada.
+
+Mesmo com essas ressalvas, do ponto de vista de automação funcional e boas práticas de testes, o desafio atende aos critérios técnicos principais.
+
+Resultado: Aprovado coom ressalva.
+
+
+
+A candidata apresentou um bom desempenho no desafio mobile, com uso adequado de Page Object Model, aplicação de data-driven com JSON e cobertura consistente dos principais fluxos do aplicativo, indicando boa base técnica em automação mobile. Entretanto, no desafio de API, a entrega não atendeu aos critérios mínimos de qualidade e cobertura, com poucos cenários, foco em caminho feliz e ausência de validações de regras, erros e uso efetivo de autenticação, resultando em reprovação nesta etapa. Considerando que ambos os desafios fazem parte do critério de avaliação técnica, o resultado consolidado é não aprovado para entrevista técnica neste momento, apesar de demonstrar potencial de evolução, especialmente na parte de automação mobile.

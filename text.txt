@@ -1,1 +1,5 @@
-A candidata apresentou bom desempenho no desafio de API, demonstrando domínio da ferramenta (Java + RestAssured), entendimento de arquitetura REST e preocupação em cobrir cenários além do caminho feliz, incluindo casos de erro. Apesar de pontos de melhoria relacionados a boas práticas de código, reutilização de modelos e qualidade das validações, o desafio foi considerado aprovado com ressalvas e a candidata seria direcionada para entrevista técnica. Entretanto, o desafio mobile não foi entregue por limitações de ambiente na máquina da candidata e, antes da continuidade do processo, a mesma foi alocada em outro cliente, não estando mais disponível para seguir no processo seletivo neste momento.
+O desafio de API foi avaliado e não atendeu aos critérios esperados, contemplando majoritariamente o caminho feliz, com validações limitadas a status code e sem cobertura adequada de cenários alternativos e negativos, conforme solicitado no enunciado. A automação apresentada não demonstrou maturidade em qualidade, confiabilidade e boas práticas de design de testes para o nível da vaga.
+
+O desafio mobile não foi entregue, pois a candidata informou limitações de máquina para execução do ambiente de automação.
+
+Diante do resultado técnico dos desafios e da ausência de evidências no escopo mobile, o processo não seguirá para a etapa de entrevista técnica.

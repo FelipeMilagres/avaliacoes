@@ -1,0 +1,3 @@
+O candidato utilizou RestAssured para automação de API, com geração de relatórios em Allure e execução automatizada via GitHub Actions. A solução está bem estruturada, cobre todos os endpoints principais e executa com sucesso tanto localmente quanto na pipeline. Como ponto de atenção, os testes estão mais focados em status code e fluxos básicos, com pouca validação de contrato, dados de resposta, cenários de erro e autorização, o que reduz a profundidade da cobertura sob a ótica de qualidade de API.
+
+Com base nesses pontos, o desafio foi considerado aprovado com ressalvas, recomendando avanço para a entrevista técnica para avaliação mais profunda do conhecimento.

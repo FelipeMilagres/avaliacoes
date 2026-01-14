@@ -1,7 +1,15 @@
-O candidato entregou o desafio mobile em dois repositórios distintos, porém nenhum deles atendeu aos critérios técnicos esperados. A estrutura dos projetos é confusa e inconsistente, com arquivos duplicados, Page Objects incompletos, múltiplas versões de testes e ausência de um padrão claro de arquitetura. Apesar de existir tentativa de utilização de boas práticas, como Page Object, data-driven e integração com CI, essas abordagens foram aplicadas de forma superficial e incorreta.
+O candidato utilizou Java com RestAssured, demonstrando conhecimento básico da ferramenta e da estrutura necessária para testes de API. No entanto, a implementação é bastante limitada, com cenários simples, dados e token fixos no código e validações superficiais, sem exploração de cenários negativos, regras de negócio ou boas práticas de reutilização e organização. A entrega não atende à profundidade técnica esperada para o desafio, especialmente considerando o nível do perfil avaliado. Diante disso, o desafio de API foi considerado reprovado.
 
-O projeto não apresentou execução funcional, com problemas recorrentes de configuração do WebdriverIO, mistura de abordagens de execução, configurações inválidas ou conflitantes de capabilities e ausência de evidências de execução local ou em pipeline. A cobertura de cenários é limitada, com validações frágeis, muitos testes sem asserts efetivos e ausência dos principais fluxos exigidos no enunciado, como navegação, formulários e validação consistente de mensagens.
 
-Também não houve implementação efetiva de execução multi-plataforma, integração real com BrowserStack ou geração confiável de relatórios, apesar de esses pontos terem sido citados na documentação. A entrega demonstra conhecimento conceitual básico das ferramentas, porém carece de maturidade técnica, organização e foco em qualidade, aspectos fundamentais para um perfil sênior.
 
-Diante dos pontos levantados, o desafio mobile foi considerado reprovado, não atendendo aos requisitos técnicos, de estrutura e de qualidade definidos para a vaga
+
+O candidato entregou ambos os desafios (API e Mobile), porém as entregas apresentaram diversos problemas técnicos e não atenderam aos requisitos do enunciado e dos checklists de avaliação.
+
+No desafio de API, apesar de utilizar RestAssured e demonstrar noções básicas de testes REST, a automação não executa corretamente, utiliza token JWT fixo e inválido, possui endpoints incorretos, IDs hardcoded e cobre apenas cenários de caminho feliz, sem validações de erro, regras de negócio, gerenciamento de dados de teste ou integração com CI e relatórios.
+
+No desafio Mobile, a estrutura está confusa, com duplicidade de arquivos, padrões inconsistentes, page objects incompletos, testes pouco assertivos e configurações que impedem a execução. Apesar de haver tentativa de uso de Page Object, data-driven e pipeline, a implementação é superficial e não atende aos requisitos mínimos de cobertura, organização, execução e evidências solicitadas.
+
+Considerando o perfil informado como sênior e o nível de qualidade esperado para a vaga, a entrega ficou muito abaixo do esperado em termos de arquitetura, boas práticas e profundidade técnica.
+
+Conclusão: o candidato não foi aprovado para a entrevista técnica.
+

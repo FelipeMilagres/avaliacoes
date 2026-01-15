@@ -1,5 +1,16 @@
-O candidato entregou uma automação de API bem organizada utilizando Postman e Newman, com boa cobertura dos endpoints de CRUD, validação de regras de negócio, cenários positivos e negativos, além de validação de contrato via JSON Schema. Também foi configurada a execução em pipeline de CI, com geração e disponibilização de relatórios, e a documentação está clara e facilita tanto a execução local quanto na pipeline.
+O candidato entregou um projeto de automação mobile bem estruturado, com 10 cenários cobrindo login, cadastro, navegação entre telas, preenchimento de formulários e validação de erros, atendendo ao escopo funcional solicitado. Os testes executaram com sucesso no Android com geração de evidências via screenshots em falha e relatórios Allure, além de pipeline de CI/CD configurada no GitLab, contemplando execução automática, geração e publicação de relatórios.
 
-Entretanto, o desafio não atinge 100% de cobertura conforme solicitado. Não há validação do uso do token de autenticação nos endpoints que dependem de login e os testes de autenticação utilizam um usuário fixo definido em variáveis, o que pode gerar instabilidade caso esse usuário seja removido da base, indicando ausência de um gerenciamento mais robusto de dados de teste.
+O projeto também contempla execução em ambientes diferentes, uso de dados externos em JSON para data-driven testing, retries para testes instáveis e documentação clara para execução local e em CI, o que demonstra boa maturidade em automação mobile.
 
-Com base nesses pontos, o desafio de API é considerado aprovado com ressalvas.
+Como ponto de atenção, no iOS foi identificado problema de sincronização com o teclado, que em alguns momentos sobrepõe elementos e exige intervenção manual para que os testes avancem, indicando ausência de uma tratativa automatizada para esse cenário. Apesar disso, os fluxos estão funcionais também em iOS, faltando apenas esse ajuste de robustez.
+
+Com base no checklist e nos testes executados, o desafio mobile pode ser considerado aprovado com ressalvas, principalmente pelo ponto de estabilidade no iOS, mas com atendimento sólido aos requisitos técnicos, arquiteturais e de integração contínua.
+
+Card Pai
+
+
+Com base na avaliação dos desafios de API e Mobile, o candidato demonstrou boa capacidade técnica em automação de testes, cobrindo cenários funcionais relevantes, regras de negócio, validações de erro, uso de dados externos, geração de relatórios e integração com pipelines de CI/CD.
+
+No desafio de API, a automação foi bem estruturada e com boa cobertura, porém com ressalvas quanto ao uso do token de autenticação e ao gerenciamento de dados de teste. No desafio mobile, os cenários atenderam ao escopo solicitado e executaram com sucesso em Android, com pequena ressalva de estabilidade no iOS relacionada ao tratamento do teclado.
+
+Com base nesses pontos, o candidato é considerado aprovado para a entrevista técnica, com observações de melhoria a serem exploradas na próxima etapa.

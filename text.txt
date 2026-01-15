@@ -1,0 +1,5 @@
+O candidato entregou uma automação de API bem organizada utilizando Postman e Newman, com boa cobertura dos endpoints de CRUD, validação de regras de negócio, cenários positivos e negativos, além de validação de contrato via JSON Schema. Também foi configurada a execução em pipeline de CI, com geração e disponibilização de relatórios, e a documentação está clara e facilita tanto a execução local quanto na pipeline.
+
+Entretanto, o desafio não atinge 100% de cobertura conforme solicitado. Não há validação do uso do token de autenticação nos endpoints que dependem de login e os testes de autenticação utilizam um usuário fixo definido em variáveis, o que pode gerar instabilidade caso esse usuário seja removido da base, indicando ausência de um gerenciamento mais robusto de dados de teste.
+
+Com base nesses pontos, o desafio de API é considerado aprovado com ressalvas.

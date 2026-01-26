@@ -1,11 +1,1 @@
-Avaliação Mobile
-
-O desafio Mobile apresenta boa base técnica, com uso de Java, Appium e Cucumber, estrutura organizada em Page Object e separação clara entre páginas, steps, hooks e utilitários. A suíte atende à quantidade de cenários solicitada e cobre os principais fluxos do aplicativo, como login e cadastro, navegação entre telas, formulários, webview, swipe, drag and drop e validação de mensagens de erro, demonstrando entendimento do escopo funcional proposto.
-
-Entretanto, não foi possível executar os cenários seguindo as recomendações descritas no README, uma vez que a execução padrão não identificou testes a serem rodados. Esse ponto compromete diretamente a validação prática da automação e o atendimento aos critérios do checklist. Somado a isso, há oportunidades de evolução em resiliência e manutenção (uso excessivo de Thread.sleep, setup do driver distribuído nos steps, configuração restrita a Android e integração inicial de relatórios e pipeline). Diante da não execução do projeto, o desafio foi Reprovado.
-
-Avaliação do candidato
-
-De forma geral, o candidato demonstra uma boa base técnica e conhecimento das ferramentas de automação, tanto em API quanto em Mobile. No entanto, ao analisar as entregas de forma conjunta, os desafios não atingiram o nível mínimo esperado. No desafio de API, a automação apresentou limitações de cobertura, dependência de dados fixos e problemas de preparo de ambiente. Já no desafio Mobile, apesar da boa organização e estrutura do código, não foi possível executar os cenários conforme as próprias recomendações do projeto, o que impede validar a automação na prática.
-
-Diante desses pontos, e considerando a necessidade de entregas executáveis e consistentes para continuidade no processo, o candidato não foi aprovado para a entrevista técnica.
+Que tal algo direto e explicativo? O título do convite poderia ser: "Mentoria: Contexto dos Times - Conversa com Adriana" (ou "Conversa com Júlia"). Na descrição, você pode colocar algo como: "Reunião de alinhamento para compreender o contexto e os desafios do time, explorando oportunidades de automação além de API e mobile, com foco em direcionar a mentoria e apoiar nas necessidades específicas do time." Simples e funcional!

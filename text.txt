@@ -1,0 +1,7 @@
+Avaliação Mobile
+
+O desafio Mobile apresenta boa base técnica, com uso de Java, Appium e Cucumber, estrutura organizada em Page Object e separação clara entre páginas, steps, hooks e utilitários. A suíte atende à quantidade de cenários solicitada e cobre os principais fluxos do aplicativo, como login e cadastro, navegação entre telas, formulários, webview, swipe, drag and drop e validação de mensagens de erro, demonstrando entendimento do escopo funcional proposto.
+
+Entretanto, não foi possível executar os cenários seguindo as recomendações descritas no README, uma vez que a execução padrão não identificou testes a serem rodados. Esse ponto compromete diretamente a validação prática da automação e o atendimento aos critérios do checklist. Somado a isso, há oportunidades de evolução em resiliência e manutenção (uso excessivo de Thread.sleep, setup do driver distribuído nos steps, configuração restrita a Android e integração inicial de relatórios e pipeline). Diante da não execução do projeto, o desafio foi Reprovado.
+
+Avaliação do candidato

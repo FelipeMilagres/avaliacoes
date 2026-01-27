@@ -1,9 +1,0 @@
-Olá, tudo bem?
-
-Estamos iniciando um novo time e buscamos um QA Sênior, com atuação forte tanto em testes manuais quanto automatizados, com foco principal em validações de back-end, com possibilidade de evolução para front-end ao longo do tempo.
-
-O contexto exige alguém com perfil proativo, que atue de forma próxima ao time desde as fases iniciais (shift left), ajudando a estruturar práticas de qualidade, apoiar decisões técnicas e evoluir o produto de forma sustentável.
-
-Esperamos uma pessoa com iniciativa, capaz de atender tanto as demandas do time quanto necessidades mais amplas da corporação, contribuindo ativamente para a maturidade do produto e dos processos de qualidade.
-
-Se fizer sentido para você, gostaria de saber se toparia conversar e participar do nosso processo

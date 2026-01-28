@@ -1,10 +1,3 @@
-A solução apresentada demonstra boa organização de código, uso adequado de Jest e PactumJS, execução estável em ambiente local e em pipeline de CI, além de geração de relatórios e evidências. Os testes cobrem de forma consistente os fluxos de CRUD de usuários, incluindo cenários positivos e negativos relevantes ao domínio implementado, evidenciando entendimento da arquitetura RESTful e boas práticas de automação.
+Não foi possível executar o projeto seguindo as instruções fornecidas, o que compromete diretamente os critérios de execução, repetibilidade e confiabilidade exigidos no checklist. Além disso, a automação concentra testes de múltiplas APIs distintas no mesmo projeto, sem um domínio único claramente definido, o que inviabiliza uma estratégia consistente de testes. A cobertura apresentada é superficial e fragmentada, limitada majoritariamente à validação de status code, sem contemplar de forma adequada contratos, parâmetros, headers e regras de negócio conforme esperado no enunciado. Esses fatores impedem a validação prática da automação e a caracterização da solução como sustentável em um ambiente real.
 
-Entretanto, a automação está restrita ao domínio de usuários e não contempla integralmente os demais recursos da API, tampouco valida de forma abrangente parâmetros, headers, contratos e comportamentos em todos os endpoints disponíveis. Esse ponto limita a abrangência da solução e impede que o conjunto de testes seja considerado completo do ponto de vista de cobertura, conforme definido no checklist. Diante disso, o desafio de API foi aprovado com ressalvas.
------------------
-
-O candidato apresentou uma automação de testes de API estável e bem estruturada, com uso adequado de Jest e PactumJS, execução consistente em ambiente local e em pipeline de CI, além de geração de relatórios e evidências. A solução cobre de forma consistente os fluxos de CRUD de usuários, com cenários positivos e negativos relevantes, demonstrando bom entendimento da arquitetura RESTful.
-
-Entretanto, a automação está restrita ao domínio de usuários e não atende ao critério de cobertura de 100% da API, limitando a abrangência da solução. Ainda assim, o candidato demonstra base técnica e capacidade de execução suficientes para avançar para a entrevista técnica, com atenção ao ponto de cobertura em etapas futuras.
-
-
+Resultado da avaliação: Reprovado.

@@ -1,0 +1,10 @@
+A solução apresentada demonstra boa organização de código, uso adequado de Jest e PactumJS, execução estável em ambiente local e em pipeline de CI, além de geração de relatórios e evidências. Os testes cobrem de forma consistente os fluxos de CRUD de usuários, incluindo cenários positivos e negativos relevantes ao domínio implementado, evidenciando entendimento da arquitetura RESTful e boas práticas de automação.
+
+Entretanto, a automação está restrita ao domínio de usuários e não contempla integralmente os demais recursos da API, tampouco valida de forma abrangente parâmetros, headers, contratos e comportamentos em todos os endpoints disponíveis. Esse ponto limita a abrangência da solução e impede que o conjunto de testes seja considerado completo do ponto de vista de cobertura, conforme definido no checklist. Diante disso, o desafio de API foi aprovado com ressalvas.
+-----------------
+
+O candidato apresentou uma automação de testes de API estável e bem estruturada, com uso adequado de Jest e PactumJS, execução consistente em ambiente local e em pipeline de CI, além de geração de relatórios e evidências. A solução cobre de forma consistente os fluxos de CRUD de usuários, com cenários positivos e negativos relevantes, demonstrando bom entendimento da arquitetura RESTful.
+
+Entretanto, a automação está restrita ao domínio de usuários e não atende ao critério de cobertura de 100% da API, limitando a abrangência da solução. Ainda assim, o candidato demonstra base técnica e capacidade de execução suficientes para avançar para a entrevista técnica, com atenção ao ponto de cobertura em etapas futuras.
+
+

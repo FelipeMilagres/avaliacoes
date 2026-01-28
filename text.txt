@@ -1,3 +1,13 @@
-Não foi possível executar o projeto seguindo as instruções fornecidas, o que compromete diretamente os critérios de execução, repetibilidade e confiabilidade exigidos no checklist. Além disso, a automação concentra testes de múltiplas APIs distintas no mesmo projeto, sem um domínio único claramente definido, o que inviabiliza uma estratégia consistente de testes. A cobertura apresentada é superficial e fragmentada, limitada majoritariamente à validação de status code, sem contemplar de forma adequada contratos, parâmetros, headers e regras de negócio conforme esperado no enunciado. Esses fatores impedem a validação prática da automação e a caracterização da solução como sustentável em um ambiente real.
+O projeto não é executável, uma vez que o arquivo essencial de configuração do WebdriverIO (wdio.conf.js) está vazio, inviabilizando a execução dos testes e comprometendo os critérios de execução, repetibilidade e confiabilidade do checklist. Além disso, a automação não atende à cobertura mínima exigida, possui cenários ausentes ou incompletos, não contempla execução em Android/iOS, nem apresenta geração de evidências e relatórios conforme solicitado no enunciado.
 
 Resultado da avaliação: Reprovado.
+
+
+============================
+
+
+No desafio de API, o projeto não executou conforme as instruções fornecidas, apresentou cobertura superficial, ausência de domínio único de API e não atendeu aos critérios estruturais de confiabilidade e repetibilidade definidos no checklist.
+
+No desafio Mobile, o projeto também não foi executável devido à ausência de configuração essencial do WebdriverIO (wdio.conf.js vazio), além de não atender à cobertura mínima exigida, não gerar evidências ou relatórios e não sustentar execução em ambientes mobile conforme o enunciado.
+
+Diante desses pontos, o candidato não foi aprovado para a entrevista técnica.

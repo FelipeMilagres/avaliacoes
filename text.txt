@@ -1,0 +1,5 @@
+A solução apresentada demonstra bom domínio de automação de testes de API, utilizando Postman, com execução via Newman e integração em pipeline de CI no GitHub Actions, além da geração de relatórios em htmlextra. A suíte é abrangente, cobre diferentes endpoints e contempla uma quantidade relevante de cenários positivos e negativos, atendendo aos principais requisitos definidos no enunciado.
+
+Apesar do bom volume de testes, a cobertura ainda pode ser evoluída. Os cenários estão majoritariamente focados nos fluxos principais e em validações diretas de status e mensagens, com menor exploração de variações de parâmetros, limites, comportamentos alternativos e validações de contrato, que contribuiriam para aumentar a robustez da automação. Também foram observadas falhas pontuais em alguns cenários relacionadas à preparação dos dados de teste.
+
+Dessa forma, o desafio é considerado aprovado com ressalvas, sendo recomendável aprofundar esses pontos em uma entrevista técnica.

@@ -1,5 +1,9 @@
-A solução apresentada demonstra bom domínio de automação de testes de API, utilizando Postman, com execução via Newman e integração em pipeline de CI no GitHub Actions, além da geração de relatórios em htmlextra. A suíte é abrangente, cobre diferentes endpoints e contempla uma quantidade relevante de cenários positivos e negativos, atendendo aos principais requisitos definidos no enunciado.
+A automação foi desenvolvida utilizando WebdriverIO, com execução bem-sucedida em ambiente Android. Os cenários implementados cobrem login/cadastro, navegação entre telas, preenchimento de formulários e validação de mensagens de erro. O padrão de Page Object foi aplicado corretamente, com boa organização, reutilização de código e separação adequada entre elementos e ações.
 
-Apesar do bom volume de testes, a cobertura ainda pode ser evoluída. Os cenários estão majoritariamente focados nos fluxos principais e em validações diretas de status e mensagens, com menor exploração de variações de parâmetros, limites, comportamentos alternativos e validações de contrato, que contribuiriam para aumentar a robustez da automação. Também foram observadas falhas pontuais em alguns cenários relacionadas à preparação dos dados de teste.
+Como pontos não atendidos no checklist, o projeto não contempla execução em ambiente iOS, não possui integração com pipeline de CI/CD e não está configurado para execução em device farm, limitando a validação em múltiplos dispositivos e ambientes. 
 
-Dessa forma, o desafio é considerado aprovado com ressalvas, sendo recomendável aprofundar esses pontos em uma entrevista técnica.
+De forma geral, a entrega atende aos principais requisitos funcionais e às boas práticas de automação, resultando numa aprovação com ressalvas.
+
+
+
+As entregas demonstram boa organização, execução funcional dos testes, aplicação de boas práticas de automação e entendimento consistente dos frameworks utilizados. Apesar de existirem lacunas em pontos do checklist, como cobertura mais aprofundada no desafio de API e ausência de integração com CI/CD, execução em iOS e device farm no desafio Mobile, esses pontos foram tratados como ressalvas e não impediram o avanço no processo.

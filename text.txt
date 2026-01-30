@@ -1,9 +1,0 @@
-A automação foi desenvolvida utilizando WebdriverIO, com execução bem-sucedida em ambiente Android. Os cenários implementados cobrem login/cadastro, navegação entre telas, preenchimento de formulários e validação de mensagens de erro. O padrão de Page Object foi aplicado corretamente, com boa organização, reutilização de código e separação adequada entre elementos e ações.
-
-Como pontos não atendidos no checklist, o projeto não contempla execução em ambiente iOS, não possui integração com pipeline de CI/CD e não está configurado para execução em device farm, limitando a validação em múltiplos dispositivos e ambientes. 
-
-De forma geral, a entrega atende aos principais requisitos funcionais e às boas práticas de automação, resultando numa aprovação com ressalvas.
-
-
-
-As entregas demonstram boa organização, execução funcional dos testes, aplicação de boas práticas de automação e entendimento consistente dos frameworks utilizados. Apesar de existirem lacunas em pontos do checklist, como cobertura mais aprofundada no desafio de API e ausência de integração com CI/CD, execução em iOS e device farm no desafio Mobile, esses pontos foram tratados como ressalvas e não impediram o avanço no processo.

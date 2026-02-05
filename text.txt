@@ -1,4 +1,1 @@
-O candidato desenvolveu a automação utilizando Playwright Test com TypeScript, aplicando uma estrutura bem organizada, modular e de fácil manutenção, com separação clara entre suítes de teste, helpers, validações de schema, geração de dados e relatórios.
-A solução cobre integralmente os endpoints da API, incluindo cenários positivos, negativos, autenticação JWT, validação de contrato e integração com pipeline de CI, com execução estável de 56 testes com sucesso e geração de evidências automatizadas.
-O projeto demonstra maturidade técnica, boa leitura de arquitetura REST e preocupação com a sustentabilidade da automação em execuções recorrentes.
-Status do desafio: Aprovado.
+O desafio Mobile apresenta boa organização e cobertura dos cenários solicitados, porém não executa devido a falha técnica no ciclo de vida dos testes, impedindo a validação funcional. Diante da ausência de execução e build verde, o desafio foi reprovado.

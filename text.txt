@@ -1,14 +1,4 @@
-===== Desafio Api ====
-
-O desafio de automação de API foi desenvolvido utilizando Robot Framework e apresenta uma boa estrutura técnica, com código modular, legível e alinhado às boas práticas. Os testes demonstram entendimento da arquitetura RESTful, contemplam cenários positivos e negativos, utilizam autenticação via JWT e estão integrados a uma pipeline de CI no GitHub Actions, com geração de relatórios como artefatos.
-Apesar de os principais fluxos e riscos da API estarem bem cobertos, a suíte não garante uma cobertura completa aceitável, pois há pouca exploração de variações de parâmetros, limites e comportamentos alternativos. Além disso, a primeira execução evidenciou dependência de preparação de massa de dados, corrigida na execução seguinte.
-De forma geral, o desafio foi aprovado com ressalvas, demonstrando boa base técnica e capacidade de automação, com oportunidades de evolução principalmente no aprofundamento da cobertura e na gestão de dados de teste.
-
-===== Desafio Mobile =====
-O desafio de automação mobile foi desenvolvido utilizando Robot Framework com Appium e apresentou uma entrega consistente do ponto de vista técnico. Os 10 cenários foram implementados e executaram com sucesso em ambiente Android, cobrindo login, navegação, interações com produtos, validações de erro e boas práticas como Page Object, reutilização de código, waits explícitos e geração de evidências.
-Como pontos não atendidos, a solução não contempla execução em iOS, não está integrada a device farm e não possui pipeline de CI/CD executando os testes mobile de forma automatizada, o que limita a escalabilidade e a validação em múltiplos ambientes.
-De forma geral, o desafio foi aprovado com ressalvas, atendendo plenamente aos requisitos funcionais e de qualidade da automação, com oportunidades claras de evolução nos aspectos de infraestrutura e integração contínua.
-
-
-===== Card Pai =====
-Com base nos desafios técnicos de API e Mobile, o candidato demonstrou bom domínio de automação utilizando Robot Framework, com organização adequada, cobertura de cenários relevantes e integração com CI. Apesar de pontos pontuais de melhoria relacionados à infraestrutura e escalabilidade, a entrega atende aos requisitos esperados. Diante disso, o candidato está aprovado para a entrevista técnica, onde será possível aprofundar aspectos de arquitetura, cobertura e evolução das soluções apresentadas.
+O candidato desenvolveu a automação utilizando Playwright Test com TypeScript, aplicando uma estrutura bem organizada, modular e de fácil manutenção, com separação clara entre suítes de teste, helpers, validações de schema, geração de dados e relatórios.
+A solução cobre integralmente os endpoints da API, incluindo cenários positivos, negativos, autenticação JWT, validação de contrato e integração com pipeline de CI, com execução estável de 56 testes com sucesso e geração de evidências automatizadas.
+O projeto demonstra maturidade técnica, boa leitura de arquitetura REST e preocupação com a sustentabilidade da automação em execuções recorrentes.
+Status do desafio: Aprovado.

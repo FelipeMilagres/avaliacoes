@@ -1,6 +1,0 @@
-O desafio Mobile apresenta boa organização, aplicação correta do padrão Page Object e cobertura dos cenários solicitados. No entanto, a automação não executa devido a uma falha técnica no ciclo de vida dos testes, causada pelo uso de um método incompatível com a stack adotada, o que impede a inicialização adequada dos cenários e a validação funcional. Diante da impossibilidade de execução.
-Status do desafio: Reprovado.
-
-
-O candidato apresentou bom desempenho no desafio de API, com solução bem estruturada, cobertura adequada e execução estável. No entanto, o desafio Mobile não executou devido a uma falha técnica no ciclo de vida dos testes, o que impediu a validação funcional da automação.
-Considerando que a vaga é focada principalmente em automação mobile e que ambos os desafios são obrigatórios no processo, o candidato não foi aprovado para entrevista técnica.

@@ -1,3 +1,5 @@
-Como entrega, é esperado: configuração de ambiente, escrita de cenários executáveis, geração de evidências, tratamento de falhas e clareza na documentação. Esses aspectos não foram atendidos, o que inviabiliza a validação técnica do desafio e compromete a aderência ao nível esperado para a posição.
+De forma geral, a candidata apresentou uma entrega organizada no desafio de API, com execução bem-sucedida dos testes e cobertura dos principais fluxos funcionais, ainda que limitada em profundidade e variedade de cenários.
 
-Diante disso, o desafio não atende aos requisitos mínimos de aprovação.
+No desafio mobile, a entrega se restringiu à estrutura inicial do projeto, sem execução dos testes, sem cenários validados, sem evidências e sem comprovação funcional. Dessa forma, não foi possível avaliar a efetividade da automação proposta.
+
+Considerando o desempenho nos dois desafios, a entrega não atende ao nível esperado, ficando aquém dos critérios mínimos de execução, cobertura e maturidade técnica exigidos. Assim, a candidata não foi aprovada para a entrevista técnica.

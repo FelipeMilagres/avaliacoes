@@ -1,5 +1,3 @@
-O desafio de API executou com sucesso e cobre os fluxos principais de criação, consulta, edição, exclusão de usuários e autenticação, utilizando dados dinâmicos e validações de retorno. A estrutura está organizada e os testes demonstram entendimento do fluxo da API.
+Como entrega, é esperado: configuração de ambiente, escrita de cenários executáveis, geração de evidências, tratamento de falhas e clareza na documentação. Esses aspectos não foram atendidos, o que inviabiliza a validação técnica do desafio e compromete a aderência ao nível esperado para a posição.
 
-Por outro lado, a cobertura é limitada, sem validações mais profundas de contrato (schema), exploração de cenários de erro mais amplos (variações de payload, campos inválidos, limites) e sem integração com pipeline de CI ou geração de relatórios automatizados.
-
-Resultado: Aprovado com ressalvas, em função da cobertura parcial e da ausência de alguns pontos do checklist.
+Diante disso, o desafio não atende aos requisitos mínimos de aprovação.

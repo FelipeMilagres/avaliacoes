@@ -1,5 +1,0 @@
-A candidata apresentou bom desempenho nos desafios técnicos, demonstrando domínio dos fundamentos de automação de testes, boa organização de código, aplicação de boas práticas e integração com pipeline de CI/CD. As soluções entregues são estáveis, executáveis e bem documentadas.
-
-Apesar de algumas ressalvas pontuais relacionadas à cobertura completa de requisitos específicos, os desafios atendem aos critérios técnicos esperados para a etapa.
-
-Resultado final: Aprovada para entrevista técnica

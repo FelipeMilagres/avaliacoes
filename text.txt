@@ -1,7 +1,5 @@
-A candidata desenvolveu a automação mobile utilizando WebdriverIO com Appium e Mocha, aplicando corretamente o Page Object Model, com boa separação entre page objects, componentes reutilizáveis e arquivos de teste. A estrutura do projeto é clara, organizada e segue boas práticas de automação, facilitando a manutenção e a evolução dos testes.
+A candidata apresentou bom desempenho nos desafios técnicos, demonstrando domínio dos fundamentos de automação de testes, boa organização de código, aplicação de boas práticas e integração com pipeline de CI/CD. As soluções entregues são estáveis, executáveis e bem documentadas.
 
-Os cenários implementados cobrem as principais funcionalidades do aplicativo, incluindo login, cadastro, navegação entre telas, preenchimento de formulários e validação de mensagens de erro, atendendo ao escopo proposto. A automação apresentou execução estável, com sucesso no Android, tanto em ambiente local quanto em BrowserStack.
+Apesar de algumas ressalvas pontuais relacionadas à cobertura completa de requisitos específicos, os desafios atendem aos critérios técnicos esperados para a etapa.
 
-O projeto conta com pipeline de CI/CD no GitLab, automatizando a execução dos testes e a geração de relatórios Allure, com evidências automáticas em caso de falha. Como pontos de atenção, não há evidência de execução em iOS e não foi utilizado data-driven testing, item opcional do desafio.
-
-Status: Aprovado com ressalvas
+Resultado final: Aprovada para entrevista técnica

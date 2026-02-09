@@ -1,0 +1,5 @@
+A candidata utilizou Cypress, com boa organização do projeto e separação adequada entre os cenários de teste e a camada de serviços. Os testes cobrem fluxos positivos e negativos, utilizam dados dinâmicos e apresentam execução estável, com 100% dos cenários passando de forma consistente.
+
+A solução conta com integração em pipeline de CI (GitLab CI) e geração de relatórios via Allure, garantindo evidência dos resultados. A documentação é clara e suficiente para compreender os cenários implementados e executar o projeto sem dependências manuais.
+
+Como pontos de atenção, não foram atendidos itens de cobertura relacionados à autenticação via JWT, validação de headers, validação de contrato (schema de response) e cenários de erro do tipo 5xx, o que impede considerar a cobertura da API como completa conforme os critérios definidos no desafio.

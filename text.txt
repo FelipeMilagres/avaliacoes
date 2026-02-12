@@ -1,8 +1,17 @@
-Olá, bom dia, [Nome], tudo bem?
+Pessoal, hoje entrevistamos uma das candidatas da CI&T que passou no nosso crivo técnico inicial para a vaga de QA Pleno para o time de Engajamento ou Open Finance. Gostaríamos de compartilhar o retorno da avaliação e discutir em conjunto a decisão final.
 
-Estamos passando por um processo de software selection para a nossa Device Farm, em função da renovação da licença do BrowserStack neste ano.
+📝 Feedback de Entrevista: Candidata QA (Pleno)
 
-Para termos uma decisão mais objetiva e baseada no uso real da ferramenta, estamos coletando o feedback de quem utiliza o App Live no dia a dia.
+Em suma, nossa recomendação é uma aprovação com ressalvas.
+✅ Por que apostar nela?
+•	Perfil comportamental excelente, muito alinhado ao time de Canais. Comunicação clara, objetiva e postura colaborativa.
+•	Demonstra domínio dos fundamentos (levantamento de cenários, critérios de aceite, priorização por risco e evidência de defeitos), com boa maturidade na abordagem e comunicação de bugs.
+•	Embora não tenha experiência prévia com automação mobile, foi honesta sobre o nível atual, demonstrou abertura para aprender e se dispôs a executar o desafio técnico.
+⚠️ Pontos de Atenção (Ressalvas)
+•	Em alguns momentos, apresentou lacunas em conceitos mais teóricos de QA, com foco maior na execução.
+•	Vai precisar de acompanhamento mais próximo do QA Lead, principalmente para consolidação dos fundamentos de processo de QA (estratégia de testes, definição de cenários, critérios de cobertura, análise de risco e rastreabilidade) e para desenvolvimento em automação mobile, visto que ainda não possui experiência prática nesse contexto.
+💡 Conclusão
+Comparada a outros perfis avaliados recentemente, está acima da média (estimamos ~70% de aderência), mas não é uma candidata “pronta” para o perfil no curto prazo sem apoio inicial
 
-Poderia, por gentileza, responder a essa pesquisa rápida? Leva menos de 3 minutos:
-👉 [LINK DO FORMULÁRIO]
+Decisão:
+Considerando que o escopo está fechado com a consultoria CI&T e que o perfil necessário no momento é Pleno (limitado pelo rate), seguimos com a aposta para fechar uma das vagas agora, ou preferem aguardar mais candidatos para termos um comparativo antes de bater o martelo?

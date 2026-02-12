@@ -1,5 +1,1 @@
-Beleza! Do nosso lado, também preferimos ter 100% de certeza do candidato, e nesse caso isso pesa ainda mais pelo custo do investimento na CI&T.
-
-Trouxemos esse retorno justamente para alinhar expectativa, prazo e a severidade do perfil que vocês precisam agora. A ideia foi dar visibilidade do cenário para que a decisão não impacte negativamente nem o cronograma de alocação, nem a assertividade da contratação.
-
-Já alinhei com o Bruno para acelerarmos a triagem de mais candidatos e, assim, conseguirmos conciliar a urgência do prazo com a segurança na decisão.
+A candidata demonstrou bom fit comportamental e domínio dos processos básicos de QA, mas apresentou lacunas em conceitos teóricos, com foco maior na execução. Não possui experiência com automação mobile, mas reforçamos que isso não é um critério eliminatório. O ponto central é que, para atender à exigência de qualidade dos nossos processos, seria necessário um acompanhamento próximo para consolidar fundamentos de qualidade internos. Considerando o prazo e a necessidade de um perfil pronto, optamos por expandir a busca por outros candidatos que atendam ao escopo com mais segurança.

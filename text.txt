@@ -1,1 +1,8 @@
-Bom dia, [Fulano], tudo bem? Estou entrando em contato para solicitar seu auxílio em uma questão importante. Estamos conduzindo um processo de software selection para device farm devido à renovação da licença do BrowserStack. Para tomarmos uma decisão embasada, gostaríamos de saber quais funcionalidades do App Live você mais utiliza, quais seriam indispensáveis caso o fornecedor fosse trocado e se hoje há algum problema no uso da ferramenta. Agradecemos antecipadamente por sua colaboração!
+Olá, bom dia, [Nome], tudo bem?
+
+Estamos passando por um processo de software selection para a nossa Device Farm, em função da renovação da licença do BrowserStack neste ano.
+
+Para termos uma decisão mais objetiva e baseada no uso real da ferramenta, estamos coletando o feedback de quem utiliza o App Live no dia a dia.
+
+Poderia, por gentileza, responder a essa pesquisa rápida? Leva menos de 3 minutos:
+👉 [LINK DO FORMULÁRIO]

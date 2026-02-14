@@ -1,1 +1,21 @@
-A candidata demonstrou bom fit comportamental e domínio dos processos básicos de QA, mas apresentou lacunas em conceitos teóricos, com foco maior na execução. Não possui experiência com automação mobile, mas reforçamos que isso não é um critério eliminatório. O ponto central é que, para atender à exigência de qualidade dos nossos processos, seria necessário um acompanhamento próximo para consolidar fundamentos de qualidade internos. Considerando o prazo e a necessidade de um perfil pronto, optamos por expandir a busca por outros candidatos que atendam ao escopo com mais segurança.
+Em 2025, atuei fortemente na reestruturação dos processos de Qualidade para atender às novas demandas de advisory, do escritório de arquitetura e da operação como um todo. Contribuí para dar mais clareza aos fluxos, fortalecer a governança e apoiar as tribos no dia a dia, tornando a atuação de QA mais organizada, previsível e integrada às decisões técnicas e de produto.
+
+Como resultado desse trabalho, minhas principais entregas foram:
+
+Estruturação do modelo de advisory e controle de qualidade para as tribos.
+
+Definição e consolidação da Política de Qualidade do CE de Qualidade.
+
+Criação e aplicação do checklist de acessibilidade.
+
+Estruturação do Cockpit de Qualidade (métricas e indicadores).
+
+Apoio ao escritório de arquitetura em decisões técnicas e avaliações de soluções.
+
+Condução do processo de software selection da Device Farm (BrowserStack).
+
+Apoio à migração de stack de automação (Katalon → WebdriverIO) e revisão do modelo de execução em VDI.
+
+Planejamento e condução de treinamentos técnicos para o time de QA.
+
+Evolão das práticas de automação mobile e de APIs como suporte aos processos.

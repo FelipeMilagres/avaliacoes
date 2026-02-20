@@ -1,8 +1,247 @@
-Descrição:
-Levantar e documentar os requisitos técnicos, funcionais e de segurança para integração da futura ferramenta de gestão de testes com os agentes de IA corporativos, considerando casos de uso como: refinamento automático de cenários, geração de código de testes a partir de cenários, entendimento de repositórios (onboarding técnico) e sugestão de pontos de início para automação. Garantir viabilidade técnica, compliance e critérios objetivos para o processo de Software Selection.
+Levantamento de Requisitos – Integração da Ferramenta de Gestão de Testes com Agentes de IA
 
-Objetivo da tarefa:
-Garantir que a ferramenta de gestão de testes selecionada seja tecnicamente integrável ao ecossistema de IA do banco, esteja aderente às diretrizes de segurança/compliance e suporte os casos de uso estratégicos de QA com IA.
- 
-Entregável:
-Documento de Requisitos de Integração com os agentes de IA
+Projeto: Software Selection – Ferramenta de Gestão de Testes
+Versão: 1.1
+Status: Em validação
+Responsável: [Seu nome]
+Data: [Data]
+
+1. Objetivo do Documento
+
+Consolidar os requisitos técnicos, funcionais, de segurança e governança necessários para a integração da futura ferramenta de gestão de testes com os agentes de IA corporativos, viabilizando automação real de processos de QA, orquestração de testes automatizados e rastreabilidade ponta a ponta entre demanda, teste e execução.
+
+2. Contexto e Escopo
+
+Os agentes de IA corporativos atuarão como orquestradores do processo de Qualidade, automatizando atividades operacionais na ferramenta de gestão de testes e no pipeline de automação, reduzindo esforço manual e aumentando a velocidade de feedback.
+
+A integração deverá suportar dois modos de operação:
+
+Modo assistido: IA sugere e o humano valida.
+
+Modo automatizado: IA executa ações diretamente via integrações.
+
+O escopo contempla:
+
+Criação, manutenção e versionamento de cenários de testes (BDD/ATDD)
+
+Criação e manutenção de suítes de testes
+
+Leitura e interpretação de histórias do Kanbanize para geração automática de cenários e suítes
+
+Orquestração e execução de testes integrados por tags e funcionalidades
+
+Execução de testes automatizados marcados na ferramenta por meio de integração com GitLab CI/CD
+
+Coleta de resultados e evidências e atualização automática de status
+
+Rastreabilidade entre demanda, cenário, suíte e execução
+
+Integração técnica via API REST e/ou MCP
+
+3. Requisitos Funcionais
+3.1 Criação e manutenção de cenários de teste
+
+A ferramenta deve permitir que os agentes de IA:
+
+Criem, atualizem e versionem cenários de teste
+
+Padronizem escrita em BDD/ATDD
+
+Identifiquem duplicidades e lacunas de cobertura
+
+Vinculem cenários às demandas do Kanbanize
+
+3.2 Leitura e análise de cenários existentes
+
+A ferramenta deve permitir:
+
+Consulta de cenários por tags, funcionalidades, suítes, produto e squad
+
+Análise de cobertura por funcionalidade
+
+Identificação de cenários impactados por mudanças
+
+3.3 Criação e manutenção de suítes de testes
+
+A ferramenta deve permitir:
+
+Criação automática de suítes
+
+Organização por release, criticidade, funcionalidade e tags
+
+Reorganização dinâmica de suítes existentes
+
+3.4 Orquestração e execução de testes
+
+A ferramenta deve permitir:
+
+Disparo de execuções integradas por tags, funcionalidades e suítes
+
+Consulta de status e resultados
+
+Registro de evidências e rastreabilidade com a demanda
+
+3.5 Integração com Kanbanize
+
+A ferramenta deve permitir que os agentes:
+
+Leiam histórias e critérios de aceite
+
+Gerem cenários e suítes automaticamente
+
+Mantenham vínculo entre card, cenário, suíte e execução
+
+3.6 Orquestração de testes automatizados via GitLab CI/CD
+
+A ferramenta deve permitir que o agente:
+
+Identifique cenários marcados como automatizados
+
+Dispare pipelines no GitLab via API
+
+Passe parâmetros de execução (tags, suíte, ambiente)
+
+Consulte status do pipeline
+
+Colete artefatos e evidências
+
+Atualize automaticamente o status dos cenários
+
+4. Requisitos Técnicos de Integração
+4.1 Obrigatórios
+
+API REST pública e documentada e/ou suporte a MCP
+
+Autenticação segura (OAuth2, token, service account)
+
+Endpoints para:
+
+criar/editar/excluir/listar cenários
+
+criar/editar/excluir/listar suítes
+
+disparar execuções
+
+consultar status e evidências
+
+Webhooks para eventos de execução
+
+Integração programática com GitLab CI/CD
+
+Atualização automática de status e anexação de evidências
+
+Ferramentas sem capacidade de criação e execução via API/MCP devem ser consideradas não aderentes.
+
+4.2 Desejáveis
+
+Integração nativa com CI/CD
+
+Integração com versionamento (Git)
+
+Metadados de automação por cenário
+
+Exportação de métricas via API
+
+5. Requisitos de Segurança e Governança
+
+Conta técnica dedicada para o agente (ferramenta de testes e GitLab)
+
+Controle de acesso por perfil (RBAC)
+
+Logs e auditoria de ações do agente
+
+Possibilidade de rollback
+
+Conformidade com LGPD
+
+Restrição de dados sensíveis
+
+Segregação de ambientes
+
+Rate limit e controle de abuso de pipelines
+
+Mecanismo de aprovação humana para ações críticas (modo assistido)
+
+6. Observabilidade e Métricas
+
+Logs de integração
+
+Métricas de:
+
+cenários criados pela IA
+
+suítes criadas pela IA
+
+execuções disparadas pela IA
+
+Métricas de valor:
+
+redução de esforço manual
+
+tempo de feedback
+
+Monitoramento de falhas de integração
+
+7. Critérios para Software Selection
+
+Possui API REST pública e documentada?
+
+Possui suporte a MCP?
+
+Permite criar/manter cenários via API?
+
+Permite criar/manter suítes via API?
+
+Permite disparar execuções por tags e funcionalidades?
+
+Permite atualização de status e anexação de evidências via API?
+
+Possui RBAC e auditoria?
+
+Integra com Kanbanize?
+
+Integra com GitLab CI/CD?
+
+Suporta BDD/ATDD de forma estruturada?
+
+Possui segregação de ambientes?
+
+8. Riscos e Dependências
+
+Dependência de APIs da ferramenta selecionada
+
+Dependência de disponibilidade do GitLab
+
+Risco de vendor lock-in em soluções com APIs restritas
+
+Impacto em custos de pipeline
+
+Risco de execução indevida em ambientes sensíveis
+
+9. Premissas
+
+Agentes de IA serão responsáveis pela automação operacional
+
+Requisitos de integração são critérios obrigatórios de seleção
+
+Integração com IA é parte estratégica da evolução da Qualidade
+
+10. Próximos Passos
+
+Validar documento com Arquitetura, Segurança e responsáveis pelos agentes de IA
+
+Incorporar critérios no processo de Software Selection
+
+Utilizar este documento como critério de desclassificação técnica
+
+11. Incrementos Estratégicos Recomendados
+
+Sandbox para testes da integração com IA
+
+Feature flag para ativar/desativar automações por squad
+
+Plano de contingência para indisponibilidade de integração
+
+SLA de API do fornecedor
+
+Política de governança para automações da IA

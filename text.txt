@@ -1,0 +1,8 @@
+Descrição:
+Levantar e documentar os requisitos técnicos, funcionais e de segurança para integração da futura ferramenta de gestão de testes com os agentes de IA corporativos, considerando casos de uso como: refinamento automático de cenários, geração de código de testes a partir de cenários, entendimento de repositórios (onboarding técnico) e sugestão de pontos de início para automação. Garantir viabilidade técnica, compliance e critérios objetivos para o processo de Software Selection.
+
+Objetivo da tarefa:
+Garantir que a ferramenta de gestão de testes selecionada seja tecnicamente integrável ao ecossistema de IA do banco, esteja aderente às diretrizes de segurança/compliance e suporte os casos de uso estratégicos de QA com IA.
+ 
+Entregável:
+Documento de Requisitos de Integração com os agentes de IA

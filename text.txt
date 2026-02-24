@@ -1,7 +1,5 @@
-Considerando os dois desafios (API e Mobile), a avaliação consolidada é a seguinte:
+A candidata desenvolveu o desafio utilizando Java 17/21, JUnit 5 e RestAssured, com arquitetura organizada em camadas (client, specs, fixtures, helpers e suporte), DTO tipado, validação de contrato via JSON Schema, geração dinâmica de dados com DataFaker e seed automatizado de massa.
 
-No desafio de API, o candidato demonstrou boa organização estrutural, uso adequado de RestAssured + JUnit 5, separação entre testes e utilitários, externalização de payloads e validação de contrato via JSON Schema. A solução executa com sucesso, evidencia entendimento de arquitetura REST e possui integração com CI. Há oportunidades de melhoria em cobertura de cenários negativos e geração efetiva de relatório de cobertura, mas tecnicamente o desafio foi satisfatório.
+A suíte contempla todos os endpoints exigidos (GET, POST, PUT e DELETE), cobrindo cenários positivos e negativos relevantes, incluindo validações de regra de negócio e tratamento de erros. A execução apresentou 30 testes, 0 falhas e build bem-sucedido, além de integração com pipeline CI e geração de relatórios.
 
-No desafio Mobile, embora o candidato tenha demonstrado entendimento conceitual de automação com Robot Framework + Appium + Allure e estruturado o projeto com Page Object e pipeline CI, a solução não executa de forma estável em Android nem em iOS. Foram identificadas falhas estruturais relevantes (paths incorretos, conflitos de keywords, resources inexistentes e erro de inicialização no iOS), comprometendo a reprodutibilidade da execução, critério essencial para automação.
-
-Conclusão: apesar do bom desempenho no desafio de API, a entrega do desafio mobile não atende ao critério mínimo de execução funcional e estabilidade. Considerando a avaliação conjunta dos dois desafios, o candidato não foi aprovado para a entrevista técnica.
+Conclusão: o desafio foi aprovado, demonstrando bom domínio de automação de API, arquitetura REST e boas práticas de organização e manutenção de código.

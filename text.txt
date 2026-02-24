@@ -1,0 +1,3 @@
+O candidato desenvolveu o desafio utilizando RestAssured + JUnit 5, com boa organização estrutural, separação entre testes e utilitários e uso consistente de validação de contrato via JSON Schema. A solução demonstra entendimento da arquitetura REST, uso adequado dos métodos HTTP e integração com pipeline de CI via GitHub Actions. Todos os testes implementados executaram com sucesso, com gerenciamento de dados dinâmicos e externalização de payloads e schemas.
+
+Como pontos de atenção, a cobertura não atinge 100% da API, pois há exploração limitada de cenários negativos e de autorização. Além disso, o relatório de cobertura (JaCoCo) não foi efetivamente gerado e a documentação é superficial quanto à estratégia e abrangência dos testes.

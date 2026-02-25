@@ -1,5 +1,0 @@
-No desafio de API, a solução apresentou boa estrutura, uso adequado do framework e execução estável, porém não atingiu integralmente os critérios de cobertura e robustez esperados conforme a heurística de avaliação. Por isso, foi considerado aprovado com ressalvas.
-
-Já no desafio mobile, embora a arquitetura tenha seguido o padrão Page Object e os 10 cenários tenham sido implementados, a execução apresentou falhas em cenários críticos (login com sucesso, cadastro, dropdown e swipe), erros técnicos como problemas de importação por inconsistência no nome de arquivos e ausência de validação comprovada em iOS e BrowserStack. Além disso, houve necessidade de ajustes para conseguir rodar parcialmente os testes, o que indica falta de validação e refinamento antes da entrega.
-
-Considerando que um dos desafios não atingiu o nível mínimo de estabilidade e maturidade técnica esperado, e que o outro foi aprovado apenas com ressalvas, o candidato não avançará para a próxima etapa do processo seletivo.

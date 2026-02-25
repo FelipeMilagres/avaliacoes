@@ -1,0 +1,5 @@
+O desafio foi desenvolvido com Playwright para API de forma adequada, utilizando geração dinâmica de dados com Faker e integração funcional com GitLab CI. A suíte cobre corretamente o fluxo principal de CRUD e autenticação via. Todos os testes executaram com sucesso e o projeto está organizado e executável.
+
+Por outro lado, apesar de atender bem ao fluxo principal, a cobertura não alcança o escopo solicitado no enunciado. Faltam cenários negativos mais robustos, como validações de campos obrigatórios, requisições sem token e exploração mais ampla de falhas.
+
+De forma geral, o desafio demonstra boa base técnica e entendimento de REST e automação de API, mas ainda com espaço para maior profundidade e criticidade na cobertura de testes.

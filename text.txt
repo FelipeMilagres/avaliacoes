@@ -1,0 +1,7 @@
+O candidato optou por utilizar Postman, integrando os testes a uma pipeline no GitHub Actions. A escolha do framework é adequada para o desafio proposto e demonstra conhecimento básico de automação de API, estrutura REST e integração contínua. Também houve tentativa de utilização de dados dinâmicos com faker, o que indica preocupação inicial com massa de teste.
+
+No entanto, a execução do projeto apresentou falhas de assertions, resultando em build quebrado. Os testes não se sustentam de forma estável, há dependência de dados fixos na collection, ausência de autenticação, falta de validação de contrato (schema) e cobertura limitada de cenários negativos. A geração de dados dinâmica não está integrada de fato à execução da collection, comprometendo repetibilidade e confiabilidade. Além disso, não há geração de relatórios como artefato da pipeline nem documentação estruturada orientando execução e cobertura.
+
+De forma geral, a solução demonstra entendimento básico da ferramenta e da arquitetura REST, porém não atende aos critérios estruturais do checklist, principalmente em robustez, gerenciamento de dados, cobertura de regras de negócio e estabilidade da automação.
+
+Resultado: Reprovado.

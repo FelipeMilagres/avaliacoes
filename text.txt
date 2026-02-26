@@ -1,5 +1,12 @@
-O desafio foi desenvolvido com Playwright para API de forma adequada, utilizando geração dinâmica de dados com Faker e integração funcional com GitLab CI. A suíte cobre corretamente o fluxo principal de CRUD e autenticação via. Todos os testes executaram com sucesso e o projeto está organizado e executável.
+O desafio foi desenvolvido com WebdriverIO + Appium. A estrutura do framework está organizada e demonstra entendimento das ferramentas e do padrão de automação mobile.
 
-Por outro lado, apesar de atender bem ao fluxo principal, a cobertura não alcança o escopo solicitado no enunciado. Faltam cenários negativos mais robustos, como validações de campos obrigatórios, requisições sem token e exploração mais ampla de falhas.
+No entanto, a execução não apresentou estabilidade: houve falhas nos testes de login, problema técnico na implementação do swipe (incompatível com o padrão W3C do Appium 2), seletores incorretos e ausência de sincronização adequada. Além disso, a configuração está restrita ao Android e a pipeline não está totalmente alinhada aos scripts do projeto.
 
-De forma geral, o desafio demonstra boa base técnica e entendimento de REST e automação de API, mas ainda com espaço para maior profundidade e criticidade na cobertura de testes.
+Em resumo, o framework está estruturado corretamente, mas a implementação não atinge o nível de robustez e confiabilidade esperado.
+
+
+Considerando os dois desafios em conjunto, o projeto de API apresentou uma boa base técnica, com estrutura organizada e execução estável, embora com cobertura limitada em cenários negativos e menor profundidade de validação. Já no desafio mobile, apesar da estrutura do framework estar adequada, a execução não foi estável, houve falhas técnicas relevantes (implementação incorreta de swipe, seletores inconsistentes e problemas na validação de login), além de não atender integralmente aos requisitos do enunciado.
+
+Diante disso, o nível de robustez e consistência técnica esperado para avançar no processo não foi plenamente demonstrado. Portanto, o candidato não foi aprovado para a entrevista técnica.
+
+

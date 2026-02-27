@@ -1,9 +1,24 @@
-O candidato apresentou uma automação de API utilizando Postman + Newman integrada ao GitHub Actions, cobrindo os principais fluxos de CRUD, autenticação via JWT, cenários negativos relevantes (4xx) e validação de rate limit. A collection está organizada por domínios funcionais, há encadeamento correto de variáveis (token e userId), geração de relatório HTML como artefato da pipeline e documentação clara com instruções de execução.
 
-Como pontos positivos, destacam-se o bom entendimento de arquitetura REST, uso adequado de métodos HTTP e status codes, validação de regras de negócio e integração contínua funcional com geração de evidências.
+O candidato apresentou um projeto com boa organização estrutural, utilizando WebdriverIO v9, Appium 3, Mocha, Allure e integração com BrowserStack, aplicando o padrão Page Object e separação entre specs e pageobjects. A documentação é detalhada e demonstra preocupação com apresentação e estrutura.
 
-Como pontos de melhoria, a suíte apresentou falhas em assertions na execução, não garante uma cobertura da API esperada, faltaram alguns pontos adicionais de cobertura de testes (validações mais profundas de contratos e cenários complementares), não há separação estruturada de massa de dados (payloads externos/data-driven), há uso pontual de ID fixo e a pipeline está configurada para não falhar mesmo diante de erro, reduzindo o rigor do controle de qualidade.
+Entretanto, durante a avaliação técnica, o projeto não executou corretamente em ambiente limpo. Foi necessário adicionar manualmente a dependência @wdio/cli para viabilizar a execução, o que indica falha de configuração básica e ausência de validação final do setup. Além disso, a automação não executa localmente com Appium, está restrita ao Android no BrowserStack (sem suporte configurado para iOS), não atende ao requisito mínimo de 10 cenários e não cobre todas as funcionalidades principais do app (Swipe e Drag não possuem testes). Também não há pipeline funcional configurada para executar os testes automaticamente.
 
-De forma geral, o desafio demonstra boa base técnica e entendimento consistente de automação de API, porém com lacunas em robustez e cobertura.
+Considerando que a vaga é sênior, espera-se entrega totalmente funcional, reprodutível e aderente aos requisitos do desafio. As inconsistências de setup, a limitação de execução e a falha em teste crítico indicam falta de validação final e menor rigor técnico do que o esperado para o nível.
 
-Resultado: Aprovado com ressalvas.
+Resultado: Reprovado.
+
+
+
+
+
+
+
+
+Considerando a avaliação conjunta dos desafios de API e Mobile, o candidato demonstrou organização estrutural e clareza na documentação.
+
+No desafio de API, a solução apresentou cobertura de cenários positivos e negativos, validações adequadas de status codes e regras de negócio, além de integração com pipeline e geração de relatório. Entretanto, foram identificados pontos pendentes relacionados à cobertura total dos fluxos e alguns ajustes de robustez. Esses pontos não comprometeram a execução geral, mas impediram uma aprovação plena, resultando em aprovação com ressalvas para o desafio de API.
+
+Já no desafio mobile, foram identificadas inconsistências mais relevantes: ausência da dependência @wdio/cli no projeto (sendo necessário ajuste manual para execução), falha em execução real de um dos cenários, não atendimento ao requisito mínimo de cenários, ausência de cobertura para todas as funcionalidades principais (Swipe e Drag), inexistência de execução local com Appium, suporte restrito apenas a Android no BrowserStack (sem configuração para iOS) e ausência de pipeline funcional para automação contínua. Considerando que a avaliação é para nível sênior, espera-se entrega completamente reprodutível, estável e aderente aos requisitos definidos.
+
+Dessa forma, embora o desafio de API tenha resultado em aprovação com ressalvas, o conjunto da avaliação (API + Mobile) não atingiu o nível de consistência técnica esperado para avançar para entrevista técnica.
+

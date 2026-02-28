@@ -1,0 +1,9 @@
+O candidato implementou a automação utilizando Robot Framework com RequestsLibrary, organizando a solução com arquivo de resource, uso de payload externo em JSON e aplicação correta dos métodos HTTP no fluxo de CRUD. A estrutura demonstra entendimento básico da arquitetura REST e execução funcional da API.
+
+Entretanto, a cobertura mínima de testes esperada não foi atingida. A solução possui apenas um cenário concentrando todo o fluxo, não contempla casos negativos relevantes e apresenta validações superficiais das respostas.
+
+Além disso, o código foi entregue com conflito de merge não resolvido dentro do arquivo usuario.robot. Nesse estado, o projeto não executaria, pois o Robot Framework não consegue interpretar marcações de conflito como <<<<<<< HEAD, gerando erro de parsing antes mesmo da execução dos testes. Esse ponto é crítico e evidencia ausência de validação final da entrega.
+
+A solução atende ao básico funcional, mas não demonstra profundidade técnica, robustez nem qualidade de entrega compatíveis com o esperado para o desafio.
+
+Resultado: Reprovado.

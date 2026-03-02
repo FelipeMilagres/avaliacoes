@@ -303,3 +303,19 @@ As funcionalidades mais valorizadas pelos usuários estão relacionadas ao acess
 Entretanto, foram identificados pontos relevantes de melhoria relacionados principalmente a performance, estabilidade e conectividade.
 
 Esses fatores devem ser considerados no processo de Software Selection, visando a escolha de uma solução que ofereça maior confiabilidade, melhor desempenho e maior aderência às necessidades dos times de desenvolvimento e qualidade.
+
+
+
+
+Dear Himanshu,
+
+Thank you for enabling the access.
+
+I was able to successfully access the account and have already sent invitations to the rest of the team so they can join the workspace.
+
+We will start the validation activities as part of the POC. If we encounter any questions or technical challenges during this process, we will reach out to Naved for support.
+
+Thanks again for the support.
+
+Best regards,
+Felipe

@@ -1,0 +1,305 @@
+1. Contexto
+
+Com o objetivo de avaliar a adequação da solução atual utilizada para testes em dispositivos reais, o Centro de Excelência de Qualidade conduziu uma pesquisa interna de uso e satisfação da ferramenta de Device Farm atualmente utilizada pelos times de QA.
+
+A pesquisa teve como finalidade compreender:
+
+a frequência de utilização da ferramenta pelos times;
+
+as funcionalidades mais utilizadas no dia a dia;
+
+os recursos considerados essenciais para a execução dos testes;
+
+as principais limitações e dificuldades enfrentadas pelos usuários;
+
+o nível geral de satisfação com a solução atual.
+
+Os resultados obtidos servem como insumo para o levantamento de requisitos funcionais e não funcionais, apoiando o processo de Software Selection de uma solução de Device Farm que atenda às necessidades atuais e futuras dos times de desenvolvimento e qualidade.
+
+2. Metodologia da Pesquisa
+
+A coleta de dados foi realizada por meio de um formulário estruturado, disponibilizado aos profissionais que utilizam a ferramenta no contexto de testes mobile.
+
+Foram coletadas 22 respostas, provenientes de profissionais envolvidos diretamente nas atividades de validação de aplicações mobile.
+
+O questionário contemplou os seguintes aspectos:
+
+Frequência de utilização da ferramenta
+
+Funcionalidades mais utilizadas no dia a dia
+
+Funcionalidades consideradas essenciais em caso de substituição da ferramenta atual
+
+Problemas ou limitações enfrentadas durante o uso
+
+Avaliação geral da solução atualmente adotada
+
+As respostas foram analisadas de forma consolidada, permitindo identificar padrões de uso, necessidades prioritárias e pontos de melhoria.
+
+A taxa de participação obtida foi considerada representativa do público que utiliza a ferramenta no contexto de testes mobile.
+
+3. Frequência de Utilização da Ferramenta
+
+A análise das respostas indica que a ferramenta é utilizada com alta frequência pelos times de QA, sendo parte integrante do fluxo de testes mobile.
+
+Considerando o total de 22 respondentes, a distribuição observada foi:
+
+Frequência de uso	Quantidade	Percentual
+Diariamente	13	59%
+Algumas vezes por semana	8	36%
+Raramente	1	5%
+
+Observa-se que 95% dos respondentes utilizam a ferramenta ao menos semanalmente, reforçando seu papel crítico no processo de validação de aplicações mobile.
+
+4. Funcionalidades Mais Utilizadas
+
+A análise das respostas permitiu identificar as funcionalidades mais utilizadas pelos profissionais durante a execução dos testes.
+
+Visão Consolidada
+Funcionalidade	Ocorrência aproximada	Percentual
+Testes em múltiplos dispositivos	20	~91%
+Instalação de aplicativos	19	~86%
+Captura de screenshot	17	~77%
+Gravação de sessão	16	~73%
+Testes de acessibilidade	15	~68%
+Monitoramento de rede	14	~64%
+UI Inspector / Appium Inspector	10	~45%
+
+Os resultados indicam que os recursos mais utilizados estão diretamente relacionados à execução de testes em dispositivos reais, instalação de builds e coleta de evidências de teste.
+
+4.1 Testes em múltiplos dispositivos
+
+A possibilidade de executar testes em diferentes modelos de dispositivos foi a funcionalidade mais citada pelos respondentes.
+
+Esse recurso é essencial para validar o comportamento da aplicação em diferentes combinações de hardware, sistema operacional e tamanhos de tela.
+
+4.2 Instalação de aplicativos
+
+A instalação de novas versões do aplicativo nos dispositivos é uma atividade recorrente durante o ciclo de testes.
+
+Os principais métodos utilizados incluem:
+
+upload manual de builds (APK / IPA)
+
+integração com TestFlight
+
+utilização de ferramentas de distribuição como App Tester
+
+Essa funcionalidade é fundamental para a validação contínua de novas versões da aplicação.
+
+4.3 Captura de evidências
+
+Os recursos de captura de evidências são amplamente utilizados para registro de defeitos e documentação de testes.
+
+Entre os principais recursos utilizados destacam-se:
+
+captura de screenshots
+
+gravação de sessões de teste
+
+Essas evidências são utilizadas para comunicação de problemas com as equipes de desenvolvimento.
+
+4.4 Testes de acessibilidade
+
+Alguns respondentes relataram utilizar a ferramenta para validação de requisitos de acessibilidade, incluindo:
+
+utilização de screen reader
+
+ajustes no tamanho de fonte
+
+4.5 Monitoramento de rede
+
+O recurso de monitoramento de tráfego de rede (Network Tracking) também foi mencionado como importante para análise de requisições realizadas pela aplicação durante os testes.
+
+Esse recurso auxilia na identificação de problemas relacionados à comunicação com APIs e serviços backend.
+
+4.6 Inspeção de elementos da interface
+
+Alguns usuários utilizam a ferramenta para inspecionar elementos da interface, por meio de recursos como UI Inspector ou Appium Inspector, principalmente como apoio à automação de testes mobile.
+
+5. Funcionalidades Essenciais
+
+Quando questionados sobre quais funcionalidades não poderiam faltar em uma eventual substituição da ferramenta atual, os respondentes destacaram principalmente:
+
+execução de testes em dispositivos reais Android e iOS
+
+acesso a múltiplos modelos de dispositivos
+
+instalação de builds via upload ou integração com stores
+
+captura de screenshots
+
+gravação de sessões de teste
+
+suporte a testes de acessibilidade
+
+monitoramento de rede
+
+recursos de inspeção de elementos da interface
+
+simulação de condições de rede
+
+suporte a alteração de idioma e localização
+
+Essas funcionalidades foram consideradas essenciais para a continuidade das atividades de teste mobile.
+
+6. Principais Problemas Identificados
+
+A análise das respostas também permitiu identificar alguns problemas recorrentes enfrentados pelos usuários.
+
+Visão consolidada
+Problema relatado	Ocorrência aproximada
+Lentidão da ferramenta	13 respostas
+Instabilidade ou travamento de dispositivos	7 respostas
+Problemas no monitoramento de rede	5 respostas
+Problemas de conectividade	4 respostas
+Problemas na instalação de builds	3 respostas
+
+Observa-se que a lentidão da ferramenta é o principal problema apontado, sendo mencionada em mais da metade das respostas.
+
+6.1 Problemas de performance
+
+O problema mais recorrente identificado foi relacionado à lentidão na interação com os dispositivos.
+
+Entre os principais relatos destacam-se:
+
+lentidão durante a interação com o dispositivo;
+
+degradação de performance ao utilizar múltiplos dispositivos simultaneamente;
+
+maior impacto observado em dispositivos iOS.
+
+6.2 Instabilidade das sessões
+
+Alguns usuários relataram episódios de:
+
+encerramento inesperado das sessões;
+
+travamento dos dispositivos;
+
+necessidade de reiniciar sessões de teste.
+
+6.3 Problemas no monitoramento de rede
+
+Também foram mencionadas dificuldades relacionadas ao recurso de monitoramento de rede, como:
+
+demora para ativação do recurso;
+
+falhas intermitentes no funcionamento.
+
+6.4 Problemas de conectividade
+
+Alguns respondentes relataram situações de:
+
+dificuldade para acessar dispositivos;
+
+instabilidades na conexão com os dispositivos.
+
+6.5 Problemas na instalação de builds
+
+Foram relatados casos de:
+
+lentidão no processo de instalação de builds;
+
+falhas ocasionais durante o processo de instalação.
+
+6.6 Problemas de interface e interação
+
+Também foram mencionadas dificuldades relacionadas à interação com o dispositivo, como:
+
+perda de foco da tela;
+
+necessidade de múltiplos cliques para execução de ações;
+
+travamentos ocasionais na interface.
+
+6.7 Limitações de infraestrutura
+
+Algumas limitações estruturais da solução atual também foram mencionadas, incluindo:
+
+ausência de acesso via VPN
+
+limitação de alguns modelos de dispositivos
+
+indisponibilidade de tablets para testes
+
+7. Avaliação Geral da Ferramenta
+
+A avaliação geral da ferramenta indica que, embora a solução atenda às necessidades básicas dos times de QA, existem oportunidades de melhoria.
+
+Avaliação	Quantidade	Percentual
+Boa	13	59%
+Regular	7	32%
+Ruim	2	9%
+
+Embora a maioria dos usuários considere a ferramenta adequada, observa-se que 41% das avaliações apontam algum nível de insatisfação, principalmente relacionado à performance e estabilidade.
+
+8. Requisitos para Seleção de uma Nova Solução
+
+Com base na análise das respostas da pesquisa, foram identificados requisitos que devem ser considerados no processo de avaliação e seleção de uma nova solução de Device Farm.
+
+8.1 Requisitos Funcionais
+
+A solução selecionada deverá possibilitar:
+
+execução de testes em dispositivos reais Android e iOS
+
+acesso a diversos modelos de dispositivos
+
+instalação de builds via upload ou integração com stores
+
+captura de screenshots
+
+gravação de sessões de teste
+
+inspeção de elementos da interface
+
+monitoramento de tráfego de rede
+
+simulação de condições de rede
+
+execução de testes de acessibilidade
+
+suporte a alteração de idioma e localização
+
+rotação de tela e suporte a diferentes resoluções
+
+8.2 Requisitos Não Funcionais
+
+A solução deverá atender aos seguintes critérios de qualidade:
+
+baixa latência na interação com dispositivos
+
+alta disponibilidade de dispositivos
+
+estabilidade das sessões de teste
+
+boa qualidade de streaming da tela
+
+instalação rápida e confiável de builds
+
+9. Principais Insights da Pesquisa
+
+A análise consolidada da pesquisa permite destacar os seguintes pontos principais:
+
+A ferramenta de Device Farm é utilizada com alta frequência, sendo utilizada diariamente por 59% dos respondentes.
+
+A funcionalidade mais crítica para os usuários é a execução de testes em múltiplos dispositivos, citada por aproximadamente 91% dos participantes.
+
+Recursos de instalação de builds, captura de evidências e gravação de sessão são amplamente utilizados no processo de validação.
+
+O principal ponto de insatisfação está relacionado à lentidão da ferramenta, mencionada em mais da metade das respostas.
+
+Problemas de instabilidade e conectividade também impactam a experiência dos usuários.
+
+A avaliação geral indica que, embora a ferramenta atenda às necessidades básicas, existem oportunidades relevantes de melhoria.
+
+10. Conclusão
+
+A pesquisa evidenciou que a solução de Device Farm é um componente essencial no processo de testes mobile, sendo amplamente utilizada pelos profissionais de QA.
+
+As funcionalidades mais valorizadas pelos usuários estão relacionadas ao acesso a dispositivos reais, instalação de builds e captura de evidências de testes.
+
+Entretanto, foram identificados pontos relevantes de melhoria relacionados principalmente a performance, estabilidade e conectividade.
+
+Esses fatores devem ser considerados no processo de Software Selection, visando a escolha de uma solução que ofereça maior confiabilidade, melhor desempenho e maior aderência às necessidades dos times de desenvolvimento e qualidade.

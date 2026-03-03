@@ -1,0 +1,170 @@
+Levantamento de Requisitos
+
+Projeto: [Tooling and Integration] [Software Selection] Device Farm
+Versão: 1.0
+Status: Em andamento
+Responsável: Mauricio SA Peixoto
+Data: 25/02/2026
+
+Requisitos de Acessibilidade
+1. Objetivo do Documento
+
+Consolidar os requisitos técnicos e funcionais de acessibilidade necessários para a seleção de uma nova ferramenta de Device Farm.
+
+O objetivo é garantir que a solução selecionada permita:
+
+a execução de testes manuais assistivos em dispositivos reais, e
+
+que a plataforma de gerenciamento da ferramenta seja plenamente acessível para colaboradores com deficiência.
+
+2. Contexto e Escopo
+
+Considerando que a Device Farm será a base para garantir a qualidade inclusiva para usuários com deficiência, a ferramenta deverá atender a dois pilares principais:
+
+Viabilização de Testes Assistivos
+Prover acesso remoto às tecnologias assistivas nativas dos sistemas operacionais móveis.
+
+Conformidade com padrões de Acessibilidade Web (WCAG nível AA)
+A interface web da plataforma deve ser livre de barreiras críticas, permitindo que profissionais que utilizam leitores de tela ou navegação via teclado possam operar a ferramenta de ponta a ponta.
+
+3. Requisitos Funcionais Eliminatórios (Ambiente de Dispositivo)
+
+As funcionalidades descritas abaixo são consideradas obrigatórias. A ausência de qualquer um desses recursos torna a ferramenta não aderente às necessidades do negócio.
+
+Simulação de Leitores de Tela Nativos (Android e iOS)
+
+A ferramenta deve permitir a execução de testes com leitores de tela nativos dos dispositivos móveis.
+
+Requisitos mínimos:
+
+Disponibilidade de leitores de tela
+
+A plataforma deve permitir ativar e utilizar:
+
+TalkBack (Android)
+
+VoiceOver (iOS)
+
+nos dispositivos reais disponíveis na nuvem.
+
+Retorno de áudio
+
+A ferramenta deve transmitir o áudio gerado pelo leitor de tela do dispositivo remoto para o computador do testador em tempo real, sem atrasos perceptíveis.
+
+Interação assistiva
+
+A plataforma deve permitir a execução de gestos de acessibilidade necessários para navegação assistiva, como:
+
+navegação por varredura (swipe)
+
+duplo toque para ativação
+
+navegação entre elementos acessíveis
+
+Essas interações devem ser reproduzidas através da interface da plataforma de acesso remoto.
+
+4. Requisitos de Acessibilidade da Plataforma (Interface Web)
+
+A interface web da plataforma de gerenciamento deve garantir uma experiência acessível, contemplando os seguintes critérios:
+
+Navegação via Teclado
+
+A interface deve permitir operabilidade completa sem o uso de mouse, incluindo:
+
+navegação consistente entre elementos interativos
+
+ordem lógica de foco
+
+indicadores de foco claramente visíveis
+
+Semântica e Rótulos (Labels)
+
+Todos os elementos interativos da interface devem possuir identificação acessível, incluindo:
+
+botões
+
+ícones de controle
+
+menus
+
+campos de formulário
+
+Devem seguir as boas práticas de WAI-ARIA e HTML semântico.
+
+Não devem existir botões ou controles puramente visuais (ex.: ícones) sem descrição textual para leitores de tela.
+
+Hierarquia de Conteúdo
+
+A interface deve utilizar corretamente a estrutura de títulos (H1 a H6) para garantir uma navegação estruturada por tecnologias assistivas.
+
+Compatibilidade com Tecnologias Assistivas
+
+A plataforma deve funcionar adequadamente com leitores de tela amplamente utilizados, como:
+
+NVDA (Windows)
+
+VoiceOver (macOS)
+
+5. Critérios para Software Selection
+Critério	Descrição	Importância
+Leitor de Tela Remoto	Permite ativar e ouvir TalkBack/VoiceOver em dispositivos reais na nuvem	Eliminatório
+Navegação via Teclado	A plataforma permite operação completa apenas pelo teclado	Obrigatório
+Rótulos e Semântica	Controles e menus possuem labels claros para leitores de tela	Obrigatório
+Indicação de Foco	O foco de teclado é visível e segue sequência lógica na interface	Obrigatório
+Hierarquia de Títulos	A plataforma utiliza corretamente tags de título para estruturar a página	Alto
+Suporte a atalhos para simular gestos	A interface permite traduzir comandos de teclado/mouse em gestos de acessibilidade móvel	Obrigatório
+6. Plano de Adequação da Ferramenta
+
+Caso a ferramenta atenda ao requisito eliminatório (leitores de tela remotos), mas apresente lacunas nos requisitos de acessibilidade da interface web, o fornecedor deverá apresentar um Plano de Ação Corretiva.
+
+Prioridade Crítica (Blockers)
+
+Correções relacionadas a barreiras que impedem o uso da ferramenta por profissionais com deficiência, como por exemplo:
+
+botões críticos sem label acessível
+
+menus sem foco navegável via teclado
+
+impossibilidade de navegação sem mouse
+
+Essas correções devem ser priorizadas no cronograma de implantação.
+
+Prioridade Alta / Média
+
+Melhorias relacionadas à experiência de uso, como:
+
+aprimoramento da semântica
+
+ajustes de contraste
+
+melhoria na hierarquia de títulos
+
+O fornecedor deverá se comprometer com a inclusão dessas melhorias no roadmap do produto.
+
+Auditoria e Suporte
+
+O fornecedor deverá disponibilizar:
+
+canal de suporte técnico para reporte de bugs de acessibilidade
+
+suporte a validações periódicas de conformidade
+
+7. Riscos e Dependências
+Latência de Áudio
+
+Atrasos na transmissão do áudio do leitor de tela podem impactar a precisão dos testes manuais de acessibilidade.
+
+Sistemas Proprietários
+
+Versões altamente customizadas de Android podem apresentar comportamentos distintos do TalkBack, exigindo validações prévias.
+
+8. Próximos Passos
+
+PoC Técnica
+Validar a transmissão de áudio e a execução de gestos de acessibilidade em um dispositivo real disponibilizado na nuvem do fornecedor.
+
+Teste de Acessibilidade da Plataforma
+Realizar uma sessão de navegação com leitores de tela (NVDA / VoiceOver) na interface web da ferramenta.
+
+Análise de Roadmap
+Caso sejam identificadas falhas não críticas, formalizar junto ao fornecedor o compromisso de correção através de cláusulas contratuais.

@@ -168,3 +168,41 @@ Realizar uma sessão de navegação com leitores de tela (NVDA / VoiceOver) na i
 
 Análise de Roadmap
 Caso sejam identificadas falhas não críticas, formalizar junto ao fornecedor o compromisso de correção através de cláusulas contratuais.
+
+
+=============================================================
+
+
+6. Plano de Adequação da Ferramenta
+
+Caso a ferramenta atenda ao requisito eliminatório (leitores de tela remotos), mas apresente lacunas nos requisitos de interface (Plataforma Web), o fornecedor deverá apresentar um Plano de Ação Corretiva.
+
+6.1 Prioridade Crítica (Blockers)
+
+Correções de barreiras que impedem o uso da ferramenta por profissionais com deficiência, como:
+
+botões críticos sem label
+
+falta de foco em menus
+
+Devem ser priorizadas no cronograma de implantação.
+
+6.2 Prioridade Alta / Média
+
+Melhorias relacionadas a:
+
+semântica
+
+contraste
+
+hierarquia de títulos
+
+O fornecedor deve se comprometer com a inclusão destes itens no roadmap do produto.
+
+6.3 Auditoria e Suporte
+
+O fornecedor deve disponibilizar:
+
+canal de suporte técnico para reporte de bugs de acessibilidade
+
+possibilidade de validações periódicas de conformidade

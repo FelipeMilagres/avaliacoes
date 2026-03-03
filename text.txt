@@ -1,29 +1,17 @@
-Realizar o levantamento e consolidação dos requisitos de acessibilidade necessários para avaliação e seleção da ferramenta de Gestão de Testes, considerando a utilização por profissionais que utilizam tecnologias assistivas.
+Realizar o levantamento e consolidação dos requisitos de acessibilidade necessários para avaliação e seleção de uma ferramenta de Device Farm, garantindo suporte à execução de testes assistivos em dispositivos móveis.
 
-A atividade tem como objetivo garantir que a ferramenta selecionada esteja alinhada com boas práticas de acessibilidade digital, possibilitando autonomia na criação, edição e execução de ciclos de testes, além da consulta de dashboards e relatórios.
+O objetivo é assegurar que a solução permita a utilização de tecnologias assistivas nativas, possibilitando a validação de acessibilidade em dispositivos reais e garantindo que profissionais que utilizam leitores de tela possam executar testes de forma adequada.
 
 O levantamento deverá considerar principalmente:
 
-Navegação completa da interface utilizando apenas teclado;
+Suporte à ativação e utilização de leitores de tela nativos nos dispositivos (TalkBack no Android e VoiceOver no iOS);
 
-Compatibilidade com leitores de tela (ex.: NVDA, VoiceOver);
+Transmissão do áudio do leitor de tela do dispositivo remoto para o ambiente do testador;
 
-Presença de labels e semântica adequada em formulários e componentes interativos;
+Possibilidade de executar gestos de navegação assistiva (ex.: swipe, duplo toque);
 
-Suporte a componentes dinâmicos acessíveis (modais, editores de texto, árvores de navegação, drag-and-drop);
+Estabilidade e latência adequada para execução de testes manuais de acessibilidade;
 
-Visualização acessível de dados e gráficos, evitando dependência exclusiva de cores;
+Compatibilidade com fluxos de validação utilizados pelo time de QA.
 
-Conformidade com diretrizes de acessibilidade baseadas na WCAG.
-
-Como resultado esperado, deverá ser produzido um documento consolidado de requisitos de acessibilidade, contendo:
-
-contexto e escopo da avaliação;
-
-requisitos funcionais e de interface;
-
-critérios para software selection;
-
-riscos e dependências identificados;
-
-próximos passos para validação com fornecedores.
+Como resultado esperado, deverá ser produzido um documento consolidado de requisitos de acessibilidade, contendo critérios técnicos e funcionais que serão utilizados no processo de avaliação e seleção da ferramenta de Device Farm.

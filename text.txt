@@ -1,158 +1,29 @@
-1. Objetivo do Documento
+Realizar o levantamento e consolidação dos requisitos de acessibilidade necessários para avaliação e seleção da ferramenta de Gestão de Testes, considerando a utilização por profissionais que utilizam tecnologias assistivas.
 
-Definir os requisitos de acessibilidade necessários para a seleção da ferramenta de Gestão de Testes, garantindo que a plataforma seja plenamente utilizável por profissionais com deficiência (PcD).
+A atividade tem como objetivo garantir que a ferramenta selecionada esteja alinhada com boas práticas de acessibilidade digital, possibilitando autonomia na criação, edição e execução de ciclos de testes, além da consulta de dashboards e relatórios.
 
-O foco está na conformidade com padrões internacionais de acessibilidade (WCAG) para permitir autonomia na criação, edição e monitoramento de ciclos de teste.
+O levantamento deverá considerar principalmente:
 
-2. Contexto e Escopo
+Navegação completa da interface utilizando apenas teclado;
 
-Como a ferramenta de gestão de testes será o hub central de trabalho do time de QA, é fundamental que ela ofereça um ambiente inclusivo.
+Compatibilidade com leitores de tela (ex.: NVDA, VoiceOver);
 
-Barreiras na criação de casos de teste ou na leitura de relatórios podem impedir ou dificultar o trabalho de profissionais com necessidades específicas.
+Presença de labels e semântica adequada em formulários e componentes interativos;
 
-O escopo deste levantamento contempla:
+Suporte a componentes dinâmicos acessíveis (modais, editores de texto, árvores de navegação, drag-and-drop);
 
-conformidade da interface web com leitores de tela e navegação por teclado;
+Visualização acessível de dados e gráficos, evitando dependência exclusiva de cores;
 
-acessibilidade em componentes dinâmicos (arrastar/soltar, modais, editores de texto);
+Conformidade com diretrizes de acessibilidade baseadas na WCAG.
 
-visualização acessível de dados e gráficos.
+Como resultado esperado, deverá ser produzido um documento consolidado de requisitos de acessibilidade, contendo:
 
-3. Requisitos Funcionais e de Interface (Plataforma Web)
-3.1 Navegação e Controle via Teclado
+contexto e escopo da avaliação;
 
-A plataforma deve permitir operabilidade completa utilizando apenas o teclado, incluindo ações como:
+requisitos funcionais e de interface;
 
-criar casos de teste;
+critérios para software selection;
 
-mover cards ou elementos de fluxo;
+riscos e dependências identificados;
 
-salvar alterações;
-
-disparar execuções de testes.
-
-Ordem de Tabulação
-
-O foco de navegação deve seguir uma sequência lógica e intuitiva, evitando “armadilhas de teclado”, especialmente em:
-
-janelas modais;
-
-menus suspensos;
-
-componentes dinâmicos.
-
-Atalhos de Teclado
-
-Caso a ferramenta possua atalhos de teclado, eles não devem entrar em conflito com atalhos nativos de leitores de tela, como:
-
-NVDA
-
-VoiceOver
-
-3.2 Compatibilidade com Leitores de Tela
-
-A interface deve ser plenamente navegável utilizando leitores de tela.
-
-Componentes Complexos
-
-Componentes ricos, como:
-
-árvores de casos de teste;
-
-gráficos;
-
-estruturas hierárquicas;
-
-devem possuir equivalentes textuais ou estados acessíveis que descrevam corretamente sua estrutura.
-
-Editores de Texto
-
-O campo de escrita de cenários de teste deve ser acessível, permitindo que o leitor de tela anuncie corretamente:
-
-posição do cursor;
-
-texto digitado;
-
-mudanças de contexto.
-
-Rótulos e Estados
-
-Botões ou indicadores de status não devem depender apenas de cor para transmitir informação.
-
-Eles devem possuir rótulos textuais claros interpretáveis por tecnologias assistivas.
-
-3.3 Visualização e Percepção
-Uso de Cores
-
-Nenhuma informação crítica (como resultado de um teste) deve depender exclusivamente de cor para ser compreendida.
-
-Deve existir suporte a:
-
-ícones com rótulos;
-
-padrões visuais distintos.
-
-Contraste
-
-Textos e elementos da interface (bordas de campos, ícones, indicadores) devem respeitar contraste mínimo de 4.5:1, conforme diretrizes WCAG.
-
-Hierarquia de Títulos
-
-As páginas devem utilizar corretamente a estrutura de títulos (H1 a H6) para permitir navegação estruturada por tecnologias assistivas.
-
-4. Requisitos de Funcionalidades Dinâmicas (Diferenciais)
-Alternativa ao Drag-and-Drop
-
-Caso a ferramenta utilize interações de arrastar e soltar para organização de suítes ou casos de teste, deve existir uma alternativa acessível via teclado.
-
-Notificações ao Vivo (ARIA-live)
-
-Alertas de sucesso ou erro (por exemplo, ao salvar alterações ou validar campos) devem ser anunciados automaticamente pelo leitor de tela, sem que o usuário perca o foco atual.
-
-5. Critérios para Software Selection
-Critério	Descrição	Importância
-Navegação via Teclado	É possível criar e executar um ciclo completo de teste usando apenas o teclado?	Obrigatório
-Rótulos de Status	Os status de elementos relevantes possuem identificação textual para leitores de tela?	Obrigatório
-Labels em Formulários	Todos os campos de cadastro de teste possuem <label> associado?	Obrigatório
-Alternativa ao Drag-and-Drop	Existe forma de organizar testes sem depender exclusivamente de movimentos de mouse?	Obrigatório
-Acessibilidade de Gráficos	Os dashboards possuem descrição ou tabela equivalente para os dados exibidos?	Desejável
-Foco Visível	O indicador de foco é claro e nunca desaparece durante a navegação?	Alto
-6. Plano de Adequação da Ferramenta
-
-Caso a ferramenta apresente falhas de acessibilidade, o fornecedor deverá seguir um plano de ajustes estruturado.
-
-Tratamento de Itens Impeditivos
-
-Problemas que bloqueiam totalmente o uso da ferramenta por pessoas com deficiência devem ser tratados como prioridade máxima, como por exemplo:
-
-botões que não funcionam via teclado;
-
-campos sem identificação para leitores de tela.
-
-Esses problemas devem ter correção imediata ou alternativa funcional.
-
-Tratamento de Itens de Médio e Baixo Impacto
-
-Problemas que dificultam a navegação, mas não impedem a conclusão da tarefa, devem ser:
-
-registrados;
-
-priorizados no planejamento de melhorias do fornecedor;
-
-incluídos em atualizações futuras da ferramenta.
-
-7. Riscos e Dependências
-
-Editores de Texto Complexos
-Ferramentas que utilizam editores customizados podem apresentar barreiras para leitores de tela.
-
-Gráficos de Terceiros
-Dependência de bibliotecas externas de gráficos que podem não suportar descrições adequadas de acessibilidade.
-
-8. Próximos Passos
-
-Realizar smoke test navegando na ferramenta apenas com teclado.
-
-Verificar a leitura dos principais dashboards utilizando o leitor de tela NVDA.
-
-Solicitar ao fornecedor evidências ou documentação sobre conformidade com padrões de acessibilidade.
+próximos passos para validação com fornecedores.

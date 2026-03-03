@@ -206,3 +206,80 @@ O fornecedor deve disponibilizar:
 canal de suporte técnico para reporte de bugs de acessibilidade
 
 possibilidade de validações periódicas de conformidade
+
+
+
+
+
+
+
+
+3. Requisitos Funcionais e Eliminatórios (Ambiente de Dispositivo)
+
+As funcionalidades descritas nesta seção são consideradas obrigatórias. A ausência de qualquer um desses recursos torna a ferramenta não aderente às necessidades do negócio.
+
+3.1 Suporte a Leitores de Tela Nativos (Android e iOS)
+
+A ferramenta deve permitir a utilização dos leitores de tela nativos nos dispositivos disponibilizados na nuvem, possibilitando a execução de testes manuais de acessibilidade em dispositivos reais.
+
+Leitores suportados:
+
+TalkBack (Android)
+
+VoiceOver (iOS)
+
+3.1.1 Retorno de Áudio
+
+A ferramenta deve transmitir o áudio gerado pelo leitor de tela do dispositivo remoto para o computador do testador em tempo real, sem atraso perceptível na resposta.
+
+3.1.2 Interação Assistiva
+
+A ferramenta deve permitir a execução das interações necessárias para navegação assistiva, incluindo:
+
+navegação por varredura (swipe)
+
+duplo toque para ativação
+
+Essas interações devem ser executadas por meio da interface de acesso remoto da plataforma.
+
+4. Requisitos de Acessibilidade da Plataforma (Interface Web)
+
+A interface web da plataforma de gerenciamento deve garantir uma experiência de uso sem barreiras críticas, permitindo que profissionais que utilizam tecnologias assistivas possam operar a ferramenta de forma completa.
+
+4.1 Navegação via Teclado
+
+A plataforma deve permitir operabilidade completa sem o uso de mouse, contemplando:
+
+navegação consistente entre elementos interativos
+
+ordem lógica de foco
+
+indicadores de foco claramente visíveis
+
+4.2 Semântica e Rótulos (Labels)
+
+Todos os elementos interativos da interface devem possuir identificação acessível, incluindo:
+
+botões
+
+ícones de controle
+
+menus
+
+campos de formulário
+
+Devem seguir boas práticas de WAI-ARIA e HTML semântico.
+
+Não devem existir controles puramente visuais (ex.: ícones) sem descrição textual adequada para leitores de tela.
+
+4.3 Hierarquia de Conteúdo
+
+A interface deve utilizar corretamente a estrutura de títulos (H1 a H6) para permitir navegação estruturada por tecnologias assistivas.
+
+4.4 Compatibilidade com Tecnologias Assistivas
+
+A plataforma deve apresentar funcionamento adequado com leitores de tela amplamente utilizados, incluindo:
+
+NVDA (Windows)
+
+VoiceOver (macOS)

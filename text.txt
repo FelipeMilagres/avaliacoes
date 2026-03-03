@@ -1,285 +1,158 @@
-Levantamento de Requisitos
-
-Projeto: [Tooling and Integration] [Software Selection] Device Farm
-Versão: 1.0
-Status: Em andamento
-Responsável: Mauricio SA Peixoto
-Data: 25/02/2026
-
-Requisitos de Acessibilidade
 1. Objetivo do Documento
 
-Consolidar os requisitos técnicos e funcionais de acessibilidade necessários para a seleção de uma nova ferramenta de Device Farm.
+Definir os requisitos de acessibilidade necessários para a seleção da ferramenta de Gestão de Testes, garantindo que a plataforma seja plenamente utilizável por profissionais com deficiência (PcD).
 
-O objetivo é garantir que a solução selecionada permita:
-
-a execução de testes manuais assistivos em dispositivos reais, e
-
-que a plataforma de gerenciamento da ferramenta seja plenamente acessível para colaboradores com deficiência.
+O foco está na conformidade com padrões internacionais de acessibilidade (WCAG) para permitir autonomia na criação, edição e monitoramento de ciclos de teste.
 
 2. Contexto e Escopo
 
-Considerando que a Device Farm será a base para garantir a qualidade inclusiva para usuários com deficiência, a ferramenta deverá atender a dois pilares principais:
+Como a ferramenta de gestão de testes será o hub central de trabalho do time de QA, é fundamental que ela ofereça um ambiente inclusivo.
 
-Viabilização de Testes Assistivos
-Prover acesso remoto às tecnologias assistivas nativas dos sistemas operacionais móveis.
+Barreiras na criação de casos de teste ou na leitura de relatórios podem impedir ou dificultar o trabalho de profissionais com necessidades específicas.
 
-Conformidade com padrões de Acessibilidade Web (WCAG nível AA)
-A interface web da plataforma deve ser livre de barreiras críticas, permitindo que profissionais que utilizam leitores de tela ou navegação via teclado possam operar a ferramenta de ponta a ponta.
+O escopo deste levantamento contempla:
 
-3. Requisitos Funcionais Eliminatórios (Ambiente de Dispositivo)
+conformidade da interface web com leitores de tela e navegação por teclado;
 
-As funcionalidades descritas abaixo são consideradas obrigatórias. A ausência de qualquer um desses recursos torna a ferramenta não aderente às necessidades do negócio.
+acessibilidade em componentes dinâmicos (arrastar/soltar, modais, editores de texto);
 
-Simulação de Leitores de Tela Nativos (Android e iOS)
+visualização acessível de dados e gráficos.
 
-A ferramenta deve permitir a execução de testes com leitores de tela nativos dos dispositivos móveis.
+3. Requisitos Funcionais e de Interface (Plataforma Web)
+3.1 Navegação e Controle via Teclado
 
-Requisitos mínimos:
+A plataforma deve permitir operabilidade completa utilizando apenas o teclado, incluindo ações como:
 
-Disponibilidade de leitores de tela
+criar casos de teste;
 
-A plataforma deve permitir ativar e utilizar:
+mover cards ou elementos de fluxo;
 
-TalkBack (Android)
+salvar alterações;
 
-VoiceOver (iOS)
+disparar execuções de testes.
 
-nos dispositivos reais disponíveis na nuvem.
+Ordem de Tabulação
 
-Retorno de áudio
+O foco de navegação deve seguir uma sequência lógica e intuitiva, evitando “armadilhas de teclado”, especialmente em:
 
-A ferramenta deve transmitir o áudio gerado pelo leitor de tela do dispositivo remoto para o computador do testador em tempo real, sem atrasos perceptíveis.
+janelas modais;
 
-Interação assistiva
+menus suspensos;
 
-A plataforma deve permitir a execução de gestos de acessibilidade necessários para navegação assistiva, como:
+componentes dinâmicos.
 
-navegação por varredura (swipe)
+Atalhos de Teclado
 
-duplo toque para ativação
+Caso a ferramenta possua atalhos de teclado, eles não devem entrar em conflito com atalhos nativos de leitores de tela, como:
 
-navegação entre elementos acessíveis
+NVDA
 
-Essas interações devem ser reproduzidas através da interface da plataforma de acesso remoto.
+VoiceOver
 
-4. Requisitos de Acessibilidade da Plataforma (Interface Web)
+3.2 Compatibilidade com Leitores de Tela
 
-A interface web da plataforma de gerenciamento deve garantir uma experiência acessível, contemplando os seguintes critérios:
+A interface deve ser plenamente navegável utilizando leitores de tela.
 
-Navegação via Teclado
+Componentes Complexos
 
-A interface deve permitir operabilidade completa sem o uso de mouse, incluindo:
+Componentes ricos, como:
 
-navegação consistente entre elementos interativos
+árvores de casos de teste;
 
-ordem lógica de foco
+gráficos;
 
-indicadores de foco claramente visíveis
+estruturas hierárquicas;
 
-Semântica e Rótulos (Labels)
+devem possuir equivalentes textuais ou estados acessíveis que descrevam corretamente sua estrutura.
 
-Todos os elementos interativos da interface devem possuir identificação acessível, incluindo:
+Editores de Texto
 
-botões
+O campo de escrita de cenários de teste deve ser acessível, permitindo que o leitor de tela anuncie corretamente:
 
-ícones de controle
+posição do cursor;
 
-menus
+texto digitado;
 
-campos de formulário
+mudanças de contexto.
 
-Devem seguir as boas práticas de WAI-ARIA e HTML semântico.
+Rótulos e Estados
 
-Não devem existir botões ou controles puramente visuais (ex.: ícones) sem descrição textual para leitores de tela.
+Botões ou indicadores de status não devem depender apenas de cor para transmitir informação.
 
-Hierarquia de Conteúdo
+Eles devem possuir rótulos textuais claros interpretáveis por tecnologias assistivas.
 
-A interface deve utilizar corretamente a estrutura de títulos (H1 a H6) para garantir uma navegação estruturada por tecnologias assistivas.
+3.3 Visualização e Percepção
+Uso de Cores
 
-Compatibilidade com Tecnologias Assistivas
+Nenhuma informação crítica (como resultado de um teste) deve depender exclusivamente de cor para ser compreendida.
 
-A plataforma deve funcionar adequadamente com leitores de tela amplamente utilizados, como:
+Deve existir suporte a:
 
-NVDA (Windows)
+ícones com rótulos;
 
-VoiceOver (macOS)
+padrões visuais distintos.
+
+Contraste
+
+Textos e elementos da interface (bordas de campos, ícones, indicadores) devem respeitar contraste mínimo de 4.5:1, conforme diretrizes WCAG.
+
+Hierarquia de Títulos
+
+As páginas devem utilizar corretamente a estrutura de títulos (H1 a H6) para permitir navegação estruturada por tecnologias assistivas.
+
+4. Requisitos de Funcionalidades Dinâmicas (Diferenciais)
+Alternativa ao Drag-and-Drop
+
+Caso a ferramenta utilize interações de arrastar e soltar para organização de suítes ou casos de teste, deve existir uma alternativa acessível via teclado.
+
+Notificações ao Vivo (ARIA-live)
+
+Alertas de sucesso ou erro (por exemplo, ao salvar alterações ou validar campos) devem ser anunciados automaticamente pelo leitor de tela, sem que o usuário perca o foco atual.
 
 5. Critérios para Software Selection
 Critério	Descrição	Importância
-Leitor de Tela Remoto	Permite ativar e ouvir TalkBack/VoiceOver em dispositivos reais na nuvem	Eliminatório
-Navegação via Teclado	A plataforma permite operação completa apenas pelo teclado	Obrigatório
-Rótulos e Semântica	Controles e menus possuem labels claros para leitores de tela	Obrigatório
-Indicação de Foco	O foco de teclado é visível e segue sequência lógica na interface	Obrigatório
-Hierarquia de Títulos	A plataforma utiliza corretamente tags de título para estruturar a página	Alto
-Suporte a atalhos para simular gestos	A interface permite traduzir comandos de teclado/mouse em gestos de acessibilidade móvel	Obrigatório
+Navegação via Teclado	É possível criar e executar um ciclo completo de teste usando apenas o teclado?	Obrigatório
+Rótulos de Status	Os status de elementos relevantes possuem identificação textual para leitores de tela?	Obrigatório
+Labels em Formulários	Todos os campos de cadastro de teste possuem <label> associado?	Obrigatório
+Alternativa ao Drag-and-Drop	Existe forma de organizar testes sem depender exclusivamente de movimentos de mouse?	Obrigatório
+Acessibilidade de Gráficos	Os dashboards possuem descrição ou tabela equivalente para os dados exibidos?	Desejável
+Foco Visível	O indicador de foco é claro e nunca desaparece durante a navegação?	Alto
 6. Plano de Adequação da Ferramenta
 
-Caso a ferramenta atenda ao requisito eliminatório (leitores de tela remotos), mas apresente lacunas nos requisitos de acessibilidade da interface web, o fornecedor deverá apresentar um Plano de Ação Corretiva.
+Caso a ferramenta apresente falhas de acessibilidade, o fornecedor deverá seguir um plano de ajustes estruturado.
 
-Prioridade Crítica (Blockers)
+Tratamento de Itens Impeditivos
 
-Correções relacionadas a barreiras que impedem o uso da ferramenta por profissionais com deficiência, como por exemplo:
+Problemas que bloqueiam totalmente o uso da ferramenta por pessoas com deficiência devem ser tratados como prioridade máxima, como por exemplo:
 
-botões críticos sem label acessível
+botões que não funcionam via teclado;
 
-menus sem foco navegável via teclado
+campos sem identificação para leitores de tela.
 
-impossibilidade de navegação sem mouse
+Esses problemas devem ter correção imediata ou alternativa funcional.
 
-Essas correções devem ser priorizadas no cronograma de implantação.
+Tratamento de Itens de Médio e Baixo Impacto
 
-Prioridade Alta / Média
+Problemas que dificultam a navegação, mas não impedem a conclusão da tarefa, devem ser:
 
-Melhorias relacionadas à experiência de uso, como:
+registrados;
 
-aprimoramento da semântica
+priorizados no planejamento de melhorias do fornecedor;
 
-ajustes de contraste
-
-melhoria na hierarquia de títulos
-
-O fornecedor deverá se comprometer com a inclusão dessas melhorias no roadmap do produto.
-
-Auditoria e Suporte
-
-O fornecedor deverá disponibilizar:
-
-canal de suporte técnico para reporte de bugs de acessibilidade
-
-suporte a validações periódicas de conformidade
+incluídos em atualizações futuras da ferramenta.
 
 7. Riscos e Dependências
-Latência de Áudio
 
-Atrasos na transmissão do áudio do leitor de tela podem impactar a precisão dos testes manuais de acessibilidade.
+Editores de Texto Complexos
+Ferramentas que utilizam editores customizados podem apresentar barreiras para leitores de tela.
 
-Sistemas Proprietários
-
-Versões altamente customizadas de Android podem apresentar comportamentos distintos do TalkBack, exigindo validações prévias.
+Gráficos de Terceiros
+Dependência de bibliotecas externas de gráficos que podem não suportar descrições adequadas de acessibilidade.
 
 8. Próximos Passos
 
-PoC Técnica
-Validar a transmissão de áudio e a execução de gestos de acessibilidade em um dispositivo real disponibilizado na nuvem do fornecedor.
+Realizar smoke test navegando na ferramenta apenas com teclado.
 
-Teste de Acessibilidade da Plataforma
-Realizar uma sessão de navegação com leitores de tela (NVDA / VoiceOver) na interface web da ferramenta.
+Verificar a leitura dos principais dashboards utilizando o leitor de tela NVDA.
 
-Análise de Roadmap
-Caso sejam identificadas falhas não críticas, formalizar junto ao fornecedor o compromisso de correção através de cláusulas contratuais.
-
-
-=============================================================
-
-
-6. Plano de Adequação da Ferramenta
-
-Caso a ferramenta atenda ao requisito eliminatório (leitores de tela remotos), mas apresente lacunas nos requisitos de interface (Plataforma Web), o fornecedor deverá apresentar um Plano de Ação Corretiva.
-
-6.1 Prioridade Crítica (Blockers)
-
-Correções de barreiras que impedem o uso da ferramenta por profissionais com deficiência, como:
-
-botões críticos sem label
-
-falta de foco em menus
-
-Devem ser priorizadas no cronograma de implantação.
-
-6.2 Prioridade Alta / Média
-
-Melhorias relacionadas a:
-
-semântica
-
-contraste
-
-hierarquia de títulos
-
-O fornecedor deve se comprometer com a inclusão destes itens no roadmap do produto.
-
-6.3 Auditoria e Suporte
-
-O fornecedor deve disponibilizar:
-
-canal de suporte técnico para reporte de bugs de acessibilidade
-
-possibilidade de validações periódicas de conformidade
-
-
-
-
-
-
-
-
-3. Requisitos Funcionais e Eliminatórios (Ambiente de Dispositivo)
-
-As funcionalidades descritas nesta seção são consideradas obrigatórias. A ausência de qualquer um desses recursos torna a ferramenta não aderente às necessidades do negócio.
-
-3.1 Suporte a Leitores de Tela Nativos (Android e iOS)
-
-A ferramenta deve permitir a utilização dos leitores de tela nativos nos dispositivos disponibilizados na nuvem, possibilitando a execução de testes manuais de acessibilidade em dispositivos reais.
-
-Leitores suportados:
-
-TalkBack (Android)
-
-VoiceOver (iOS)
-
-3.1.1 Retorno de Áudio
-
-A ferramenta deve transmitir o áudio gerado pelo leitor de tela do dispositivo remoto para o computador do testador em tempo real, sem atraso perceptível na resposta.
-
-3.1.2 Interação Assistiva
-
-A ferramenta deve permitir a execução das interações necessárias para navegação assistiva, incluindo:
-
-navegação por varredura (swipe)
-
-duplo toque para ativação
-
-Essas interações devem ser executadas por meio da interface de acesso remoto da plataforma.
-
-4. Requisitos de Acessibilidade da Plataforma (Interface Web)
-
-A interface web da plataforma de gerenciamento deve garantir uma experiência de uso sem barreiras críticas, permitindo que profissionais que utilizam tecnologias assistivas possam operar a ferramenta de forma completa.
-
-4.1 Navegação via Teclado
-
-A plataforma deve permitir operabilidade completa sem o uso de mouse, contemplando:
-
-navegação consistente entre elementos interativos
-
-ordem lógica de foco
-
-indicadores de foco claramente visíveis
-
-4.2 Semântica e Rótulos (Labels)
-
-Todos os elementos interativos da interface devem possuir identificação acessível, incluindo:
-
-botões
-
-ícones de controle
-
-menus
-
-campos de formulário
-
-Devem seguir boas práticas de WAI-ARIA e HTML semântico.
-
-Não devem existir controles puramente visuais (ex.: ícones) sem descrição textual adequada para leitores de tela.
-
-4.3 Hierarquia de Conteúdo
-
-A interface deve utilizar corretamente a estrutura de títulos (H1 a H6) para permitir navegação estruturada por tecnologias assistivas.
-
-4.4 Compatibilidade com Tecnologias Assistivas
-
-A plataforma deve apresentar funcionamento adequado com leitores de tela amplamente utilizados, incluindo:
-
-NVDA (Windows)
-
-VoiceOver (macOS)
+Solicitar ao fornecedor evidências ou documentação sobre conformidade com padrões de acessibilidade.

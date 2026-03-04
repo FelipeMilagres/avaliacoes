@@ -1,11 +1,4 @@
-Olá, Caio.
+O desafio mobile foi desenvolvido utilizando WebdriverIO com Appium e apresenta uma estrutura organizada, aplicando o padrão Page Object e separação adequada entre pages, testes e configurações. O projeto demonstra bom entendimento do framework utilizado, incluindo execução local, integração com BrowserStack para dispositivos reais, geração de relatórios com Allure e pipeline de CI/CD utilizando GitHub Actions. Os cenários solicitados foram implementados e executaram com sucesso no ambiente Android, demonstrando estabilidade da automação. Como ponto de melhoria, a automação não executa corretamente no ambiente iOS devido ao uso de seletores específicos de Android, o que impede a execução multiplataforma esperada no desafio. Considerando os critérios avaliados, o desafio mobile foi aprovado com ressalvas.
 
-Peço desculpas por não termos respondido anteriormente ao e-mail com as orientações de acesso.
 
-Informo que já iniciamos os testes na ferramenta e estamos realizando as primeiras validações relacionadas às integrações. Para otimizar o alinhamento entre os times, nossa proposta é consolidar os pontos de integração, dúvidas e também os feedbacks iniciais da ferramenta e realizar uma reunião única para tratar todos esses tópicos de forma estruturada.
-
-Dessa forma, evitamos a necessidade de múltiplas reuniões de alinhamento ao longo do processo.
-
-Assim que finalizarmos essa primeira rodada de testes e levantamentos, retornaremos com algumas sugestões de horários para realizarmos esse encontro.
-
-Obrigado pelo suporte e seguimos à disposição.
+Considerando os resultados dos desafios de API e Mobile, o candidato demonstrou bom entendimento das ferramentas utilizadas e capacidade de estruturar automações utilizando frameworks consolidados. No desafio de API apresentou uma automação funcional e organizada, com integração em pipeline e geração de relatórios, tendo como ponto de melhoria apenas a cobertura de validações mais ampla. No desafio mobile aplicou corretamente o padrão Page Object Model, com execução estável no Android e integração com CI/CD, embora a execução em iOS não tenha funcionado devido ao uso de seletores específicos de Android. Diante do conjunto das entregas, o candidato está aprovado para entrevista técnica.

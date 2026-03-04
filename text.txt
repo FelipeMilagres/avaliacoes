@@ -1,13 +1,185 @@
-O desafio foi desenvolvido utilizando WebdriverIO, Appium e Mocha, seguindo o padrão Page Object e com geração de relatórios via Allure. A solução contempla os 10 cenários solicitados, cobrindo Login, Cadastro, Navegação, Formulários e validações de erro. A organização do projeto está adequada, com separação clara entre configurações, Page Objects, dados e specs, além de uso de data-driven testing via JSON. A integração contínua foi configurada no GitHub Actions, com execução para Android e iOS, geração de relatórios e publicação no GitHub Pages.
+Perguntas:
 
-Como pontos positivos, destaca-se a boa implementação do padrão Page Object, reutilização de componentes, captura automática de screenshots, inclusão de logs e informações de ambiente no Allure e execução estável no Android. A documentação é clara e suficiente para replicar o ambiente.
+1. Sincronização e instabilidade no iOS
 
-Como pontos de atenção, a execução no iOS apresentou falhas estruturais relacionadas à sincronização e navegação inicial, comprometendo a estabilidade multi-plataforma. O job iOS está configurado com continue-on-error, o que reduz a confiabilidade da pipeline como critério de qualidade. Além disso, não houve integração com BrowserStack (item opcional).
+Trecho do TabBar
 
-Resultado: Aprovado com ressalvas. A solução demonstra boa base técnica em automação mobile e boas práticas estruturais, porém a instabilidade no iOS impacta a robustez da execução em ambientes diferentes.
+static async waitForTabBarShown() {
+  const timeout = 10000;
+  try {
+    await $('~Home').waitForDisplayed({ timeout });
+    return;
+  } catch (e) {
+    try {
+      if (driver.isAndroid) {
+        await driver.back();
+      } else {
+        const ok = await $('~OK');
+        if (await ok.isExisting()) await ok.click();
+      }
+      await $('~Home').waitForDisplayed({ timeout: 5000 });
+      return;
+    } catch {
+      throw e;
+    }
+  }
+}
 
-===================
+Perguntas
 
-Com base na avaliação dos dois desafios, a Camila demonstrou boa base técnica em automação tanto para API quanto para Mobile. No desafio de API apresentou cobertura funcional adequada, integração com CI e geração de relatórios, embora com alguns pontos de melhoria relacionados à estabilidade da execução e profundidade das validações. No desafio Mobile estruturou bem o projeto com Page Object, uso de dados externos, relatórios completos com evidências e execução estáável no Android, apesar de instabilidades no iOS.
+Por que você optou por esse fallback dentro do catch em vez de usar uma estratégia de retry estruturada?
 
-De forma geral, os pontos observados estão mais ligados à robustez e refinamento da solução do que à falta de conhecimento técnico. Considerando o conjunto das entregas, a Camila está aprovada para entrevista técnica, onde será possível aprofundar temas como estabilidade de testes, estratégia multi-plataforma e critérios de cobertura.
+Como você melhoraria essa sincronização para evitar as falhas observadas no iOS?
+
+Se o problema fosse timing de renderização, qual abordagem do WebdriverIO você utilizaria para tornar isso mais robusto?
+
+Você considera esse método idempotente? Por quê?
+
+2. Captura automática de screenshots
+
+Trecho do afterTest
+
+afterTest: async function (test, context, { passed }) {
+  const screenshot = await driver.takeScreenshot();
+  const buffer = Buffer.from(screenshot, 'base64');
+  fs.writeFileSync(filepath, buffer);
+
+  const allure = (await import('@wdio/allure-reporter')).default;
+  allure.addAttachment(label, buffer, 'image/png');
+}
+
+Perguntas
+
+Por que decidiu capturar screenshot tanto em sucesso quanto em falha?
+
+Existe impacto de performance nessa abordagem?
+
+Como você alteraria o código para capturar apenas em falha?
+
+Em um projeto grande com milhares de testes, o que você mudaria aqui?
+
+Peça que ela escreva rapidamente essa modificação ao vivo.
+
+3. Data-driven testing
+
+Trecho
+
+const loginCredentials = loginData.login;
+
+loginCredentials.forEach((data) => {
+  it(`Login com ${data.description}`, async () => {
+    ...
+  });
+});
+
+Perguntas
+
+Por que você escolheu JSON em vez de CSV?
+
+Se o arquivo tivesse 200 linhas, como você organizaria para manter legibilidade?
+
+Como você faria para validar cenários positivos e negativos no mesmo data-driven?
+
+Se fosse necessário rodar apenas um conjunto específico via variável de ambiente, como faria?
+
+4. NativeAlert com múltiplos fallbacks
+
+Trecho
+
+for (const { text, timeout } of IOS_ALERT_TEXTS) {
+  const sel = SELECTORS.IOS.alertByLabel(text);
+  try {
+    await $(sel).waitForExist({ timeout });
+    return;
+  } catch (err) {
+    lastErr = err;
+  }
+}
+
+Perguntas
+
+Qual foi o problema real que você tentou resolver aqui?
+
+Existe risco de falso positivo nesse tipo de abordagem?
+
+Como você tornaria essa validação mais determinística?
+
+Você considera essa lógica parte de Page Object ou de um helper? Por quê?
+
+5. Pipeline com continue-on-error
+
+Trecho do CI
+
+ios-tests:
+  continue-on-error: true
+
+Perguntas
+
+Por que decidiu permitir que o iOS não quebre a pipeline?
+
+Em um ambiente corporativo, você manteria essa configuração?
+
+Como você trataria a qualidade se apenas uma das plataformas falhar?
+
+Qual estratégia você adotaria para tornar a execução multi-plataforma confiável?
+
+6. Page Object e encapsulamento
+
+Trecho
+
+async submitLoginForm(username, password) {
+  await this.email.setValue(username);
+  await this.password.setValue(password);
+  ...
+  await this.loginButton.click();
+}
+
+Perguntas
+
+Por que encapsular ações no Page Object em vez de fazer no spec?
+
+Qual seria o risco de expor os seletores diretamente no teste?
+
+Se o seletor mudasse apenas no iOS, como você estruturaria para evitar duplicação?
+
+Peça para ela propor uma pequena refatoração ao vivo.
+
+7. Robustez multi-plataforma
+
+Trecho
+
+const selector = driver.isAndroid
+  ? `//*[contains(@text, "${expectedText}")]`
+  : `-ios predicate string:label CONTAINS "${expectedText}"`;
+
+Perguntas
+
+Quais são os riscos de manter lógica condicional espalhada pelos Page Objects?
+
+Como você organizaria isso para escalar para mais plataformas?
+
+Criaria uma camada de abstração por plataforma? Como ficaria?
+
+8. Estratégia de cobertura
+
+Perguntas conceituais baseadas no projeto:
+
+Como você definiria cobertura adequada para um app mobile?
+
+O que você adicionaria para tornar essa automação mais próxima de produção?
+
+Como evitar flaky tests?
+
+Como você faria paralelização segura nesse projeto?
+
+9. Pergunta prática de melhoria
+
+Peça que ela escreva rapidamente:
+
+Uma melhoria na sincronização do TabBar.
+
+Ou uma refatoração para centralizar tratamento de plataforma.
+
+Ou uma estratégia para remover o continue-on-error.
+
+Isso valida domínio real.

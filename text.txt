@@ -1,3 +1,11 @@
-A automação foi desenvolvida utilizando Postman e Newman, com execução em Node.js e integração em pipeline de CI com GitHub Actions. A solução apresenta boa organização da collection, separando os cenários de autenticação, testes positivos, testes negativos e validação de limite de requisições, além de contar com documentação explicando os endpoints e o fluxo dos testes.Os cenários cobrem os principais comportamentos da API, incluindo autenticação, operações de CRUD de usuários e validação de campos obrigatórios. 
+Olá, Caio.
 
-De forma geral, a solução demonstra bom entendimento de automação de testes de API e uso adequado das ferramentas propostas. Como ponto de melhoria, a cobertura de validações poderia ser mais ampla, incluindo verificações adicionais de respostas e cenários de erro para tornar a automação mais robusta e alinhada às boas práticas de testes.
+Peço desculpas por não termos respondido anteriormente ao e-mail com as orientações de acesso.
+
+Informo que já iniciamos os testes na ferramenta e estamos realizando as primeiras validações relacionadas às integrações. Para otimizar o alinhamento entre os times, nossa proposta é consolidar os pontos de integração, dúvidas e também os feedbacks iniciais da ferramenta e realizar uma reunião única para tratar todos esses tópicos de forma estruturada.
+
+Dessa forma, evitamos a necessidade de múltiplas reuniões de alinhamento ao longo do processo.
+
+Assim que finalizarmos essa primeira rodada de testes e levantamentos, retornaremos com algumas sugestões de horários para realizarmos esse encontro.
+
+Obrigado pelo suporte e seguimos à disposição.

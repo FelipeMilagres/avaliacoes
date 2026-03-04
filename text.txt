@@ -1,7 +1,13 @@
-O desafio foi desenvolvido utilizando Postman, com execução via Newman em ambiente Node.js e integração configurada no GitHub Actions, incluindo geração de relatórios JUnit e HTML publicados como artefato da pipeline. 
+O desafio foi desenvolvido utilizando WebdriverIO, Appium e Mocha, seguindo o padrão Page Object e com geração de relatórios via Allure. A solução contempla os 10 cenários solicitados, cobrindo Login, Cadastro, Navegação, Formulários e validações de erro. A organização do projeto está adequada, com separação clara entre configurações, Page Objects, dados e specs, além de uso de data-driven testing via JSON. A integração contínua foi configurada no GitHub Actions, com execução para Android e iOS, geração de relatórios e publicação no GitHub Pages.
 
-Como pontos positivos, o desafio demonstra bom entendimento do fluxo REST, implementação correta da autenticação via token e integração contínua funcional. A cobertura funcional dos principais endpoints está bem estruturada e os testes validam status code, tempo de resposta e campos relevantes do retorno.
+Como pontos positivos, destaca-se a boa implementação do padrão Page Object, reutilização de componentes, captura automática de screenshots, inclusão de logs e informações de ambiente no Allure e execução estável no Android. A documentação é clara e suficiente para replicar o ambiente.
 
-Como pontos de atenção, a execução apresentou cinco falhas de assertion nos cenários sem token, mantendo o build instável. Além disso, a cobertura não atende ao nível esperado para o desafio, pois não há validação de contrato (JSON schema), nem validações mais profundas de estrutura e tipos de resposta, e alguns testes aceitam múltiplos status codes de forma ampla, reduzindo a precisão das validações.
+Como pontos de atenção, a execução no iOS apresentou falhas estruturais relacionadas à sincronização e navegação inicial, comprometendo a estabilidade multi-plataforma. O job iOS está configurado com continue-on-error, o que reduz a confiabilidade da pipeline como critério de qualidade. Além disso, não houve integração com BrowserStack (item opcional).
 
-Resultado: Aprovado com ressalvas. A solução apresenta boa base técnica, porém com lacunas de cobertura e estabilidade que impactam a robustez da automação.
+Resultado: Aprovado com ressalvas. A solução demonstra boa base técnica em automação mobile e boas práticas estruturais, porém a instabilidade no iOS impacta a robustez da execução em ambientes diferentes.
+
+===================
+
+Com base na avaliação dos dois desafios, a Camila demonstrou boa base técnica em automação tanto para API quanto para Mobile. No desafio de API apresentou cobertura funcional adequada, integração com CI e geração de relatórios, embora com alguns pontos de melhoria relacionados à estabilidade da execução e profundidade das validações. No desafio Mobile estruturou bem o projeto com Page Object, uso de dados externos, relatórios completos com evidências e execução estáável no Android, apesar de instabilidades no iOS.
+
+De forma geral, os pontos observados estão mais ligados à robustez e refinamento da solução do que à falta de conhecimento técnico. Considerando o conjunto das entregas, a Camila está aprovada para entrevista técnica, onde será possível aprofundar temas como estabilidade de testes, estratégia multi-plataforma e critérios de cobertura.

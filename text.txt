@@ -1,0 +1,7 @@
+O desafio foi desenvolvido utilizando Postman, com execução via Newman em ambiente Node.js e integração configurada no GitHub Actions, incluindo geração de relatórios JUnit e HTML publicados como artefato da pipeline. 
+
+Como pontos positivos, o desafio demonstra bom entendimento do fluxo REST, implementação correta da autenticação via token e integração contínua funcional. A cobertura funcional dos principais endpoints está bem estruturada e os testes validam status code, tempo de resposta e campos relevantes do retorno.
+
+Como pontos de atenção, a execução apresentou cinco falhas de assertion nos cenários sem token, mantendo o build instável. Além disso, a cobertura não atende ao nível esperado para o desafio, pois não há validação de contrato (JSON schema), nem validações mais profundas de estrutura e tipos de resposta, e alguns testes aceitam múltiplos status codes de forma ampla, reduzindo a precisão das validações.
+
+Resultado: Aprovado com ressalvas. A solução apresenta boa base técnica, porém com lacunas de cobertura e estabilidade que impactam a robustez da automação.

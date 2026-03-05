@@ -1,0 +1,11 @@
+A candidata Camila Almeida foi aprovada para alocação no time de Open Finance, na tribo de Canais, no rate de QA Pleno.
+
+Feedback Consolidado
+
+A candidata demonstrou boa maturidade prática na área de qualidade, apresentando experiência em atividades comuns do dia a dia de QA, como análise de defeitos, investigação de causa raiz e acompanhamento da qualidade do produto. Embora ainda não utilize com profundidade algumas nomenclaturas e conceitos mais formais da área, demonstrou entendimento dos processos e capacidade de aplicar práticas importantes na rotina de testes.
+
+Durante a entrevista também se destacou pela transparência ao reconhecer seus pontos de evolução, especialmente em temas como automação, inteligência artificial e acessibilidade, o que gerou confiança no time avaliador em relação à sua postura profissional.
+
+Outro ponto positivo foi sua comunicação e capacidade de compreender o contexto do produto e as necessidades do cliente, demonstrando potencial para evoluir de uma atuação mais reativa para uma participação mais ativa na construção da qualidade dentro do time.
+
+De forma geral, foi considerada uma profissional com bom potencial de desenvolvimento, alinhada culturalmente ao time e com perfil adequado para contribuir com as iniciativas de qualidade da squad.

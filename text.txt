@@ -1,9 +1,0 @@
-Como parte do processo de Software Selection para solução de Device Farm, será realizado um benchmarking técnico entre ferramentas de mercado que atendam aos requisitos identificados no levantamento realizado pelo Centro de Excelência de Qualidade.
-
-Nesta etapa serão avaliadas inicialmente as seguintes soluções:
-
-BrowserStack
-
-LambdaTest
-
-O objetivo é validar a aderência dessas ferramentas aos requisitos técnicos e operacionais definidos para execução de testes mobile no contexto do Banco Carrefour.

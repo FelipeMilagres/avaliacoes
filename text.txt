@@ -1,0 +1,21 @@
+Realizar o levantamento e validação dos requisitos técnicos, riscos e restrições necessários para a adoção de uma solução de Device Farm, considerando o contexto de infraestrutura, segurança e integração com o ecossistema tecnológico do Banco Carrefour.
+
+Como parte desta atividade, deverão ser executadas as seguintes ações:
+
+Identificar os requisitos técnicos necessários para utilização da ferramenta, incluindo acesso à rede interna do banco, necessidade de VPN ou outros mecanismos de conectividade segura.
+
+Validar a viabilidade de integração da solução com os ambientes internos (DEV, QA, HML ou equivalentes).
+
+Avaliar se as soluções candidatas suportam execução de testes manuais e automatizados em dispositivos reais.
+
+Verificar suporte à execução paralela de testes em múltiplos dispositivos.
+
+Validar funcionalidades relacionadas ao gerenciamento e instalação de builds nas plataformas Android e iOS.
+
+Avaliar a compatibilidade com a esteira de automação utilizada pelos times, incluindo integração com ferramentas e frameworks de automação mobile.
+
+Identificar possíveis riscos técnicos ou limitações que possam impactar a adoção da solução.
+
+Mapear restrições de segurança, infraestrutura ou compliance que devam ser consideradas no processo de avaliação.
+
+Ao final da atividade, os requisitos, riscos e restrições identificados deverão ser documentados e utilizados como base para a avaliação técnica das ferramentas candidatas no processo de Software Selection.

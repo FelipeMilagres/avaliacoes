@@ -1,4 +1,4 @@
-Matriz Consolidada de Benchmark
+Levantamento para Benchmarking de Ferramentas
 Software Selection – Device Farm
 
 Projeto: Software Selection – Device Farm
@@ -7,94 +7,171 @@ Status: Em elaboração
 Responsável: Centro de Excelência de Qualidade
 Data: (preencher)
 
-1. Objetivo
+1. Contexto
 
-Esta matriz tem como objetivo consolidar todos os requisitos identificados durante o processo de levantamento de necessidades e requisitos técnicos para avaliação de ferramentas de Device Farm.
+Como parte da iniciativa de Software Selection para solução de Device Farm, foram realizados levantamentos com o objetivo de identificar as necessidades dos times de QA e os requisitos técnicos necessários para adoção da solução no ambiente do Banco Carrefour.
 
-A matriz será utilizada como instrumento de avaliação durante o benchmarking das soluções, permitindo comparar de forma estruturada a aderência das ferramentas aos critérios definidos.
+Esses levantamentos incluíram:
 
-As ferramentas inicialmente avaliadas serão:
+uma pesquisa interna com usuários da ferramenta atual, identificando funcionalidades utilizadas e principais limitações;
+
+a definição de requisitos técnicos e restrições de infraestrutura necessários para adoção de uma solução no contexto do banco.
+
+Com base nesses insumos, será conduzido um benchmark técnico entre ferramentas de Device Farm disponíveis no mercado, com o objetivo de avaliar o nível de aderência das soluções aos requisitos identificados.
+
+Este documento define os critérios e estrutura de avaliação que serão utilizados no processo de benchmarking.
+
+2. Objetivo
+
+O objetivo deste documento é estabelecer um modelo estruturado de avaliação das ferramentas de Device Farm, permitindo comparar soluções de mercado de forma consistente e alinhada às necessidades operacionais e técnicas do banco.
+
+A avaliação permitirá:
+
+verificar a aderência das ferramentas aos requisitos levantados;
+
+comparar funcionalidades e capacidades técnicas;
+
+identificar limitações ou riscos de adoção;
+
+apoiar a tomada de decisão no processo de Software Selection.
+
+3. Escopo da Avaliação
+
+O benchmarking considerará ferramentas de Device Farm que permitam a execução de testes mobile em dispositivos reais.
+
+Nesta etapa inicial serão avaliadas as seguintes soluções:
 
 BrowserStack
 
 LambdaTest
 
-2. Estrutura de Avaliação
+Outras ferramentas poderão ser avaliadas posteriormente caso necessário.
 
-Cada critério deverá ser avaliado considerando:
+A avaliação terá como foco principal:
+
+execução de testes mobile;
+
+execução de testes web mobile;
+
+integração com automação de testes;
+
+integração com ambientes restritos do banco;
+
+funcionalidades de observabilidade e debugging.
+
+4. Estrutura de Avaliação
+
+Cada ferramenta será avaliada com base nos critérios definidos neste documento. Para cada critério será atribuída uma pontuação de aderência, de acordo com o nível de atendimento da ferramenta ao requisito avaliado.
+
+A pontuação será atribuída conforme a seguinte escala:
 
 Pontuação	Significado
-0	Não atende
+0	Não atende ao requisito
 1	Atende parcialmente
-2	Atende
-3	Atende plenamente / diferencial
-3. Matriz Consolidada de Avaliação
-3.1 Dispositivos reais
+2	Atende ao requisito
+3	Atende plenamente ou apresenta diferencial relevante
+4.1 Utilização de pesos na avaliação
+
+Considerando que nem todos os critérios possuem o mesmo nível de relevância para o processo de decisão, cada critério de avaliação poderá possuir um peso associado, indicando sua importância relativa no processo de benchmarking.
+
+O peso tem como objetivo garantir que critérios considerados críticos para o contexto do banco, como requisitos de segurança, integração com infraestrutura interna e suporte à automação, tenham maior impacto na pontuação final das ferramentas avaliadas.
+
+A pontuação final de cada critério será calculada a partir da multiplicação entre:
+
+a pontuação de aderência atribuída à ferramenta, e
+
+o peso definido para o critério avaliado.
+
+A fórmula utilizada será:
+
+Pontuação final do critério = Pontuação atribuída × Peso do critério
+
+4.2 Escala de peso utilizada
+
+Para fins de avaliação, será utilizada a seguinte escala de peso:
+
+Peso	Significado
+1	Baixa importância
+2	Importância moderada
+3	Importante
+4	Muito importante
+5	Critério crítico para decisão
+
+Critérios classificados com peso mais elevado representam requisitos considerados essenciais para adoção da solução no ambiente do banco.
+
+5. Dimensões de Avaliação
+
+O benchmarking será conduzido considerando diferentes dimensões relacionadas ao uso da ferramenta.
+
+5.1 Dispositivos reais
 Critério	Peso	BrowserStack	LambdaTest	Observações
-Disponibilidade de dispositivos reais Android				
+Disponibilidade de dispositivos Android				
 Disponibilidade de dispositivos iOS				
 Variedade de modelos de dispositivos				
 Disponibilidade de tablets				
 Acesso remoto aos dispositivos				
-3.2 Execução de testes
+5.2 Execução de testes
 Critério	Peso	BrowserStack	LambdaTest	Observações
 Execução de testes manuais				
 Execução de testes automatizados				
 Execução paralela de testes				
-Execução por múltiplos usuários simultâneos				
-Estabilidade das sessões de teste				
-3.3 Testes web mobile
+Execução por múltiplos usuários				
+Estabilidade das sessões				
+5.3 Testes web mobile
+
+Considerando o contexto operacional do banco, parte das aplicações utilizadas em dispositivos móveis consiste em aplicações web executadas em tablets Android utilizando navegador Chrome.
+
 Critério	Peso	BrowserStack	LambdaTest	Observações
 Execução de aplicações web em dispositivos móveis				
 Suporte ao navegador Chrome em dispositivos Android				
 Execução em tablets Android				
 Suporte a diferentes resoluções de tela				
-3.4 Automação de testes
+5.4 Automação de testes
 Critério	Peso	BrowserStack	LambdaTest	Observações
 Integração com Appium				
 Integração com WebdriverIO				
 Execução de automação em dispositivos reais				
 Execução paralela de automação				
 Integração com pipelines CI/CD				
-3.5 Gerenciamento de builds
+5.5 Gerenciamento de builds
 Critério	Peso	BrowserStack	LambdaTest	Observações
 Upload manual de builds (APK / IPA)				
-Instalação de builds diretamente nos dispositivos				
-Distribuição de builds para múltiplos dispositivos				
-Suporte ao Firebase App Distribution				
-Suporte ao TestFlight				
-3.6 Observabilidade e debugging
+Instalação de builds nos dispositivos				
+Distribuição para múltiplos dispositivos				
+Integração com Firebase App Distribution				
+Integração com TestFlight				
+5.6 Observabilidade e debugging
 Critério	Peso	BrowserStack	LambdaTest	Observações
 Captura de screenshots				
-Gravação de sessões de teste				
+Gravação de sessões				
 Monitoramento de rede				
-Acesso a logs de execução				
+Acesso a logs				
 Inspeção de elementos da interface				
-3.7 Integração com infraestrutura do banco
+5.7 Integração com infraestrutura do banco
 Critério	Peso	BrowserStack	LambdaTest	Observações
 Acesso via VPN ou túnel seguro				
-Acesso a ambientes internos (QA/DEV/HML)				
-Compatibilidade com restrições de segurança				
+Acesso a ambientes internos (QA / DEV / HML)				
+Compatibilidade com políticas de segurança				
 Controle de acesso de usuários				
 Auditoria de atividades				
-3.8 Performance
+5.8 Performance
 Critério	Peso	BrowserStack	LambdaTest	Observações
-Latência na interação com dispositivos				
+Latência de interação com dispositivos				
 Tempo de instalação de builds				
 Disponibilidade de dispositivos				
 Estabilidade da plataforma				
-4. Consolidação do Benchmark
+6. Consolidação do Benchmark
 
-Após o preenchimento da matriz, será possível consolidar os resultados para identificar a ferramenta com maior aderência aos requisitos levantados.
+Após a avaliação de todos os critérios, será realizada a consolidação da pontuação de cada ferramenta.
 
-Ferramenta	Pontuação total	Observações
+Ferramenta	Pontuação Total	Observações
 BrowserStack		
 LambdaTest		
-5. Resultado Esperado
+7. Resultado Esperado
 
 Ao final do processo de benchmarking espera-se obter:
 
-avaliação estruturada das ferramentas candidatas;
+uma avaliação estruturada das ferramentas avaliadas;
 
 comparação objetiva entre as soluções;
 

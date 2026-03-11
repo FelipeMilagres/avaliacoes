@@ -1,0 +1,10 @@
+5.9 Acessibilidade
+Critério	Peso	BrowserStack	LambdaTest	Observações
+Suporte a leitores de tela nativos (TalkBack / VoiceOver)	5			Requisito central para validação de acessibilidade
+Execução de testes de acessibilidade em dispositivos reais	5			Simulação ou emulação não atende totalmente o cenário
+Transmissão de áudio do leitor de tela durante a sessão remota	4			Essencial para validar feedback auditivo
+Interação com gestos de navegação assistiva (swipe, duplo toque)	4			Necessário para navegação real com leitores de tela
+Validação de aumento de fonte e configurações de acessibilidade do SO	3			Importante para testes de usabilidade e leitura
+Estabilidade da navegação assistiva durante a sessão remota	4			Instabilidade compromete a confiabilidade do teste
+Latência de áudio durante uso do leitor de tela	3			Latência alta dificulta a avaliação
+Compatibilidade com fluxos de teste manual de acessibilidade	3			Avalia a usabilidade da ferramenta para QA

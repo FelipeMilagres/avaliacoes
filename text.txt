@@ -1,0 +1,27 @@
+3.9 Execução de testes de acessibilidade
+
+A solução de Device Farm deve suportar a validação de recursos de acessibilidade das aplicações mobile, permitindo que os times realizem testes utilizando funcionalidades assistivas disponíveis nos sistemas operacionais.
+
+A plataforma deve possibilitar a execução de testes manuais de acessibilidade em dispositivos reais, garantindo que os comportamentos observados representem fielmente o ambiente de uso do usuário final.
+
+Entre os recursos esperados estão:
+
+suporte à utilização de leitores de tela nativos nos dispositivos móveis, incluindo:
+
+TalkBack (Android)
+
+VoiceOver (iOS);
+
+transmissão remota do áudio gerado pelo leitor de tela, permitindo que o testador acompanhe a navegação assistiva durante a execução dos testes;
+
+possibilidade de interação com gestos de acessibilidade, incluindo navegação por varredura (swipe), ativação por duplo toque e outros padrões utilizados por leitores de tela;
+
+capacidade de validar o comportamento da aplicação sob configurações de acessibilidade do sistema operacional, tais como:
+
+aumento de tamanho de fonte;
+
+ajustes de contraste ou configurações de exibição;
+
+execução de testes manuais de acessibilidade em dispositivos reais disponibilizados na nuvem da Device Farm;
+
+estabilidade e latência adequadas durante a execução remota para que a navegação assistiva e o retorno de áudio não comprometam a precisão da validação.

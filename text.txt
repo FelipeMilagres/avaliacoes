@@ -1,35 +1,7 @@
-O desafio foi desenvolvido utilizando JavaScript com WebdriverIO e Appium, com Cucumber para definição dos cenários em BDD e Chai para asserções. O projeto apresenta uma estrutura organizada, com separação entre features, step definitions, page objects, hooks e helpers, além de um README com instruções básicas de configuração e execução.
+O desafio foi implementado utilizando Node.js com Mocha como framework de testes, Chai para asserções e Supertest para realização das requisições HTTP. A automação executa corretamente os cenários implementados e valida operações básicas de CRUD da API proposta. A execução ocorreu de forma estável, com todos os testes passando.
 
-Entre os pontos positivos, destaca-se a adoção do padrão Page Object, separando elementos e ações da interface, o que contribui para melhor organização e manutenção do código. Os cenários implementados também cobrem as funcionalidades principais solicitadas no desafio, como login/cadastro, navegação entre telas, preenchimento de formulários e validação de mensagens de erro. Além disso, foi configurada captura automática de screenshots, gerando evidências durante a execução.
+Como pontos positivos, a solução demonstra conhecimento básico de automação de testes de API e inclui integração com pipeline de CI via GitLab, permitindo a execução automatizada dos testes. Também foi utilizada geração dinâmica de dados para criação de usuários, evitando conflitos de massa durante a execução.
 
-Por outro lado, alguns pontos importantes impactam a avaliação. O desafio solicitava 10 cenários de teste, porém foram implementados 8 cenários. Durante a execução da suíte, nenhum cenário foi concluído com sucesso, o que impede a execução correta dos testes e indica que a automação não está estável.
+Por outro lado, a cobertura de testes é limitada, concentrada apenas em fluxos felizes. Não foram implementados cenários relevantes de exceção ou erro (4xx/5xx), nem validações mais completas da API, como headers, contrato da API, validação de schema ou verificação mais detalhada do conteúdo das respostas. A autenticação via JWT, mencionada no enunciado, também não foi implementada. Além disso, a automação possui estrutura pouco modular, com todos os testes em um único arquivo e sem organização de payloads ou camadas reutilizáveis. A pipeline executa os testes, mas não gera relatórios nem publica artefatos de execução, conforme esperado no checklist.
 
-Também não foi implementada geração de relatórios detalhados, como solicitado no enunciado (Allure ou ExtentReport). A execução foi configurada apenas para rodar em SauceLabs, sem possibilidade de execução local. Mesmo que a execução em nuvem seja válida, a suíte deveria estar funcional e executando corretamente, o que não ocorreu.
-
-Itens que estavam marcados como opcionais no desafio, como data-driven testing e integração com BrowserStack, não foram considerados como fator decisivo na avaliação.
-
-Status do desafio: Reprovado.
-
-
-
-
-
-
-
-
-
-Na avaliação técnica da candidata Laura, não foi possível realizar a análise completa em todas as frentes previstas no processo seletivo.
-
-Conforme informado pela consultoria, durante a entrevista interna a candidata demonstrou conhecimento em automação de API e, por esse motivo, foi solicitado que ela realizasse apenas o desafio de automação mobile. Dessa forma, o desafio de API não foi entregue e não foi possível realizar a avaliação prática da candidata nessa frente de automação, que também faz parte do escopo da posição.
-
-Em relação ao desafio de automação mobile, a candidata apresentou uma solução utilizando JavaScript com WebdriverIO, Appium e Cucumber, com estrutura organizada em features, step definitions e Page Objects. A solução também incluiu configuração de execução em device farm via SauceLabs e captura automática de screenshots.
-
-No entanto, foram identificados alguns pontos que impactam a avaliação. O desafio solicitava 10 cenários de teste, porém foram implementados 8 cenários. Além disso, durante a execução da suíte nenhum cenário foi concluído com sucesso, devido a falhas estruturais na automação, o que impediu a execução correta dos testes.
-
-Também foi observado que não há configuração para execução local dos testes, ficando a execução dependente apenas da device farm. Mesmo quando a execução em nuvem é utilizada, espera-se que o projeto possua capacidade de execução funcional e estável localmente, o que não foi possível verificar neste caso.
-
-Adicionalmente, não foram implementados relatórios estruturados de execução (como Allure ou ExtentReport), conforme solicitado no enunciado do desafio, e não foi configurada pipeline de CI/CD para automatizar a execução dos testes a cada commit ou merge request.
-
-Considerando a impossibilidade de avaliar a candidata na frente de automação de API e as limitações identificadas na execução e nos requisitos não atendidos no desafio mobile, a candidata não será aprovada para a etapa de entrevista técnica neste processo.
-
-
+Status do desafio: Reprovado

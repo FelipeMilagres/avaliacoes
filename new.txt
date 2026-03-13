@@ -1,0 +1,35 @@
+Descrição
+
+No contexto da iniciativa de Software Selection para solução de Device Farm, está sendo conduzida a avaliação comparativa entre os fornecedores BrowserStack (solução atualmente utilizada) e LambdaTest (possível fornecedor alternativo).
+
+Como parte do processo de decisão e governança da mudança tecnológica, é necessário elaborar um plano de transição de ferramentas, contemplando as atividades necessárias caso seja definida a substituição do BrowserStack pela LambdaTest.
+
+O objetivo desta atividade é garantir que, em caso de mudança de fornecedor, exista um planejamento estruturado para:
+
+realizar as liberações necessárias junto às áreas internas do banco;
+
+garantir a integração da nova solução com a infraestrutura e pipelines existentes;
+
+preparar os times de QA e desenvolvimento para utilização da nova ferramenta;
+
+assegurar continuidade operacional na execução de testes mobile.
+
+O plano deverá contemplar aspectos técnicos, operacionais e de governança necessários para a adoção da nova solução em um ambiente bancário com requisitos de segurança e compliance.
+
+Caso o resultado do processo de Software Selection indique a continuidade com o fornecedor atual (BrowserStack), o plano servirá apenas como documentação de contingência e não será necessário executar atividades de migração.
+
+Entregável esperado
+
+Documento contendo o Plano de Transição de Ferramentas, incluindo:
+
+análise de impacto da mudança;
+
+atividades de liberação e validação interna;
+
+plano de integração técnica;
+
+plano de comunicação e capacitação dos times;
+
+ajustes em processos operacionais;
+
+cronograma sugerido para transição.

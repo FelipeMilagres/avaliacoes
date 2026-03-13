@@ -1,9 +1,0 @@
-O candidato apresentou soluções estruturadas para os desafios de automação de API e automação mobile, demonstrando conhecimento das ferramentas propostas, organização do framework e aplicação de boas práticas de automação.
-
-No desafio de API, a solução foi implementada utilizando Java, RestAssured, JUnit 5 e Allure, com uma estrutura modular e bem organizada, separando clientes, modelos, utilitários e testes. Foram implementados cenários cobrindo operações de CRUD e autenticação, com geração dinâmica de massa de teste e integração com pipeline de CI no GitHub Actions. A execução ocorreu com sucesso, com todos os testes passando. Como ponto de atenção, a cobertura ficou concentrada nos fluxos principais, sem validações mais aprofundadas de contrato, headers ou uso do token JWT em endpoints protegidos.
-
-No desafio mobile, a automação foi desenvolvida utilizando WebdriverIO, Appium, Mocha, Chai e Allure, com estrutura baseada em Page Object Model, separação adequada entre page objects, testes e dados, além de uma BasePage reutilizável. Foram implementados os 10 cenários solicitados, com suporte para execução em Android e iOS, integração com BrowserStack e pipeline de CI/CD no GitLab. Durante a execução, parte dos testes apresentou falhas relacionadas à localização de elementos e sincronização, indicando oportunidades de melhoria na estabilidade da suíte.
-
-Considerando o conjunto das entregas, ambos os desafios foram considerados aprovados com ressalvas, demonstrando que o candidato possui base técnica e entendimento das ferramentas de automação propostas.
-
-Dessa forma, o candidato está aprovado para seguir para a etapa de entrevista técnica, onde serão aprofundados aspectos relacionados à abordagem de automação, boas práticas e tomada de decisões técnicas.

@@ -1,0 +1,7 @@
+A solução foi implementada utilizando Java, RestAssured, JUnit 5 e Allure, apresentando uma estrutura organizada e modular, com separação clara entre clientes, modelos, utilitários e testes. Componentes como ApiClient, BaseTest e DataFactory contribuem para reutilização de código e manutenção da automação.
+
+Os testes cobrem os principais endpoints da API, incluindo operações de CRUD de usuários e autenticação, além de alguns cenários negativos. O gerenciamento de massa de teste foi tratado de forma adequada por meio de geração dinâmica de dados, permitindo execuções repetidas sem dependência de dados fixos. A automação também está integrada a uma pipeline de CI no GitHub Actions, com geração de relatórios via Allure. A execução ocorreu com sucesso, com 15 testes executados e build finalizado sem falhas.
+
+Como pontos de atenção, a cobertura de testes ficou concentrada principalmente nos fluxos básicos da API, sem validações mais completas de contrato, headers ou estrutura das respostas. Além disso, embora exista mecanismo para obtenção de token JWT, não há cenários que validem o uso do token em endpoints protegidos.
+
+Status do desafio: Aprovado com ressalvas.

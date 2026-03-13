@@ -1,7 +1,9 @@
-A solução foi implementada utilizando Java, RestAssured, JUnit 5 e Allure, apresentando uma estrutura organizada e modular, com separação clara entre clientes, modelos, utilitários e testes. Componentes como ApiClient, BaseTest e DataFactory contribuem para reutilização de código e manutenção da automação.
+O candidato apresentou uma solução de automação mobile utilizando WebdriverIO, Appium, Mocha, Chai e Allure, com uma estrutura bem organizada baseada no padrão Page Object Model. O projeto possui separação adequada entre page objects, specs, dados de teste e configurações de execução, além de uma BasePage reutilizável com métodos de interação e sincronização, o que demonstra preocupação com manutenção e reutilização de código.
 
-Os testes cobrem os principais endpoints da API, incluindo operações de CRUD de usuários e autenticação, além de alguns cenários negativos. O gerenciamento de massa de teste foi tratado de forma adequada por meio de geração dinâmica de dados, permitindo execuções repetidas sem dependência de dados fixos. A automação também está integrada a uma pipeline de CI no GitHub Actions, com geração de relatórios via Allure. A execução ocorreu com sucesso, com 15 testes executados e build finalizado sem falhas.
+Foram implementados 10 cenários de teste cobrindo login/cadastro, navegação, formulários e validação de mensagens de erro, conforme solicitado no desafio. O projeto também inclui exemplo de data-driven testing, configuração para execução em Android e iOS, integração com BrowserStack e pipeline de CI/CD no GitLab, além da geração de relatórios com Allure e captura automática de screenshots em falhas.
 
-Como pontos de atenção, a cobertura de testes ficou concentrada principalmente nos fluxos básicos da API, sem validações mais completas de contrato, headers ou estrutura das respostas. Além disso, embora exista mecanismo para obtenção de token JWT, não há cenários que validem o uso do token em endpoints protegidos.
+Durante a execução dos testes foi possível observar que parte da suíte apresenta falhas relacionadas à localização de elementos e sincronização, principalmente nos fluxos de login, o que indica oportunidades de melhoria na estabilidade dos testes e na robustez dos seletores.
+
+No geral, o candidato demonstrou bom domínio das ferramentas e capacidade de estruturar um framework de automação mobile, atendendo aos requisitos propostos no desafio.
 
 Status do desafio: Aprovado com ressalvas.

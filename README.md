@@ -1,138 +1,129 @@
-Benchmark Técnico
-Avaliação Comparativa de Device Farm
+# **Discovery da Arquitetura de Dados para Apresentação das Informações no Looker**
 
-BrowserStack vs LambdaTest
+**Projeto:** [Automation] Enriquecimento da Base de UAT 4
+**Versão:** 1.0
+**Status:** Em andamento
+**Responsável:** Lucas Mendes de Souza (EXT)
+**Data:** 16/03/2026
 
-Projeto: Tooling and Integration – Software Selection
-Contexto: Avaliação de solução de Device Farm para testes mobile
-Referência: Planilha de Benchmarking (resultados detalhados disponíveis para consulta)
+---
 
-1. Introdução
+## **1. Objetivo do Mapeamento**
 
-Este documento apresenta a consolidação do benchmarking técnico realizado para avaliação de soluções de Device Farm no contexto do Banco Carrefour, considerando a possível substituição da ferramenta atualmente utilizada.
+Validar a integração técnica dos arquivos enviados diariamente pela TSYS com o novo template do Looker Studio.
 
-A análise foi conduzida comparando a plataforma BrowserStack, atualmente em uso pelos times, com a plataforma LambdaTest, avaliada como alternativa. O objetivo foi verificar a aderência das soluções aos requisitos técnicos, operacionais e de segurança do banco, bem como identificar oportunidades de evolução em termos de custo, escala e capacidade técnica.
+O objetivo é otimizar a identificação de cenários específicos de teste, permitindo que o time de Qualidade:
 
-Os testes foram realizados com base em cenários reais de uso, incluindo execução em dispositivos móveis, testes web em tablets Android, automação com Appium e WebdriverIO, integração com infraestrutura interna e validações de acessibilidade.
+* Visualize o número correto do cartão por Unidade de Negócio (BU)
+* Realize ações de regularização com base no status real da conta
+* Utilize dados confiáveis extraídos diretamente dos sistemas da TSYS
 
-Os resultados completos e detalhados da avaliação encontram-se documentados em planilha específica, que deve ser utilizada como base de consulta para análise aprofundada dos critérios avaliados.
+---
 
-2. Consolidação dos Resultados
+## **2. Fontes de Dados e Integração (Arquivos TSYS)**
 
-A análise comparativa demonstrou que ambas as plataformas apresentam alto nível de aderência ao contexto atual do banco. A diferença de pontuação entre as ferramentas foi marginal, indicando equivalência funcional na maior parte dos critérios avaliados.
+O cruzamento de dados permite isolar a massa necessária para cada cenário de teste, garantindo maior precisão na seleção dos dados.
 
-Nesse cenário, não foram identificadas perdas técnicas significativas que inviabilizem uma eventual substituição da ferramenta atual.
+### **2.1 Arquivos Utilizados**
 
-2.1 Visão Geral Comparativa
+| Arquivo           | Conteúdo Principal     | Regra de Negócio                                                                                             |
+| ----------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------ |
+| IssFeed_cardx     | Dados do Cartão        | Extrair o número do cartão específico do cenário, removendo registros irrelevantes (expirados ou adicionais) |
+| IssFeed_caccounts | Dados da Conta         | Extrair o status real da conta para controle da saúde financeira                                             |
+| Feed_products     | Dicionário de Produtos | Atuar como camada de tradução dos códigos de produtos, consolidando os dados dos demais arquivos             |
 
-A LambdaTest demonstrou capacidade de atender aos principais requisitos de execução de testes, automação, integração e uso em dispositivos reais, destacando-se principalmente em:
+---
 
-melhor relação custo-benefício;
+## **3. Melhorias na Visualização e Filtros Avançados**
 
-maior escalabilidade de execução paralela;
+O modelo proposto tem como foco a redução de ruído e o aumento da eficiência operacional na análise da massa de testes.
 
-maior diversidade de dispositivos Android, especialmente modelos de entrada;
+### **3.1 Filtro por Cenário (BU)**
 
-Por outro lado, o BrowserStack mantém vantagens relevantes em:
+A vinculação com o arquivo de produtos permite aplicar filtros que retornam exclusivamente o número do cartão correspondente ao cenário desejado.
 
-maturidade da solução;
+**Problema resolvido:**
 
-estabilidade operacional;
+* O modelo anterior exibia múltiplos cartões por conta
+* Existia mistura de cartões de diferentes BUs (ex: Atacadão, Sam’s Club)
+* Havia dificuldade na identificação do cartão correto para o teste
 
-integração já consolidada com o ambiente interno;
+**Benefício:**
 
-melhor suporte a testes de acessibilidade;
+* Precisão na seleção do cartão correto por cenário
 
-3. Análise Técnica e Pontos de Atenção
+---
 
-Do ponto de vista técnico, a LambdaTest se mostrou aderente ao contexto avaliado e com potencial de evolução, não apresentando limitações estruturais que impeçam sua adoção. No entanto, alguns pontos relevantes devem ser considerados.
+### **3.2 Status de Manutenção de Pagamento**
 
-3.1 Acessibilidade
+O painel passa a exibir o status real da conta, permitindo rápida tomada de decisão pelo time de Qualidade.
 
-O principal ponto de atenção identificado está relacionado ao suporte a leitores de tela com voz em português.
+**Status disponíveis:**
 
-Durante as validações, foi observada limitação nesse aspecto, o que impacta a validação completa da experiência do usuário final em cenários reais.
+* **NORM**: Conta em estado normal (apta para uso)
+* **DLNQ**: Conta com pagamento em atraso (necessita regularização)
+* **LOST**: Conta com cartão perdido (necessita desbloqueio ou reemissão)
 
-Este ponto, no entanto, não é considerado bloqueador, podendo ser tratado por meio de alinhamento com o fornecedor ou evolução da plataforma. Adicionalmente, o contrato atual do BrowserStack que contempla esse recurso possui vigência até janeiro, o que abre uma janela para reavaliação desse requisito.
+**Benefício:**
 
-3.2 Integração com Infraestrutura Interna
+* Identificação rápida de contas que exigem ação antes da execução dos testes
 
-Durante o benchmarking, foram identificadas limitações na execução de testes na LambdaTest em função de bloqueios de rede e restrições de segurança do ambiente interno.
+---
 
-Essas limitações impactaram parcialmente a validação de alguns cenários, não por incapacidade da ferramenta, mas pela necessidade de ajustes de infraestrutura.
+## **4. Fluxo de Operação (Processo Manual)**
 
-Esse ponto reforça a necessidade de validação adicional em conjunto com os times de Arquitetura e Segurança da Informação.
+O processo mantém uma etapa de curadoria manual para garantir a integridade e confiabilidade das informações.
 
-3.3 Maturidade e Risco Operacional
+### **4.1 Etapas do Processo**
 
-O BrowserStack apresenta um cenário mais estável e previsível, já validado no ambiente do banco, com menor risco operacional imediato.
+1. **Recebimento**
+   O time responsável recebe diariamente os arquivos (.txt) provenientes da TSYS
 
-A ferramenta possui maior maturidade em aspectos como automação, debugging e acessibilidade, além de já estar integrada aos processos existentes.
+2. **Carga**
+   Upload manual dos arquivos no repositório que alimenta o Looker Studio
 
-A LambdaTest, por sua vez, apresenta maior potencial de evolução e flexibilidade, porém com necessidade de validações adicionais antes de uma adoção definitiva.
+3. **Filtragem**
+   Aplicação de filtros por BU e validação do status da conta (NORM/DLNQ/LOST), garantindo que a massa esteja apta para uso nos testes
 
-4. Conclusão
+---
 
-Com base no benchmarking realizado, conclui-se que a LambdaTest é uma alternativa tecnicamente viável para substituição da ferramenta atual, não apresentando perdas relevantes no escopo avaliado.
+## **5. Conclusão de Viabilidade**
 
-A decisão, no entanto, não deve ser baseada exclusivamente na pontuação obtida, uma vez que a diferença entre as ferramentas é marginal.
+A arquitetura proposta é tecnicamente viável.
 
-Devem ser considerados principalmente:
+A utilização do arquivo de produtos como camada de tradução possibilita a consolidação eficiente entre:
 
-riscos operacionais;
+* Conta
+* Número do cartão
+* Contexto do produto
 
-esforço de adaptação ao ambiente interno;
+Ao expor os status (NORM, DLNQ, LOST) e organizar os dados por BU, o painel evolui de uma simples ferramenta de consulta para uma **ferramenta de gestão de prontidão de massa**.
 
-necessidade de validações adicionais;
+Isso permite ao time de Qualidade:
 
-A LambdaTest apresenta vantagens em custo, escalabilidade e potencial de evolução, enquanto o BrowserStack se mantém como uma solução mais madura, estável e com menor risco no curto prazo.
+* Identificar rapidamente cenários viáveis
+* Reduzir esforço operacional
+* Aumentar a assertividade na preparação dos testes
 
-5. Próximas Etapas
+---
 
-Diante do cenário identificado, recomenda-se a evolução para uma Prova de Conceito (POC) com a LambdaTest, com o objetivo de validar de forma completa os pontos que não puderam ser totalmente cobertos durante o benchmarking.
+## **6. Riscos e Considerações**
 
-Essa etapa deve ser conduzida em conjunto com os times de Arquitetura, Segurança da Informação e Qualidade, contemplando:
+* Dependência de processo manual para carga dos dados
+* Possível defasagem entre geração e disponibilidade dos dados
+* Risco de erro humano durante o processo de upload
 
-validação de conectividade com ambientes internos;
+---
 
-execução de fluxos críticos de automação;
+## **7. Evoluções Futuras (Recomendado)**
 
-validação de acessibilidade em cenário real;
+* Automação do processo de ingestão de arquivos
+* Integração direta com a TSYS via API ou pipeline de dados
+* Implementação de alertas automáticos para inconsistências na massa
+* Criação de indicadores de qualidade da massa (ex: % contas aptas, % contas com erro)
 
-avaliação da experiência operacional dos times;
+---
 
-A partir dos resultados dessa validação, será possível suportar a tomada de decisão final quanto à continuidade com o fornecedor atual ou à transição para uma nova solução.
+## **Sugestão de Nome do Arquivo**
 
-📄 Sugestão de Nome do Arquivo
-
-Aqui vão opções corporativas (recomendo a primeira):
-
-Opção recomendada
-benchmark-tecnico-device-farm-browserstack-vs-lambdatest.pdf
-Outras opções válidas
-avaliacao-tecnica-device-farm.pdf
-benchmark-device-farm-software-selection.pdf
-analise-comparativa-device-farm.pdf
-💡 Dica final (vale muito)
-
-Se você for anexar a planilha:
-
-No documento, pode colocar uma linha assim:
-
-Referência: Planilha de Benchmarking detalhada disponível em [link]
-
-Isso mostra:
-
-✔ rastreabilidade
-✔ transparência
-✔ robustez técnica
-
-Se quiser, Felipe, posso te gerar também:
-
-versão 1 página (executiva para diretoria)
-
-ou recomendação final com GO / NO-GO
-
-ou conectar isso com seu ADR de decisão
-
-Mas esse aqui já está pronto para uso formal no banco.
+**discovery-arquitetura-dados-looker-uat4.md**

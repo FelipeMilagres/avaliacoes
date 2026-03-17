@@ -89,17 +89,17 @@ O processo mantém uma etapa de curadoria manual para garantir a integridade e c
 
 ## **5. Conclusão de Viabilidade**
 
-A arquitetura proposta é tecnicamente viável.
+A arquitetura proposta é tecnicamente viável e atende ao objetivo de organização e disponibilização da massa de testes.
 
-A utilização do arquivo de produtos como camada de tradução possibilita a consolidação eficiente entre conta, número do cartão e contexto do produto.
+A utilização do arquivo de produtos como camada de tradução permite a consolidação entre conta, número do cartão e contexto do produto, garantindo maior consistência na análise dos dados.
 
-Ao expor os status e organizar os dados por BU, o painel evolui de uma ferramenta de consulta para uma ferramenta de gestão de prontidão de massa.
+Ao expor os status da conta e estruturar as informações por Unidade de Negócio, o painel evolui de uma ferramenta de consulta para uma ferramenta de gestão de prontidão de massa, apoiando de forma mais eficiente a preparação dos testes.
 
-Isso permite ao Time de Qualidade:
+Principais ganhos observados:
 
-* Identificar rapidamente cenários viáveis
-* Reduzir esforço operacional
-* Aumentar a assertividade na preparação dos testes
+* Maior agilidade na identificação de cenários viáveis
+* Redução do esforço operacional do Time de Qualidade
+* Aumento da assertividade na execução dos testes
 
 ---
 

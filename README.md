@@ -366,3 +366,12 @@ Este documento representa a base inicial da solução e deverá evoluir conforme
 ## **Sugestão de Nome do Documento**
 
 **tdm-arquitetura-requisitos-v1.md**
+
+
+Elaborar e consolidar os requisitos técnicos e funcionais para a construção de uma solução de gestão e maturação de dados de teste (Test Data Management - TDM).
+
+A solução deverá contemplar a ingestão de arquivos batch provenientes da TSYS, o processamento e normalização desses dados por meio de um serviço de ETL em Python, o armazenamento em uma base central de massas e a execução de processos de maturação responsáveis pela atualização e preparação dos dados para uso em testes.
+
+Adicionalmente, a solução deverá permitir a criação ativa de massas de teste por meio da integração com APIs da própria TSYS, possibilitando a geração de dados sob demanda.
+
+O acesso e a manipulação das massas deverão ser realizados via uma API de gerenciamento, garantindo controle, rastreabilidade e padronização no consumo pelo time de QA e automação.

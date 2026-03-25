@@ -308,21 +308,19 @@ Escala:
 
 ---
 
-# 🎯 **Como usar na reunião**
-
-Você pode conduzir assim:
-
-> “Vamos avaliar cada ferramenta com base nos requisitos levantados, usando score de 1 a 5 por critério, ponderado por peso.”
-
----
-
-# 🚀 **Se quiser subir mais um nível**
-
-Posso te ajudar a montar:
-
-* versão executiva para diretoria
-* roteiro de POC
-* perguntas para fornecedores
-* recomendação final entre MeloQA vs LambdaTest
-
-Só me falar 👍
+Padronização e Governança:
+Estabelecer um modelo único de escrita, organização e versionamento de cenários de teste, garantindo consistência entre squads e aderência às diretrizes do CoE de Qualidade.
+Eficiência na Manutenção e Reutilização:
+Reduzir significativamente o esforço operacional por meio da modularização e reutilização de cenários, evitando duplicidade de fluxos e facilitando a manutenção contínua.
+Rastreabilidade e Conformidade Regulatória:
+Assegurar rastreabilidade completa entre demandas, cenários, execuções e evidências, garantindo conformidade com requisitos de auditoria, políticas internas e LGPD.
+Visibilidade Operacional e Executiva:
+Disponibilizar dashboards e relatórios em tempo real que permitam o acompanhamento da qualidade por diferentes níveis organizacionais, traduzindo dados técnicos em indicadores de negócio.
+Preservação e Evolução de Ativos de Teste:
+Garantir a migração segura do legado e a retenção de evidências históricas, mantendo a integridade das informações e suportando auditorias futuras.
+Integração com o Ecossistema de Qualidade:
+Permitir integração fluida com ferramentas existentes, como Kanbanize (gestão de demandas), GitLab CI/CD (execução de automação) e frameworks internos.
+Habilitação de Automação Inteligente:
+Preparar o ambiente para atuação de agentes de IA, possibilitando leitura de histórias, geração e manutenção de cenários, execução de testes e análise de resultados de forma assistida ou automatizada.
+Escalabilidade e Sustentação do Modelo de Qualidade:
+Suportar o crescimento da operação de testes, garantindo performance, segurança e governança em um ambiente com múltiplas squads e alto volume de cenários.

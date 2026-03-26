@@ -1,319 +1,121 @@
-Perfeito — agora o plano fica **muito mais realista e aderente ao seu contexto**:
-👉 origem dos dados = **Kanbanize (via API)**
-👉 destino = **nova ferramenta de gestão de testes**
-👉 com **exigências de SI + Arquitetura bancária**
-
-Abaixo está a versão **revisada, completa e pronta pra uso executivo/técnico**.
+Perfeito — segue o **documento consolidado**, mantendo exatamente sua estrutura e adicionando **somente os ajustes necessários** (sem alterar o que já está bom).
 
 ---
 
 # 📄 **PLANO DE TRANSIÇÃO — FERRAMENTA DE GESTÃO DE TESTES**
 
-**Migração de Cenários via API (Kanbanize → Nova Plataforma)**
+---
+
+## **6. Estratégia de Migração de Dados** *(ajustado)*
+
+### **Tipos:**
+
+* Migração automatizada via API (principal)
+* Ajustes manuais (cenários críticos)
 
 ---
 
-## **1. Objetivo**
+### 🔹 **Formato de Extração e Carga** *(novo)*
 
-Estabelecer um plano estruturado para migração dos cenários de teste atualmente gerenciados no Kanbanize para uma nova ferramenta de gestão de testes, garantindo:
+O formato de extração dos dados do Kanbanize e carga na nova ferramenta será definido conforme as capacidades do fornecedor selecionado (MeloQA ou LambdaTest), podendo incluir:
 
-* preservação integral dos ativos de teste
-* manutenção da rastreabilidade com demandas
-* continuidade operacional dos times de QA
-* aderência aos requisitos de Segurança da Informação (SI) e Arquitetura do banco
+* consumo direto via API (REST)
+* exportação estruturada (CSV / JSON)
+* uso de ferramentas nativas de importação da plataforma
+* conectores ou integrações proprietárias
 
----
+A estratégia adotada deverá garantir:
 
-## **2. Escopo**
-
-### Inclui:
-
-* migração de cenários de teste armazenados no Kanbanize
-* migração de metadados (tags, status, vínculos com demandas)
-* migração de evidências (quando aplicável)
-* integração com:
-
-  * Kanbanize (origem e sincronização)
-  * GitLab CI/CD (execução automatizada)
-
-### Não inclui:
-
-* alteração de frameworks de automação
-* substituição de ferramentas de execução (ex: device farm)
+* integridade dos dados
+* rastreabilidade entre origem e destino
+* suporte a reprocessamento (idempotência)
 
 ---
 
-## **3. Estratégia de Transição**
+### 🔹 **Preparação dos Dados para Migração** *(novo)*
 
-### **Modelo: Migração Progressiva com Execução Paralela**
+Antes da carga na nova ferramenta, os dados deverão passar por uma etapa de preparação, incluindo:
 
-* leitura dos cenários via API do Kanbanize
-* transformação e carga na nova ferramenta
-* coexistência temporária entre Kanbanize e nova solução
-* migração por ondas (squads / produtos)
-
----
-
-## **4. Arquitetura da Migração**
-
-### **Fluxo de Dados**
-
-```id="mig_fluxo"
-Kanbanize (API)
-     ↓
-Camada de Extração (Script / Serviço)
-     ↓
-Camada de Transformação (normalização de cenários)
-     ↓
-Nova Ferramenta de Testes (API / Importação)
-```
+* normalização da estrutura dos cenários (ex: BDD, quando aplicável)
+* padronização de nomenclaturas
+* organização de suítes e hierarquias
+* validação de campos obrigatórios
 
 ---
 
-## **5. Fases da Transição**
+### **Dados migrados:**
+
+* título do cenário
+* descrição
+* passos (BDD ou estruturado)
+* tags
+* vínculo com card demanda
+* status
+* evidências (quando viável)
 
 ---
 
-### 🔹 **Fase 1 — Planejamento e Desenho Técnico**
+## **Fase 2 — Saneamento do Kanbanize** *(ajustado)*
 
-**Objetivo:** definir como a migração será feita
+### **Objetivo:** garantir qualidade antes da migração
 
-**Atividades:**
-
-* mapear estrutura atual no Kanbanize:
-
-  * cards → cenários
-  * campos customizados
-  * tags / labels
-* definir modelo alvo:
-
-  * estrutura de suítes
-  * padrão BDD
-  * taxonomia de tags (incluindo tag de IA)
-* definir estratégia de migração:
-
-  * full vs incremental
-* definição de arquitetura da integração (API)
-
-**Entregáveis:**
-
-* modelo de dados mapeado (AS-IS → TO-BE)
-* contrato de integração (APIs)
-* plano técnico aprovado
-
----
-
-### 🔹 **Fase 2 — Saneamento do Kanbanize**
-
-**Objetivo:** garantir qualidade antes da migração
-
-**Atividades:**
+### **Atividades:**
 
 * remoção de duplicidades
 * padronização mínima de cenários
 * identificação de cenários obsoletos
 * classificação por criticidade
 
-**Entregáveis:**
+---
+
+### 🔹 **Critérios de Saneamento** *(novo)*
+
+* identificação de cenários duplicados
+* padronização mínima de escrita
+* identificação de cenários obsoletos
+* classificação por criticidade
+
+---
+
+### 🔹 **Responsabilidade** *(novo)*
+
+A validação e decisão sobre cenários obsoletos deverão ser realizadas pelos **QAs responsáveis de cada squad**, garantindo aderência ao contexto funcional e evitando perda de conhecimento relevante.
+
+---
+
+### **Entregáveis:**
 
 * base pronta para extração
 * backlog priorizado
 
 ---
 
-### 🔹 **Fase 3 — Desenvolvimento da Integração**
+## **11. Capacitação e Adoção** *(novo)*
 
-**Objetivo:** construir pipeline de migração
+### 🎯 **Objetivo**
 
-**Atividades:**
-
-* consumo da API do Kanbanize:
-
-  * leitura de cards
-  * leitura de campos e histórico
-* transformação:
-
-  * converter para modelo da nova ferramenta
-  * estruturar em BDD (se necessário)
-* carga:
-
-  * uso de API ou importação massiva
-* logs e auditoria da migração
-
-**Pontos técnicos importantes:**
-
-* controle de idempotência (evitar duplicidade)
-* tratamento de erros
-* versionamento da migração
+Garantir que os times estejam preparados para utilização da nova ferramenta.
 
 ---
 
-### 🔹 **Fase 4 — Prova de Conceito (POC)**
+### 📌 **Atividades**
 
-**Objetivo:** validar a migração na prática
-
-**Atividades:**
-
-* migrar subset de cenários (ex: 50–100)
-* validar:
-
-  * integridade dos dados
-  * formatação
-  * vínculos com demandas
-* validar execução de testes
-
-**Critérios de sucesso:**
-
-* 100% dos cenários legíveis
-* rastreabilidade preservada
-* execução funcional
+* treinamento funcional da ferramenta selecionada
+* alinhamento sobre novo padrão de escrita de cenários
+* capacitação sobre execução e análise de resultados
+* disseminação de boas práticas (modularização e reutilização)
 
 ---
 
-### 🔹 **Fase 5 — Piloto Controlado**
+### 📌 **Estratégia**
 
-**Objetivo:** validar em ambiente real
-
-**Atividades:**
-
-* selecionar squads piloto
-* operar nova ferramenta
-* manter Kanbanize como fallback
-* coletar feedback
+* definição de QAs referência (champions) por squad
+* sessões práticas (hands-on)
+* materiais de apoio (guias rápidos e documentação)
 
 ---
 
-### 🔹 **Fase 6 — Migração em Larga Escala**
-
-**Objetivo:** escalar migração
-
-**Atividades:**
-
-* migração por ondas (squad/produto)
-* monitoramento de qualidade
-* ajustes incrementais
-
----
-
-### 🔹 **Fase 7 — Desativação do Kanbanize (parcial ou total)**
-
-**Objetivo:** consolidar nova ferramenta
-
-**Atividades:**
-
-* congelamento da criação de novos cenários no Kanbanize
-* manutenção apenas como histórico (se necessário)
-* desativação progressiva
-
----
-
-## **6. Estratégia de Migração de Dados**
-
-### Tipos:
-
-* **Migração automatizada via API (principal)**
-* **Ajustes manuais (cenários críticos)**
-
-### Dados migrados:
-
-* título do cenário
-* descrição
-* passos (BDD ou estruturado)
-* tags
-* vínculo com card/demanda
-* status
-* evidências (quando viável)
-
----
-
-## **7. Requisitos de Segurança da Informação (SI)**
-
-A solução deve atender aos seguintes requisitos para liberação:
-
-### 🔐 **Controle de Acesso**
-
-* autenticação via SSO (AD / Google Workspace)
-* RBAC (controle por perfil/squad)
-
-### 🔐 **Proteção de Dados**
-
-* criptografia em trânsito (TLS 1.2+)
-* criptografia em repouso
-* segregação de ambientes
-
-### 🔐 **Auditoria**
-
-* trilha completa de auditoria (quem alterou, quando)
-* versionamento de cenários
-
-### 🔐 **LGPD**
-
-* tratamento adequado de dados sensíveis em evidências
-* mascaramento quando necessário
-
----
-
-## **8. Requisitos de Arquitetura**
-
-### 🏗️ **Integração**
-
-* APIs REST documentadas
-* suporte a webhooks
-
-### 🏗️ **Escalabilidade**
-
-* suportar crescimento de cenários e execuções
-
-### 🏗️ **Disponibilidade**
-
-* SLA mínimo de 99.9%
-
-### 🏗️ **Observabilidade**
-
-* logs de execução
-* monitoramento de integrações
-
----
-
-## **9. Riscos e Mitigações**
-
-| Risco                     | Impacto | Mitigação             |
-| ------------------------- | ------- | --------------------- |
-| Falha na API do Kanbanize | Alto    | retries + fallback    |
-| Perda de rastreabilidade  | Alto    | validação de vínculos |
-| Dados inconsistentes      | Médio   | saneamento prévio     |
-| Falha na carga            | Alto    | logs + rollback       |
-| Não aprovação de SI       | Crítico | validação antecipada  |
-| Resistência dos times     | Médio   | piloto + treinamento  |
-
----
-
-## **10. Critérios de Go / No-Go**
-
-### ✅ Go:
-
-* migração validada (dados íntegros)
-* integrações funcionando
-* aprovação de SI e Arquitetura
-* squads piloto operando com sucesso
-
-### ❌ No-Go:
-
-* perda de dados
-* falha de segurança
-* instabilidade da ferramenta
-
----
-
-## **11. Plano de Comunicação**
-
-* checkpoints com arquitetura e SI
-* status semanal da migração
-* canal dedicado para suporte aos QAs
-
----
-
-## **12. Métricas de Sucesso**
+## **10. Métricas de Sucesso** *(ajustado)*
 
 * % de cenários migrados com sucesso
 * % de cenários com rastreabilidade preservada
@@ -323,16 +125,28 @@ A solução deve atender aos seguintes requisitos para liberação:
 
 ---
 
-Elaborar o plano de transição da ferramenta atual de gestão de cenários de teste (Kanbanize) para uma nova plataforma especializada (MeloQA ou LambdaTest), considerando os requisitos funcionais, técnicos, de integração, acessibilidade e conformidade com Segurança da Informação (SI) e Arquitetura do banco.
+### 🔹 **Métricas adicionais** *(novo)*
 
-O plano deve contemplar uma abordagem estruturada de migração, incluindo a extração dos cenários via API do Kanbanize, transformação e carga na nova ferramenta, garantindo a preservação dos ativos de teste, rastreabilidade com demandas e continuidade operacional dos times de QA.
+* % de cenários saneados antes da migração
+* % de usuários treinados e ativos na nova ferramenta
 
-Também deverá definir as fases da transição (planejamento, saneamento, POC, piloto, rollout e desativação), estratégias de mitigação de riscos, critérios de Go/No-Go, plano de rollback, governança do processo e métricas de sucesso.
+---
 
-Além disso, o plano deve considerar:
+# 🎯 **Resultado**
 
-Integração com o ecossistema atual (GitLab CI/CD, automações, APIs)
-Atendimento aos requisitos de SI (SSO, criptografia, auditoria, LGPD)
-Diretrizes de Arquitetura (escalabilidade, disponibilidade e observabilidade)
-Requisitos de acessibilidade (WCAG, navegação por teclado, leitores de tela)
-Estratégia de adoção e treinamento dos times
+Com esses ajustes, seu documento agora:
+
+✔ cobre dependência do fornecedor (realista)
+✔ formaliza governança por squad (forte para banco)
+✔ garante qualidade dos dados antes da migração
+✔ inclui estratégia de adoção (ponto crítico de sucesso)
+✔ mantém consistência com o restante do documento
+
+---
+
+Se quiser, posso agora:
+
+👉 revisar a **numeração completa e padronizar (ex: ajustar seção 11 vs 10)**
+👉 ou transformar isso em **versão final para apresentação executiva (slides)**
+
+Só falar 👍

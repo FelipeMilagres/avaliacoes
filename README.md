@@ -1,3 +1,0 @@
-12. Estratégia de Rollback
-
-Durante o período de transição, o Kanbanize será mantido como ferramenta ativa e fonte oficial dos cenários de teste, garantindo a continuidade operacional dos times de QA. Em caso de falha na migração ou na adoção da nova ferramenta, o rollback consiste na interrupção do uso da nova solução e retomada imediata das atividades no Kanbanize, sem necessidade de reconstrução de dados. Após a estabilização e validação completa da nova ferramenta, com aprovação de Arquitetura, Segurança da Informação e adoção pelos squads, o mecanismo de rollback deixa de ser necessário.

@@ -1,0 +1,162 @@
+## 🧩 REQUISITOS DE NEGÓCIO (RN)
+
+* **RN1: Adoção de solução de Device Farm**  
+A organização necessita adotar uma solução de Device Farm para viabilizar a execução de testes mobile em dispositivos reais. Essa necessidade surge da limitação dos testes realizados em ambientes simulados, que não representam fielmente o comportamento do usuário final. O objetivo é elevar a maturidade da qualidade, permitindo validações mais próximas da realidade produtiva, reduzindo riscos em produção e aumentando a confiabilidade das entregas.
+
+* **RN2: Aumento da confiabilidade das validações**  
+Há a necessidade de garantir que os testes executados reflitam com maior precisão o comportamento real das aplicações em produção. Esse requisito existe para mitigar falhas que não são capturadas em ambientes simulados, como diferenças de hardware, sistema operacional e condições reais de uso. O objetivo é reduzir incidentes em produção e melhorar a experiência do cliente final.
+
+* **RN3: Integração com a esteira de desenvolvimento**  
+A solução deve permitir que os testes mobile façam parte do fluxo contínuo de desenvolvimento e entrega. Esse requisito atende à necessidade de incorporar qualidade desde as fases iniciais do ciclo de desenvolvimento, automatizando validações dentro de pipelines de CI/CD. O objetivo é garantir feedback rápido, aumentar a eficiência do time e reduzir o tempo de detecção de falhas.
+
+* **RN4: Suporte às necessidades operacionais do QA**  
+A solução deve atender às necessidades práticas do time de QA, contemplando tanto testes manuais quanto automatizados. Esse requisito garante que a ferramenta não seja apenas tecnicamente robusta, mas também utilizável no dia a dia operacional, suportando investigações, validações exploratórias e execuções automatizadas. O objetivo é aumentar a produtividade e a cobertura de testes.
+
+* **RN5: Suporte ao processo de seleção de fornecedores**  
+O levantamento de requisitos deve permitir a avaliação comparativa entre diferentes fornecedores de soluções de Device Farm. Esse requisito é essencial para garantir uma decisão baseada em critérios técnicos, operacionais e estratégicos. O objetivo é reduzir riscos na escolha da solução e garantir aderência às necessidades do banco.
+
+## ⚙️ REQUISITOS FUNCIONAIS (RF)
+
+* **RF1: Execução de testes em dispositivos reais**  
+A solução deve permitir a execução de testes em dispositivos físicos reais. Esse requisito é fundamental para garantir a validação fiel do comportamento das aplicações, considerando variáveis como hardware, sistema operacional e condições reais de uso. O objetivo é eliminar dependência exclusiva de emuladores e aumentar a confiabilidade dos testes.
+
+* **RF2: Execução de testes web em dispositivos móveis**  
+A solução deve suportar a execução de testes em aplicações acessadas via navegadores mobile. Esse requisito atende ao cenário onde aplicações são utilizadas em browsers, especialmente em tablets corporativos. O objetivo é validar responsividade, compatibilidade e comportamento em diferentes resoluções e dispositivos.
+
+* **RF3: Execução de testes manuais**  
+A solução deve permitir que usuários executem testes manuais diretamente nos dispositivos disponíveis. Esse requisito é importante para validações exploratórias, testes de usabilidade e cenários não cobertos por automação. O objetivo é garantir flexibilidade na validação de funcionalidades.
+
+* **RF4: Execução de testes automatizados**  
+A solução deve suportar a execução de testes automatizados utilizando frameworks já adotados pela organização. Esse requisito garante reaproveitamento de ativos existentes e continuidade da estratégia de automação. O objetivo é escalar a execução de testes e aumentar a eficiência.
+
+* **RF5: Execução paralela de testes**  
+A solução deve permitir a execução simultânea de testes em múltiplos dispositivos. Esse requisito atende à necessidade de reduzir o tempo de execução de testes de regressão e aumentar a cobertura. O objetivo é otimizar o ciclo de validação e acelerar entregas.
+
+* **RF6: Acesso remoto a dispositivos**  
+A solução deve permitir acesso remoto aos dispositivos, possibilitando interação completa com a interface. Esse requisito é essencial para permitir testes distribuídos e acesso centralizado aos dispositivos. O objetivo é viabilizar o uso eficiente dos recursos sem dependência física.
+
+* **RF7: Uso simultâneo por múltiplos usuários**  
+A solução deve permitir que múltiplos usuários utilizem a plataforma simultaneamente. Esse requisito garante escalabilidade operacional e suporte a diferentes squads trabalhando em paralelo. O objetivo é evitar gargalos no uso dos dispositivos.
+
+* **RF8: Upload de builds**  
+A solução deve permitir o envio manual de builds (APK/IPA). Esse requisito é necessário para permitir testes de versões específicas da aplicação. O objetivo é garantir flexibilidade no controle das versões testadas.
+
+* **RF9: Instalação de builds nos dispositivos**  
+A solução deve permitir a instalação de builds diretamente nos dispositivos disponíveis. Esse requisito garante agilidade na preparação do ambiente de teste. O objetivo é reduzir tempo operacional.
+
+* **RF10: Distribuição de builds**  
+A solução deve permitir a distribuição de builds para múltiplos dispositivos. Esse requisito é essencial para execução em escala e testes paralelos. O objetivo é garantir eficiência operacional.
+
+* **RF11: Integração com ferramentas de distribuição**  
+A solução deve integrar com ferramentas como Firebase App Distribution e TestFlight. Esse requisito permite reaproveitar processos já existentes. O objetivo é evitar retrabalho e manter consistência operacional.
+
+* **RF12: Captura de screenshots**  
+A solução deve permitir captura de imagens durante execução dos testes. Esse requisito é importante para evidência de testes e análise de falhas. O objetivo é facilitar auditoria e troubleshooting.
+
+* **RF13: Gravação de sessões**  
+A solução deve permitir gravação das sessões de teste. Esse requisito auxilia na reprodução de erros e análise posterior. O objetivo é aumentar a rastreabilidade.
+
+* **RF14: Exportação de evidências**  
+A solução deve permitir exportar evidências geradas. Esse requisito garante compartilhamento e documentação dos testes. O objetivo é suportar auditorias e análises.
+
+* **RF15: Monitoramento de rede**  
+A solução deve permitir análise do tráfego de rede. Esse requisito é importante para identificar problemas de integração e performance. O objetivo é facilitar debugging.
+
+* **RF16: Acesso a logs do dispositivo**  
+A solução deve disponibilizar logs do dispositivo durante execução. Esse requisito é essencial para análise técnica de falhas. O objetivo é aumentar a eficiência na investigação.
+
+* **RF17: Logs de execução**  
+A solução deve registrar logs da execução dos testes. Esse requisito garante rastreabilidade. O objetivo é suportar análise e auditoria.
+
+* **RF18: Inspeção de elementos da interface**  
+A solução deve permitir inspeção de elementos da UI. Esse requisito é necessário para automação e debugging. O objetivo é facilitar criação e manutenção de testes.
+
+* **RF19: Integração com CI/CD**  
+A solução deve permitir integração com pipelines de CI/CD. Esse requisito garante execução automatizada contínua. O objetivo é incorporar testes no fluxo de desenvolvimento.
+
+* **RF20: APIs de automação**  
+A solução deve disponibilizar APIs para execução e gerenciamento de testes. Esse requisito permite integração programática. O objetivo é automatizar processos.
+
+* **RF21: Integração com ambientes internos**  
+A solução deve permitir integração com ambientes internos do banco. Esse requisito garante execução de testes end-to-end. O objetivo é validar cenários reais.
+
+* **RF22: Execução de testes de acessibilidade**  
+A solução deve suportar testes de acessibilidade em dispositivos reais. Esse requisito atende à necessidade de inclusão e conformidade. O objetivo é validar usabilidade para todos os usuários.
+
+* **RF23: Suporte a leitores de tela**  
+A solução deve suportar tecnologias assistivas como leitores de tela. Esse requisito garante testes completos de acessibilidade. O objetivo é validar experiência assistiva.
+
+* **RF24: Interação com gestos de acessibilidade**  
+A solução deve permitir interação com gestos específicos. Esse requisito é necessário para simular navegação assistiva. O objetivo é garantir fidelidade dos testes.
+
+* **RF25: Validação sob configurações de acessibilidade**  
+A solução deve permitir testes sob diferentes configurações do sistema. Esse requisito garante cobertura de cenários diversos. O objetivo é validar adaptação da aplicação.
+
+## 🚀 REQUISITOS NÃO FUNCIONAIS (RNF)
+
+* **RNF1: Baixa latência**  
+A solução deve apresentar baixa latência na interação remota. Esse requisito garante fluidez na execução. O objetivo é evitar impacto na produtividade.
+
+* **RNF2: Estabilidade das sessões**  
+A solução deve manter sessões estáveis. Esse requisito evita interrupções durante testes. O objetivo é garantir confiabilidade.
+
+* **RNF3: Alta disponibilidade**  
+A solução deve garantir alta disponibilidade de dispositivos. Esse requisito evita indisponibilidade operacional. O objetivo é manter produtividade contínua.
+
+* **RNF4: Tempo reduzido de instalação**  
+A instalação de builds deve ser rápida. Esse requisito reduz tempo de setup. O objetivo é otimizar execução.
+
+* **RNF5: Segurança da comunicação**  
+A solução deve garantir comunicação segura. Esse requisito protege dados sensíveis. O objetivo é atender padrões corporativos.
+
+* **RNF6: Isolamento de sessões**  
+A solução deve garantir isolamento entre sessões. Esse requisito evita contaminação de dados. O objetivo é manter integridade dos testes.
+
+## 🗄️ REQUISITOS DE DADOS (RD)
+
+* **RD1: Coleta de resultados**  
+A solução deve coletar resultados de execução. O objetivo é permitir análise e métricas.
+
+* **RD2: Armazenamento de evidências**  
+Evidências devem ser armazenadas de forma estruturada. O objetivo é suportar auditoria.
+
+* **RD3: Gestão de logs**  
+Logs devem ser persistidos para análise. O objetivo é facilitar troubleshooting.
+
+## 🖥️ REQUISITOS DE INTERFACE (RI)
+
+* **RI1: Interface web de acesso**  
+A solução deve disponibilizar interface web para interação. O objetivo é facilitar uso.
+
+* **RI2: Interação remota completa**  
+Usuários devem interagir com dispositivos remotamente. O objetivo é simular uso real.
+
+* **RI3: Visualização de logs e dados**  
+Interface deve permitir análise de informações. O objetivo é facilitar diagnóstico.
+
+* **RI4: Acessibilidade da interface da ferramenta**  
+A solução deve garantir que sua própria interface seja acessível, permitindo utilização por usuários com necessidades assistivas. Esse requisito assegura que a plataforma possa ser operada utilizando leitores de tela, navegação por teclado e outros recursos de acessibilidade. O objetivo é garantir inclusão dos usuários internos, melhorar a usabilidade geral da ferramenta e alinhar com boas práticas de experiência e acessibilidade digital.
+
+## 🛡️ REQUISITOS DE CONFORMIDADE (RC)
+
+* **RC1: Conformidade com políticas internas**  
+A solução deve seguir políticas de segurança. O objetivo é garantir governança.
+
+* **RC2: Aderência tecnológica**  
+Deve ser compatível com ferramentas existentes. O objetivo é evitar ruptura.
+
+## 👤 REQUISITOS DE USUÁRIO (RU)
+
+* **RU1: Facilidade de uso**  
+A solução deve ser intuitiva. O objetivo é reduzir curva de aprendizado.
+
+* **RU2: Eficiência na execução**  
+Usuários devem executar testes rapidamente. O objetivo é aumentar produtividade.
+
+## ⚖️ REQUISITOS LEGAIS E REGULATÓRIOS (RLR)
+
+* **RLR1: Proteção de dados**  
+Dados sensíveis devem ser protegidos. O objetivo é atender regulamentações.
+
+* **RLR2: Rastreabilidade**  
+Ações devem ser auditáveis. O objetivo é garantir compliance.

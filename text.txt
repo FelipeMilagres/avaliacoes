@@ -1,0 +1,178 @@
+# Documento de Arquitetura da Solução (DAS)  
+# DAS – Plataforma de Device Farm para Testes Mobile
+
+---
+
+## Objetivo do DAS
+
+- Definir a arquitetura técnica da solução de Device Farm, detalhando seus componentes, integrações, requisitos funcionais e não funcionais.  
+- Garantir alinhamento com a arquitetura corporativa, políticas de segurança e padrões de desenvolvimento do banco.  
+- Servir como guia para as equipes de QA, engenharia, infraestrutura e segurança na adoção da solução.  
+- Apoiar a avaliação técnica e comparativa entre fornecedores.  
+
+---
+
+## Iniciativa
+
+**Título:** Plataforma de Device Farm para Testes Mobile  
+
+**Descrição:**  
+A iniciativa tem como objetivo implementar uma solução de Device Farm que permita a execução de testes mobile em dispositivos reais, suportando testes manuais e automatizados, integrados à esteira de CI/CD. A solução visa aumentar a confiabilidade das validações, reduzir falhas em produção e melhorar a eficiência operacional do time de QA.
+
+**Origem:** Evolução das práticas de qualidade e automação  
+
+**Stakeholders:**  
+- CoE de Qualidade  
+- Arquitetura Corporativa  
+- Engenharia de Software  
+- Infraestrutura  
+- Segurança da Informação  
+
+---
+
+## Definição Arquitetural da Solução
+
+A solução de Device Farm será responsável por prover acesso remoto a dispositivos reais para execução de testes mobile, integrando-se com a esteira de desenvolvimento e ambientes internos do banco.
+
+A arquitetura deve contemplar:
+
+- Interface web para acesso aos dispositivos  
+- Orquestração de execução de testes (manual e automatizado)  
+- Gerenciamento de builds (APK/IPA)  
+- Integração com pipelines CI/CD  
+- APIs para automação e integração  
+- Camada de segurança para acesso aos ambientes internos  
+- Mecanismos de coleta de logs e evidências  
+
+A solução deve operar de forma segura, escalável e integrada ao ecossistema existente.
+
+---
+
+## Alinhamento Estratégico
+
+### Objetivos Estratégicos
+
+- **Padronização e Governança:** Garantir um modelo único de execução de testes mobile em dispositivos reais.  
+- **Eficiência Operacional:** Reduzir tempo de execução e esforço manual em testes.  
+- **Rastreabilidade:** Garantir visibilidade completa das execuções, logs e evidências.  
+- **Qualidade de Software:** Aumentar a confiabilidade das validações antes da produção.  
+- **Integração com Ecossistema:** Integrar com ferramentas existentes como CI/CD, automação e distribuição de builds.  
+- **Escalabilidade:** Suportar múltiplos times utilizando a solução simultaneamente.  
+
+---
+
+## Requisitos
+
+Para obter mais informações detalhadas, consultar o documento de requisitos do projeto.
+
+---
+
+## Arquitetura
+
+A arquitetura da solução será composta pelos seguintes blocos principais:
+
+- **Camada de Acesso:** Interface web para interação com dispositivos  
+- **Camada de Execução:** Orquestração de testes manuais e automatizados  
+- **Camada de Dispositivos:** Pool de dispositivos reais (Android e iOS)  
+- **Camada de Integração:** APIs e integração com CI/CD  
+- **Camada de Segurança:** Controle de acesso, VPN/túnel seguro e criptografia  
+- **Camada de Observabilidade:** Logs, métricas e evidências  
+
+A comunicação entre os componentes deve ocorrer de forma segura e auditável.
+
+---
+
+## Infraestrutura
+
+A solução pode ser baseada em:
+
+- Infraestrutura cloud (Device Farm do fornecedor)  
+- Conectividade segura com rede interna (VPN ou túnel seguro)  
+- Alta disponibilidade de dispositivos  
+- Escalabilidade horizontal para execução paralela  
+
+Deve suportar ambientes internos (UAT) sem exposição indevida.
+
+---
+
+## Segurança
+
+A solução deve atender aos requisitos de segurança do banco, incluindo:
+
+- Criptografia de comunicação  
+- Controle de acesso por usuário/perfil  
+- Rastreabilidade de ações (logs)  
+- Isolamento de sessões  
+- Não persistência de dados sensíveis  
+- Limpeza automática de dados após uso  
+
+A integração com ambientes internos deve ocorrer via mecanismos seguros (VPN/túnel).
+
+---
+
+## ADR’s (Architecture Decision Records)
+
+As decisões arquiteturais devem contemplar:
+
+- Escolha do fornecedor de Device Farm  
+- Estratégia de integração com CI/CD  
+- Modelo de acesso à rede interna  
+- Estratégia de execução (cloud vs híbrido)  
+
+---
+
+## Parecer(es)
+
+Serão registrados pareceres técnicos das áreas:
+
+- Arquitetura  
+- Segurança  
+- Infraestrutura  
+- Qualidade  
+
+---
+
+## Chamados
+
+Chamados podem ser necessários para:
+
+- Liberação de acesso à rede interna  
+- Configuração de segurança  
+- Integração com pipelines  
+- Provisionamento de ambientes  
+
+---
+
+## Referências
+
+- Documento de Levantamento de Requisitos  
+- Políticas de Segurança da Informação  
+- Padrões de Arquitetura Corporativa  
+- Ferramentas atuais de automação (Appium, WebdriverIO)  
+
+---
+
+## Matriz de Responsabilidade (RACI)
+
+| Atividade | Negócios | Arq. Corporativa | Arq. Soluções | Arq. Software | Arq. Infra | Segurança | Qualidade |
+|----------|----------|------------------|---------------|---------------|------------|-----------|------------|
+| Definição da solução | C | R | R | R | C | C | R |
+| Avaliação de fornecedor | R | C | C | C | C | C | R |
+| Integração CI/CD | I | C | R | R | C | C | R |
+| Segurança e acessos | I | C | C | C | R | R | C |
+| Execução de testes | I | I | I | C | I | I | R |
+| Monitoramento | I | C | C | C | R | R | C |
+
+Legenda:  
+- R = Responsável  
+- A = Aprovador  
+- C = Consultado  
+- I = Informado  
+
+---
+
+## Considerações Finais
+
+A adoção da solução de Device Farm é essencial para evolução da maturidade de testes mobile, permitindo maior confiabilidade, escalabilidade e integração com a esteira de desenvolvimento.
+
+A escolha da solução deve considerar aderência aos requisitos levantados, integração com o ecossistema atual e conformidade com políticas de segurança do banco.

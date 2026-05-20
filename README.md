@@ -1,10 +1,17 @@
-O candidato apresentou um framework organizado utilizando Java, RestAssured, JUnit, Maven, Allure e GitHub Actions, com separação entre camada base, requests, utilitários e testes, proporcionando boa legibilidade e manutenção do código. A solução também possui documentação de execução, geração de relatórios e pipeline configurada, demonstrando preocupação com organização e execução automatizada do projeto.
+Olá, Bruno, tudo bem?
 
-Como pontos positivos, demonstrou boa estruturação inicial da automação, utilização adequada das ferramentas propostas no desafio e aplicação de conceitos de reutilização por meio da centralização dos métodos HTTP e componentes compartilhados. Também implementou cenários positivos e negativos básicos, geração de evidências através do Allure, logs de execução e configuração de pipeline para execução automatizada dos testes.
+Concluímos a avaliação do candidato Erick Souza Silva.
 
-Como pontos de atenção, a cobertura implementada ficou abaixo do esperado. O CRUD está incompleto, sem implementação de cenários para atualização (PUT) e exclusão (DELETE), comprometendo o objetivo de cobertura completa da API. A cobertura de cenários negativos é limitada e não contempla validações de contrato, headers, autorização, rate limit ou regras de negócio mais abrangentes. As validações implementadas estão concentradas principalmente em status code e mensagens simples, sem aprofundamento sobre estrutura e integridade dos dados retornados.
+A entrevista teórica foi concluída e, com base na avaliação do desafio técnico de API, o candidato apresentou boa organização do framework, utilização adequada das ferramentas propostas, integração com CI e geração de evidências. Apesar de terem sido identificadas ressalvas relacionadas à cobertura, gerenciamento de massa de dados e robustez da solução para o nível sênior, a entrega demonstrou base técnica consistente e capacidade de estruturar uma automação funcional.
 
-Também foi identificado gerenciamento limitado de massa de teste, com dependência de dados fixos, e-mails e IDs estáticos definidos em propriedades. Esse comportamento gerou falha na primeira execução do projeto devido à preparação de massa, impactando repetibilidade, previsibilidade e confiabilidade da automação. Embora as execuções seguintes tenham apresentado sucesso, a solução ainda demonstra dependência do estado do ambiente, reduzindo a robustez esperada para um cenário de execução contínua.
+Resultado: aprovado para entrevista técnica.
 
-Resultado: Aprovado com ressalvas. O candidato demonstrou boa base técnica, organização do framework e conhecimento das ferramentas de automação API, porém a solução apresenta lacunas relevantes em cobertura, gerenciamento de dados e robustez.
+Você consegue verificar, por favor, a disponibilidade dele para realizarmos a entrevista técnica amanhã às 15:30 ou 17:00?
 
+Fico no aguardo da confirmação.
+
+
+
+Com base na avaliação do desafio técnico de API, o candidato apresentou boa organização do framework, utilização adequada das ferramentas propostas, integração com CI e geração de evidências. Apesar de terem sido identificadas ressalvas relacionadas à cobertura, gerenciamento de massa de dados e robustez da solução para o nível sênior, a entrega demonstrou base técnica consistente e capacidade de estruturar uma automação funcional.
+
+Resultado: aprovado para entrevista técnica.

@@ -1,0 +1,10 @@
+O candidato apresentou um framework organizado utilizando Java, RestAssured, JUnit, Maven, Allure e GitHub Actions, com separação entre camada base, requests, utilitários e testes, proporcionando boa legibilidade e manutenção do código. A solução também possui documentação de execução, geração de relatórios e pipeline configurada, demonstrando preocupação com organização e execução automatizada do projeto.
+
+Como pontos positivos, demonstrou boa estruturação inicial da automação, utilização adequada das ferramentas propostas no desafio e aplicação de conceitos de reutilização por meio da centralização dos métodos HTTP e componentes compartilhados. Também implementou cenários positivos e negativos básicos, geração de evidências através do Allure, logs de execução e configuração de pipeline para execução automatizada dos testes.
+
+Como pontos de atenção, a cobertura implementada ficou abaixo do esperado. O CRUD está incompleto, sem implementação de cenários para atualização (PUT) e exclusão (DELETE), comprometendo o objetivo de cobertura completa da API. A cobertura de cenários negativos é limitada e não contempla validações de contrato, headers, autorização, rate limit ou regras de negócio mais abrangentes. As validações implementadas estão concentradas principalmente em status code e mensagens simples, sem aprofundamento sobre estrutura e integridade dos dados retornados.
+
+Também foi identificado gerenciamento limitado de massa de teste, com dependência de dados fixos, e-mails e IDs estáticos definidos em propriedades. Esse comportamento gerou falha na primeira execução do projeto devido à preparação de massa, impactando repetibilidade, previsibilidade e confiabilidade da automação. Embora as execuções seguintes tenham apresentado sucesso, a solução ainda demonstra dependência do estado do ambiente, reduzindo a robustez esperada para um cenário de execução contínua.
+
+Resultado: Aprovado com ressalvas. O candidato demonstrou boa base técnica, organização do framework e conhecimento das ferramentas de automação API, porém a solução apresenta lacunas relevantes em cobertura, gerenciamento de dados e robustez.
+

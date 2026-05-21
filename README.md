@@ -1,5 +1,0 @@
-Os testes foram implementados utilizando Node.js (node:test) com fetch, sem dependências externas, apresentando boa organização em camadas de suporte, reutilização de componentes, factories, helpers, cliente HTTP centralizado e separação clara de responsabilidades. O projeto demonstrou maturidade na preparação do ambiente, geração dinâmica de dados, limpeza de massa e tratamento de falhas transitórias com retry e timeout. A execução ocorreu com sucesso, mantendo estabilidade.
-
-Como pontos positivos, destacam-se a preocupação com estabilidade da automação em ambiente compartilhado, a estratégia de gerenciamento de dados de teste, a centralização das regras do cliente HTTP, a integração CI/CD e a documentação clara. Como pontos de atenção, apesar da boa cobertura funcional, ainda existem lacunas para considerar cobertura total conforme solicitado no desafio: a validação de contrato é feita por assertions customizadas e não por schema/contrato formal, e há cobertura limitada para headers, cenários de autorização inválida e combinações adicionais de parâmetros.
-
-Resultado do desafio: Aprovado com ressalvas.

@@ -1,5 +1,9 @@
-O candidato utilizou WebdriverIO + Appium + Mocha + Allure com uma arquitetura organizada baseada em Page Object Model, demonstrando boa base técnica, preocupação com reutilização, documentação e integração contínua. O projeto apresenta estrutura madura, uso de massa parametrizada, geração de evidências e execução remota em Device Farm.
+Pedro Lucas apresentou boa aderência técnica aos desafios propostos e demonstrou conhecimento compatível com um perfil pleno. Nos desafios de API e Mobile, entregou projetos organizados, com boa estrutura, utilização adequada de frameworks (WebdriverIO, Appium, Node.js), aplicação de Page Object Model, data-driven, CI/CD e geração de evidências/relatórios.
 
-Como principal ponto de atenção, a solução não se sustentou de forma consistente em iOS, apresentando falhas reproduzíveis tanto localmente quanto no BrowserStack. Como o checklist considera estabilidade e repetibilidade como critérios estruturais, a configuração existente não é suficiente quando a execução prática não mantém comportamento previsível entre plataformas.
+Demonstrou preocupação com reutilização, manutenção e documentação da solução, além de conseguir sustentar execução estável no desafio de API e no fluxo Android do desafio Mobile.
 
-Status do desafio: Aprovado com ressalvas
+Como pontos de atenção, foram identificadas fragilidades relacionadas à robustez da automação mobile multiplataforma, principalmente em iOS, com falhas reproduzíveis em ambientes distintos (local e BrowserStack), além de alguns aspectos de maturidade relacionados à estabilidade, sincronização e boas práticas de gestão de configuração.
+
+Resultado final: Aprovado para entrevista técnica.
+
+Percepção de senioridade: demonstra capacidade compatível com QA de Automação Pleno, com boa base técnica e potencial de evolução, mas ainda com gaps de maturidade que não sustentariam uma avaliação de perfil sênior.

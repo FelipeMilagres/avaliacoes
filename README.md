@@ -1,156 +1,43 @@
-# Documento de Arquitetura da Solução (DAS) 📘 - Athena
-
-| Versão documento | 1.0.0 |
-|--|--|
-| Quadrimestre criação | 2026-q1 |
-| Quadrimestre atualização | 2026-q1 |
-| Owner | CoE Qualidade |
-
----
-
-# Objetivo do DAS
-
-- Centralizar documentação técnica do Athena;
-- Estruturar entendimento dos arquivos TSYS;
-- Definir estratégia inicial de normalização;
-- Padronizar consumo das massas de testes;
-- Apoiar evolução futura da automação.
-
----
-
-# Iniciativa
-
-## Título
-
-Athena - Plataforma de Gestão e Automação de Massas
-
----
-
-## Descrição
-
-O projeto Athena possui como objetivo automatizar o processo de geração, organização, atualização e manutenção das massas utilizadas nos testes E2E do ambiente UAT4.
-
-A solução busca centralizar informações técnicas relacionadas aos arquivos disponibilizados pela TSYS, permitindo evolução estruturada da automação de massas utilizada pelas squads.
-
----
-
-## Origem
-
-Projeto interno CoE Qualidade
-
----
-
-# Stakeholders
-
-## CoE Qualidade
-
-- QA Lead Automação: Felipe Milagres
-- Engenharia Qualidade
-- Times consumidores UAT4
-
----
-
-# Athena | Plataforma de Gestão de Massas
-
-## Definição Arquitetural da Solução
-
-A solução Athena visa centralizar a gestão das massas utilizadas em cenários automatizados E2E, organizando informações provenientes da TSYS e preparando uma base evolutiva para automação operacional das contas utilizadas no ambiente UAT4.
-
-Inicialmente o foco será estruturar:
-
-- Response File;
-- Regras de normalização;
-- Relacionamento cliente/cartão;
-- Organização das massas;
-- Base documental evolutiva.
-
----
-
-# Alinhamento Estratégico
-
-## Objetivos Estratégicos
-
-### Padronização Operacional
-
-Estabelecer estrutura única de documentação e organização dos arquivos consumidos pelo processo de automação.
-
-### Eficiência Operacional
-
-Reduzir atividades manuais relacionadas à preparação de massas.
-
-### Rastreabilidade
-
-Garantir entendimento dos arquivos consumidos e regras aplicadas.
-
-### Escalabilidade
-
-Permitir expansão gradual para novos arquivos TSYS.
-
-### Evolução da Qualidade
-
-Preparar ambiente para futuras automações de dados e integrações ETL.
-
----
-
 # Matriz de Responsabilidade
 
-| Atividade | CoE Qualidade | Engenharia Dados | Infra | Segurança |
-|--|--|--|--|--|
-| Documentação DAS | R | C | I | I |
-| Normalização | R | C | I | I |
-| Estratégia Arquivos | R | R | I | I |
-| Evolução Arquitetura | C | R | C | I |
-| Governança | R | C | I | C |
-
-Legenda:
-
-- R → Responsável
-- A → Aprovador
-- C → Consultado
-- I → Informado
-
----
-
-# Arquitetura 💻
-
-Para mais detalhes relacionados à arquitetura acesse o link:
-
-[Arquitetura](arquitetura.md)
-
----
-
-# Infraestrutura 🛠️
-
-Para mais detalhes relacionados à infraestrutura acesse o link:
-
-[Infraestrutura](infra.md)
-
----
-
-# ADR's 📚
-
-Para mais detalhes sobre decisões arquiteturais:
-
-[ADR's](adrs/index.md)
+| Atividade | Negócios | Arq. Corporativa | Arq. Soluções | Arq. Software | Arq. Dados | Arq. Infra | Arq. Qualidade | Eng. Software |
+|--|--|--|--|--|--|--|--|--|
+| Certificados e certificações | I | C | C | R | I | I | C | I |
+| Proposta de Solução | C | C | C | C | C | C | R | I |
+| Gestão de Acessos | I | I | C | C | R | I | C | I |
+| Monitoramento | I | I | I | I | I | I | R | C |
+| DAS - Documento de Arquitetura da Solução | R | R | R | R | R | R | R | R |
+| Análise de Impacto | I | C | R | R | R | R | R | I |
+| Objetivos Estratégicos | R | I | I | I | I | I | R | I |
+| Capacidades de Negócio | I | C | C | C | I | I | R | I |
+| Mapear Riscos e Desafios | R | R | R | R | R | R | R | R |
+| Mapear Requisitos de Negócio | I | C | C | C | I | I | R | I |
+| Mapear Requisitos de Usuário | R | C | I | I | I | I | R | I |
+| Mapear Requisitos Funcionais | I | C | C | C | I | I | R | I |
+| Mapear Requisitos Não Funcionais | I | R | R | R | C | R | R | R |
+| Mapear Requisitos de Interface | I | I | R | R | I | I | R | I |
+| Mapear Requisitos de Dados | C | I | I | I | C | I | R | I |
+| Mapear Requisitos Legais e Regulatórios | R | R | I | I | I | I | I | I |
+| Mapear Requisitos de Conformidade | R | R | R | R | R | R | R | I |
+| C4 - Nível 1 | C | C | R | I | I | I | R | I |
+| C4 - Nível 2 | A | I | R | C | A | C | R | I |
+| C4 - Nível 3 (Se aplicável) | I | I | I | R | A | I | R | I |
+| C4 - Nível 4 (Se aplicável) | I | I | I | R | A | I | R | I |
+| Diagrama de Arquitetura | I | I | R | C | A | C | R | I |
+| ADR (Architecture Decision Record) | I | C | C | C | R | R | R | I |
+| Refinamento Técnico | C | C | C | C | C | C | R | R |
+| Desenvolvimento de Software (Apis, Workers, Proxy, etc.) | I | I | C | C | I | I | R | R |
+| Abertura de Registro de Chamados | I | I | C | C | I | I | R | R |
+| Code Review | I | I | I | R | I | I | R | R |
+| Revisar Solução | C | C | R | R | C | C | R | R |
 
 ---
 
-# Referências 📎
+## Legenda
 
-- Planilha técnica TSYS
-- Response File
-- Estrutura UAT4
-- Documentação Athena
-- Estratégia de automação de massas
-
----
-
-# Status Atual
-
-| Item | Status |
+| Sigla | Descrição |
 |--|--|
-| Response File | Em andamento |
-| Regras normalização | Em andamento |
-| ETL completo | Futuro |
-| Integração arquivos TSYS | Futuro |
-
+| R | Responsável |
+| A | Aprovador |
+| C | Consultado |
+| I | Informado |

@@ -1,23 +1,77 @@
-site_name: "athena-plataforma-gestao-massas"
-site_description: "Athena - Plataforma de Gestão e Automação de Massas"
+# Athena | Plataforma de Gestão e Automação de Massas
 
-nav:
+> Versão documento: 1.0.0  
+> Quadrimestre criação: 2026-Q1  
+> Owner: CoE Qualidade  
 
-  - Athena 📘: index.md
+---
 
-  - Normalização de Dados 🔄:
-      - Visão Geral: normalizacao/index.md
-      - Contexto TSYS: normalizacao/contexto.md
-      - Localização dos Arquivos: normalizacao/localizacao.md
-      - Referência Técnica: normalizacao/referencia-tecnica.md
-      - Response File: normalizacao/response-file.md
-      - Regras de Normalização: normalizacao/regras.md
-      - Estratégia Inicial: normalizacao/estrategia.md
-      - Evolução Futura: normalizacao/evolucao.md
+# Objetivo do Athena
 
-  - Arquitetura 🏗️: arquitetura.md
-  - Infraestrutura 🛠️: infra.md
-  - ADR's 📚: adrs/index.md
+O projeto Athena possui como objetivo automatizar o processo de geração, organização, atualização e manutenção das massas utilizadas nos testes E2E do ambiente UAT4.
 
-plugins:
-  - techdocs-core
+A solução busca centralizar informações técnicas relacionadas aos arquivos disponibilizados pela TSYS, permitindo evolução estruturada da automação de massas utilizada pelas squads.
+
+---
+
+# Objetivos Estratégicos
+
+- Automatizar preparação das massas;
+- Reduzir atividades manuais;
+- Centralizar documentação técnica;
+- Disponibilizar estrutura escalável;
+- Organizar contas utilizadas em testes;
+- Facilitar entendimento dos layouts;
+- Apoiar evolução futura do processo ETL.
+
+---
+
+# Escopo Inicial
+
+Neste primeiro momento:
+
+- Não será desenvolvido ETL completo;
+- Não será construída estrutura final do banco;
+- Não serão integrados todos os arquivos da TSYS.
+
+Foco atual:
+
+- Entendimento do Response File;
+- Estruturação inicial;
+- Definição de regras;
+- Normalização dos dados;
+- Construção da base documental evolutiva.
+
+---
+
+# Contexto Operacional
+
+A TSYS disponibiliza atualmente:
+
+# 113 arquivos
+
+Relacionados aos processos:
+
+- Migração;
+- Atualização;
+- Sincronização;
+- Carga operacional;
+- Manutenção do ambiente UAT4.
+
+Periodicidades:
+
+- Diário;
+- Semanal;
+- Mensal;
+- Sob demanda.
+
+---
+
+# Estrutura Evolutiva
+
+Esta documentação será evoluída gradualmente conforme:
+
+- Novos arquivos forem analisados;
+- Arquitetura de dados evoluir;
+- Necessidades operacionais forem identificadas;
+- Estratégia de ingestão for definida.

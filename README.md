@@ -1,5 +1,0 @@
-Candidata apresentou boa consistência técnica nos dois desafios entregues (API e Mobile), com soluções estruturadas, organizadas e sustentáveis. Demonstrou domínio adequado de frameworks de automação, aplicação consistente de boas práticas como Page Object Model, reutilização de componentes, externalização de dados, integração com pipeline e geração de relatórios/evidências. Os projetos apresentaram execução validada com sucesso, incluindo pipeline funcional e estabilidade nas execuções.
-
-Como pontos de atenção, foram identificados alguns gaps pontuais relacionados à ampliação de cobertura de cenários negativos e aspectos complementares de robustez, porém sem impacto crítico na confiabilidade geral das soluções entregues.
-
-Resultado final: Aprovada para entrevista técnica. Demonstra perfil compatível com profissional Pleno, apresentando boa maturidade na construção, organização e manutenção das automações.

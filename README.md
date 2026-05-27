@@ -153,3 +153,22 @@ Para mais detalhes sobre decisões arquiteturais:
 | Regras normalização | Em andamento |
 | ETL completo | Futuro |
 | Integração arquivos TSYS | Futuro |
+
+
+
+
+Bruno, entendo seu ponto e concordo que a intenção não deve ser buscar um “candidato perfeito”. Nosso objetivo também não é tornar o processo mais burocrático ou criar barreiras desnecessárias.
+
+O contexto dessa validação adicional aconteceu por conta da própria mudança que fizemos no fluxo do processo seletivo. Antes, analisávamos os desafios técnicos primeiro e, com base no que era entregue, conduzíamos a entrevista técnica já aprofundando em cima das implementações realizadas. Como recebemos feedback de que o processo estava ficando muito demorado, invertimos a ordem para agilizar: primeiro a entrevista teórica e depois os desafios.
+
+O efeito colateral dessa mudança é justamente perder os insumos técnicos durante a entrevista inicial. Por isso, em alguns casos, precisamos fazer uma validação complementar após a entrega, principalmente para garantir que o candidato realmente domina o que foi desenvolvido e consegue sustentar tecnicamente as decisões tomadas no desafio. Hoje temos cenários onde candidatos utilizam apoio externo, IA ou até terceiros para entrega, e a intenção dessa conversa adicional é apenas validar autoria, contexto e maturidade técnica sobre o que foi apresentado.
+
+No caso da Izabela especificamente, o objetivo do papo seria exatamente esse: entender melhor algumas decisões da entrega, esclarecer dúvidas técnicas e validar o domínio dela sobre API e automação mobile conforme o material apresentado. Não era reprovar ou buscar perfeição. Inclusive, temos consciência de que sempre existirão pontos de evolução em qualquer profissional, seja pleno ou sênior.
+
+O que buscamos no processo é garantir aderência ao nível esperado para evitar problemas futuros tanto para o time quanto para a própria consultoria. Quando um candidato entra muito desalinhado do que foi apresentado, acabamos gerando desgaste para todos os lados e até situações de substituição, o que também impacta a percepção da consultoria internamente.
+
+De toda forma, como entendemos que essa etapa adicional acabou gerando desconforto, conversei com o Flávio e decidimos seguir de outra forma. Inclusive, já desmarquei o papo de amanhã.
+
+Precisamos apenas que vocês formalizem por e-mail que a candidata ofertada para a posição pleno atende tecnicamente os pontos relacionados à automação mobile e API conforme apresentado nos desafios entregues, e que vocês validam essa aderência ao nível esperado da vaga. A partir dessa formalização, seguimos com a aprovação.
+
+O Flávio provavelmente deve alinhar esse ponto com você também, mas da nossa parte a ideia é seguir de forma prática e transparente.

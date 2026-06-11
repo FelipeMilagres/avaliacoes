@@ -1,5 +1,21 @@
-Almir apresentou boas entregas nos dois desafios propostos. No desafio de API, demonstrou uma solução bem estruturada, com boa cobertura dos fluxos positivos e negativos, utilização de dados dinâmicos, execução estável da suíte, geração de relatórios e integração com pipeline, atendendo aos principais requisitos do checklist. No desafio Mobile, entregou uma automação organizada utilizando WebdriverIO, Appium e Page Object Model, com evidências de execução bem-sucedida em Android e iOS, relatórios Allure e documentação adequada.
+1. Nos desafios você trabalhou com respostas determinísticas. Como mudaria sua estratégia de testes para uma API baseada em LLM, onde a resposta pode variar a cada execução?
 
-Os principais pontos de atenção ficaram concentrados no desafio Mobile, especialmente pela ausência de Data Driven Testing, integração com BrowserStack e execução efetiva da suíte na pipeline. Também seria esperado, para um perfil sênior, maior profundidade em alguns cenários e validações. Apesar disso, as duas soluções apresentaram boa qualidade técnica, organização, evidências consistentes de execução e aderência à maior parte dos critérios avaliados.
+2. Em uma solução de IA generativa, o problema está no modelo ou nos dados. Como você estruturaria testes para identificar se uma falha veio do prompt, da base de conhecimento ou do modelo?
 
-Resultado: Aprovado para Entrevista Técnica. Recomenda-se aprofundar durante a entrevista temas relacionados à arquitetura de automação, estratégia de testes, CI/CD, device farms, escalabilidade das suítes e tomada de decisões técnicas para validação do nível de senioridade do candidato.
+3. Se a API começasse a retornar respostas geradas por IA, como você automatizaria as validações sem depender de comparações exatas de texto?
+
+4. Você implementou uma boa estrutura de automação. Como adaptaria essa arquitetura para testar dezenas de agentes de IA diferentes compartilhando os mesmos serviços e modelos?
+
+5. Qual você considera o maior risco de qualidade em uma aplicação de IA em produção e como monitoraria esse risco após o deploy?
+
+6. Se você entrasse hoje em um time que está construindo agentes de IA para atendimento ao cliente, quais seriam os três primeiros tipos de testes que você implementaria?
+
+7. No desafio mobile, sua pipeline hoje valida a estrutura do projeto, mas não executa os testes. Como você desenharia uma pipeline que executasse Android e iOS de forma automatizada?
+
+8. O cenário login-invalid.spec.js acabou cobrindo o mesmo comportamento do login vazio. Quais cenários negativos de login você considera mais relevantes para uma aplicação real?
+
+9. Você utilizou Postman/Newman no desafio. Em um projeto corporativo com milhares de testes executando diariamente, manteria essa abordagem ou migraria para outro framework? Por quê?
+
+10. Além de status code e payload, quais outras validações você considera essenciais em uma suíte de API para evitar regressões?
+
+11. Se você tivesse mais um dia para evoluir os dois desafios, quais seriam as três melhorias que implementaria primeiro e por quê?

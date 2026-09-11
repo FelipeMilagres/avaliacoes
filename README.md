@@ -14,6 +14,4 @@ When possible, could you please send us the completed document so we can continu
 
 I remain available to support you with the completion or to clarify any questions.
 
-Just a quick note: the document is in Portuguese. If this is an issue, please let me know.
-
 Thank you in advance for your support.

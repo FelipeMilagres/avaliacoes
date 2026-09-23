@@ -1,217 +1,236 @@
-Boa, isso aqui dá pra estruturar de forma bem sólida pra hackathon — principalmente se você quiser simular algo próximo de Open Finance + recomendação inteligente (IA).
+1. Schema SQLite (pronto pra rodar)
+-- customers
+CREATE TABLE customers (
+  id TEXT PRIMARY KEY,
+  name TEXT,
+  age INTEGER,
+  city TEXT,
+  state TEXT,
+  persona TEXT,
+  monthly_income REAL,
+  created_at TEXT
+);
 
-Vou te montar um modelo de dados (banco mockado) + como usar esses dados pra gerar ofertas personalizadas baseado nas personas que você mostrou.
+-- accounts
+CREATE TABLE accounts (
+  id TEXT PRIMARY KEY,
+  customer_id TEXT,
+  institution TEXT,
+  type TEXT,
+  balance REAL,
+  open_finance INTEGER,
+  FOREIGN KEY (customer_id) REFERENCES customers(id)
+);
 
-🧠 1. Conceito da arquitetura
+-- transactions
+CREATE TABLE transactions (
+  id TEXT PRIMARY KEY,
+  account_id TEXT,
+  amount REAL,
+  category TEXT,
+  subcategory TEXT,
+  merchant TEXT,
+  transaction_date TEXT,
+  payment_method TEXT,
+  is_recurring INTEGER,
+  FOREIGN KEY (account_id) REFERENCES accounts(id)
+);
 
-Você precisa separar em 3 camadas:
+-- liabilities
+CREATE TABLE liabilities (
+  id TEXT PRIMARY KEY,
+  customer_id TEXT,
+  type TEXT,
+  outstanding REAL,
+  monthly_payment REAL,
+  interest_rate REAL,
+  delinquency_days INTEGER,
+  FOREIGN KEY (customer_id) REFERENCES customers(id)
+);
 
-🔹 1. Dados brutos (Open Finance - mock)
+-- income_sources
+CREATE TABLE income_sources (
+  id TEXT PRIMARY KEY,
+  customer_id TEXT,
+  type TEXT,
+  amount REAL,
+  frequency TEXT,
+  FOREIGN KEY (customer_id) REFERENCES customers(id)
+);
 
-Simula o que viria de bancos:
+-- feature store
+CREATE TABLE customer_features (
+  customer_id TEXT PRIMARY KEY,
+  monthly_spend REAL,
+  food_ratio REAL,
+  fuel_ratio REAL,
+  pharmacy_ratio REAL,
+  debt_to_income REAL,
+  credit_utilization REAL,
+  financial_stress_score REAL,
+  lifestyle_cluster TEXT,
+  propensity_credit REAL,
+  propensity_cashback REAL
+);
 
-contas
-transações
-renda
-dívidas
-comportamento
-🔹 2. Enriquecimento (Feature Store / IA)
+-- offers
+CREATE TABLE offers (
+  id TEXT PRIMARY KEY,
+  name TEXT,
+  category TEXT,
+  description TEXT,
+  target_persona TEXT,
+  min_score REAL
+);
 
-Transforma dados em insights
+-- decision logs
+CREATE TABLE decision_logs (
+  id TEXT PRIMARY KEY,
+  customer_id TEXT,
+  offer_id TEXT,
+  score REAL,
+  reason TEXT,
+  created_at TEXT
+);
+🧪 2. Mock de dados (3 personas)
+👩 Maria (família)
+INSERT INTO customers VALUES 
+('c1','Maria Silva',34,'São Paulo','SP','familia',3500,'2026-01-01');
 
-score de perfil
-categorias de consumo
-momento de vida
-🔹 3. Motor de recomendação
+INSERT INTO accounts VALUES 
+('a1','c1','Banco X','checking',1200,1);
 
-Entrega:
+INSERT INTO transactions VALUES
+('t1','a1',-500,'food','supermarket','Carrefour','2026-09-01','credit',0),
+('t2','a1',-300,'food','supermarket','Atacadão','2026-09-02','debit',0),
+('t3','a1',-200,'shopping','clothes','Renner','2026-09-03','credit',0);
 
-ofertas (cashback, crédito, desconto, etc)
-priorização
-🗄️ 2. Modelo de Banco (Mock Open Finance)
-👤 Tabela: customers
-{
-  "customer_id": "uuid",
-  "name": "string",
-  "age": 34,
-  "region": "SP",
-  "city": "São Paulo",
-  "persona": "MASSA | IDOSO | MOTORISTA_APP",
-  "monthly_income": 3500,
-  "family_size": 3
-}
-🏦 Tabela: accounts
-{
-  "account_id": "uuid",
-  "customer_id": "uuid",
-  "bank": "Banco X",
-  "type": "checking | savings",
-  "balance": 1200.50
-}
-💳 Tabela: transactions
+INSERT INTO customer_features VALUES
+('c1',2800,0.42,0.05,0.02,0.3,0.6,0.5,'familia',0.7,0.9);
+🚗 João (motorista)
+INSERT INTO customers VALUES 
+('c2','João Carlos',41,'São Paulo','SP','mobilidade',4000,'2026-01-01');
 
-(simula Open Finance real)
+INSERT INTO accounts VALUES 
+('a2','c2','Banco Y','checking',800,1);
 
-{
-  "transaction_id": "uuid",
-  "account_id": "uuid",
-  "date": "2026-09-01",
-  "amount": -150.00,
-  "category": "food | fuel | pharmacy | utilities | shopping",
-  "merchant": "Carrefour",
-  "channel": "debit | credit | pix"
-}
-💸 Tabela: loans
-{
-  "loan_id": "uuid",
-  "customer_id": "uuid",
-  "type": "consignado | pessoal",
-  "outstanding_balance": 5000,
-  "installment_value": 250,
-  "interest_rate": 1.8
-}
-💰 Tabela: income_sources
-{
-  "income_id": "uuid",
-  "customer_id": "uuid",
-  "type": "salary | aposentadoria | informal",
-  "amount": 2000,
-  "frequency": "monthly"
-}
-🧾 Tabela: bills
-{
-  "bill_id": "uuid",
-  "customer_id": "uuid",
-  "type": "energia | agua | telefone",
-  "amount": 300,
-  "due_day": 10,
-  "status": "paid | overdue"
-}
-🧠 3. Camada de Inteligência (Feature Engineering)
+INSERT INTO transactions VALUES
+('t4','a2',-600,'fuel','gas','Shell','2026-09-01','credit',0),
+('t5','a2',-400,'fuel','gas','Ipiranga','2026-09-02','debit',0);
 
-Aqui você transforma dados em algo útil:
+INSERT INTO customer_features VALUES
+('c2',3200,0.1,0.38,0.01,0.4,0.8,0.7,'mobilidade',0.8,0.5);
+👵 Louder (idosa)
+INSERT INTO customers VALUES 
+('c3','Louder Carvalho',64,'Belo Horizonte','MG','idoso',2000,'2026-01-01');
 
-📊 Tabela: customer_features
-{
-  "customer_id": "uuid",
-  "avg_monthly_spend": 2800,
-  "food_ratio": 0.35,
-  "fuel_ratio": 0.25,
-  "pharmacy_ratio": 0.10,
-  "credit_usage": 0.8,
-  "has_debt": true,
-  "financial_health_score": 650,
-  "price_sensitivity": "high | medium | low",
-  "lifestyle": "familia | idoso | mobilidade"
-}
-🎯 4. Mapeando suas Personas
-👩 Maria Silva (família / orçamento apertado)
-{
-  "lifestyle": "familia",
-  "price_sensitivity": "high",
-  "top_categories": ["food", "groceries"],
-  "goal": "economizar"
-}
+INSERT INTO accounts VALUES 
+('a3','c3','Banco Z','checking',500,1);
 
-👉 Ofertas ideais:
+INSERT INTO transactions VALUES
+('t6','a3',-300,'pharmacy','medicines','Drogaria','2026-09-01','debit',0);
 
-cashback supermercado
-parcelamento
-cupons
-👨 João Carlos (motorista app)
-{
-  "lifestyle": "mobilidade",
-  "top_categories": ["fuel", "maintenance"],
-  "price_sensitivity": "medium"
-}
+INSERT INTO customer_features VALUES
+('c3',1800,0.1,0.02,0.25,0.2,0.3,0.4,'idoso',0.6,0.7);
+🎯 3. Ofertas
+INSERT INTO offers VALUES
+('o1','Cashback Supermercado','food','Ganhe cashback em compras','familia',0.7),
+('o2','Desconto Combustível','fuel','Desconto em postos','mobilidade',0.7),
+('o3','Farmácia Desconto','pharmacy','Desconto em medicamentos','idoso',0.6),
+('o4','Crédito Pessoal','credit','Crédito facilitado','todos',0.75);
+🧠 4. Query base (pré-decision engine)
+SELECT 
+  c.name,
+  f.lifestyle_cluster,
+  o.name AS offer,
+  f.food_ratio,
+  f.fuel_ratio,
+  f.pharmacy_ratio
+FROM customers c
+JOIN customer_features f ON c.id = f.customer_id
+JOIN offers o ON 
+  o.target_persona = f.lifestyle_cluster
+;
+⚙️ 5. Lógica do Decision Engine (Node exemplo)
+function evaluateOffers(features) {
+  const offers = [];
 
-👉 Ofertas:
-
-desconto combustível
-seguro auto
-lavagem rápida
-👵 Louder Carvalho (idosa / saúde)
-{
-  "lifestyle": "idoso",
-  "top_categories": ["pharmacy"],
-  "has_fixed_income": true
-}
-
-👉 Ofertas:
-
-farmácia
-consignado
-descontos recorrentes
-🤖 5. Motor de Recomendação (Regra + IA)
-🔹 Versão simples (hackathon-friendly)
-function getOffers(customer) {
-  if (customer.lifestyle === "familia") {
-    return ["cashback_supermercado", "parcele_facil"];
+  if (features.food_ratio > 0.3) {
+    offers.push({
+      name: "Cashback Supermercado",
+      score: features.food_ratio * 2,
+      reason: "Alto gasto com supermercado"
+    });
   }
 
-  if (customer.lifestyle === "mobilidade") {
-    return ["desconto_combustivel", "seguro_auto"];
+  if (features.fuel_ratio > 0.2) {
+    offers.push({
+      name: "Desconto Combustível",
+      score: features.fuel_ratio * 2,
+      reason: "Alto gasto com combustível"
+    });
   }
 
-  if (customer.lifestyle === "idoso") {
-    return ["farmacia_desconto", "credito_consignado"];
+  if (features.pharmacy_ratio > 0.2) {
+    offers.push({
+      name: "Farmácia Desconto",
+      score: features.pharmacy_ratio * 2,
+      reason: "Alto gasto com farmácia"
+    });
   }
+
+  return offers.sort((a, b) => b.score - a.score);
 }
-🔹 Versão mais avançada (scoring)
-{
-  "offer": "cashback_supermercado",
-  "score": 0.92
-}
+🔌 6. API simples (Express)
+Endpoint principal
+app.get('/customers/:id/offers', async (req, res) => {
+  const { id } = req.params;
 
-Baseado em:
+  const customer = await db.get(`
+    SELECT * FROM customers WHERE id = ?
+  `, [id]);
 
-frequência de compra
-valor gasto
-momento financeiro
-📦 6. Tabela de Ofertas
-{
-  "offer_id": "uuid",
-  "name": "Cashback Supermercado",
-  "category": "food",
-  "target_lifestyle": ["familia"],
-  "min_score": 0.7
-}
-🔗 7. Fluxo completo (o que você apresenta no hackathon)
-Mock Open Finance → carrega dados
-Processa features
-Classifica cliente
-Gera recomendações
-Mostra no app
-💡 8. Extra (diferencial de hackathon)
+  const features = await db.get(`
+    SELECT * FROM customer_features WHERE customer_id = ?
+  `, [id]);
 
-Se quiser se destacar mesmo:
+  const offers = evaluateOffers(features);
 
-🔥 Adiciona:
-NLP em descrição de transações
-clusterização (K-Means) pra descobrir perfis
+  res.json({
+    customer: customer.name,
+    persona: features.lifestyle_cluster,
+    offers
+  });
+});
+🚀 7. O que você tem pronto com isso
 
-explicabilidade:
+✔ Mock de Open Finance
+✔ Feature store
+✔ Decision engine
+✔ API funcional
+✔ 3 personas reais
+✔ Explicabilidade
 
-"Recomendamos desconto em combustível porque você gasta 28% com isso"
+💡 8. Próximo nível (se quiser subir muito)
 
-🚀 9. Resumo direto pra você usar
+Você pode adicionar:
 
-Você precisa de:
+tabela events → simular contexto (salário, saldo baixo)
+boost de score por evento
+logs no decision_logs
+🎯 Resumo
 
-customers
-transactions
-accounts
-loans
-features
-offers
+Você agora tem:
 
-E um motor que liga:
-👉 comportamento → perfil → oferta
+👉 um mini banco digital rodando em SQLite
+👉 com motor de decisão plugado
+👉 pronto pra demonstrar personalização real
 
-Se quiser, eu posso te montar:
+Se quiser, eu posso te mandar na próxima:
 
-dataset fake completo (JSON ou CSV)
-API mock (Node/Python)
-ou até um fluxo com IA usando prompt (LLM recomendando ofertas)
+📦 projeto Node completo (estrutura de pastas)
+🐳 docker pronto
+📊 script pra gerar 100 clientes fake
+🎤 roteiro de apresentação (isso aqui fecha o hackathon)
 
-Só me fala como você quer implementar 👍
+Só falar 👍

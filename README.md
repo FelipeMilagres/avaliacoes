@@ -11,6 +11,13 @@ class MergeData:
             "QA - Qual a prioridade do cenário?"
         }
 
+        self.DEFAULT_CUSTOM_FIELDS = {
+            "Cenário passível de automação?": None,
+            "Como o cenário é executado?": None,
+            "Selecione a(s) unidade(s) de negócio": [],
+            "Qual a prioridade do cenário?": None
+        }
+
     # =========================
     # ENTRYPOINT
     # =========================
@@ -36,15 +43,20 @@ class MergeData:
     # CARD PARSER
     # =========================
     def parse_card(self, card, tags_map, custom_fields_map):
+        custom_fields = self.parse_custom_fields(
+            card.get("custom_fields", []),
+            custom_fields_map
+        )
+
+        # 🔴 GARANTE estrutura fixa dos 4 campos
+        custom_fields = self.ensure_required_fields(custom_fields)
+
         return {
             "title": self.clean_title(card.get("title")),
             "description": card.get("description"),
             "created_at": card.get("created_at"),
             "tags": self.parse_tags(card.get("tag_ids", []), tags_map),
-            "custom_fields": self.parse_custom_fields(
-                card.get("custom_fields", []),
-                custom_fields_map
-            )
+            "custom_fields": custom_fields
         }
 
     # =========================
@@ -54,7 +66,6 @@ class MergeData:
         if not title:
             return None
 
-        # remove [COD-000]
         return re.sub(r"\[.*?\]\s*", "", title).strip()
 
     # =========================
@@ -77,7 +88,6 @@ class MergeData:
         return text.lower().replace(" ", "_")
 
     def has_lambdatest_tag(self, tags):
-        # mais resiliente (evita erro com variações)
         return any("lambdatest" in tag for tag in tags)
 
     # =========================
@@ -95,7 +105,7 @@ class MergeData:
 
             field_name = field_data.get("name")
 
-            # 🔴 FILTRO: só campos relevantes
+            # 🔴 FILTRO
             if field_name not in self.ALLOWED_FIELDS:
                 continue
 
@@ -106,13 +116,21 @@ class MergeData:
             if not resolved_values:
                 continue
 
-            # 🔴 trata multi-select
+            # multi-select
             if len(resolved_values) == 1:
                 result[clean_name] = resolved_values[0]
             else:
                 result[clean_name] = resolved_values
 
         return result
+
+    # =========================
+    # GARANTE CAMPOS PADRÃO
+    # =========================
+    def ensure_required_fields(self, custom_fields):
+        base = self.DEFAULT_CUSTOM_FIELDS.copy()
+        base.update(custom_fields)
+        return base
 
     # =========================
     # VALUE RESOLUTION

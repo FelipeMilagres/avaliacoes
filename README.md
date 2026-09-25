@@ -3,13 +3,17 @@ import re
 
 class MergeData:
 
-    ALLOWED_FIELDS = {
-        "QA - Cenário passível de automação?",
-        "QA - Como o cenário é executado?",
-        "QA - Selecione a(s) unidade(s) de negócio",
-        "QA - Qual a prioridade do cenário?"
-    }
+    def __init__(self):
+        self.ALLOWED_FIELDS = {
+            "QA - Cenário passível de automação?",
+            "QA - Como o cenário é executado?",
+            "QA - Selecione a(s) unidade(s) de negócio",
+            "QA - Qual a prioridade do cenário?"
+        }
 
+    # =========================
+    # ENTRYPOINT
+    # =========================
     def execute(self, data: dict):
         cards = data.get("cards", [])
         tags_map = data.get("tags_map", {})
@@ -18,13 +22,13 @@ class MergeData:
         result = []
 
         for card in cards:
-            parsed = self.parse_card(card, tags_map, custom_fields_map)
+            parsed_card = self.parse_card(card, tags_map, custom_fields_map)
 
             # 🔴 FILTRO: só cards com tag lambdatest
-            if "lambdatest" not in parsed["tags"]:
+            if not self.has_lambdatest_tag(parsed_card["tags"]):
                 continue
 
-            result.append(parsed)
+            result.append(parsed_card)
 
         return result
 
@@ -72,6 +76,10 @@ class MergeData:
     def to_snake_case(self, text):
         return text.lower().replace(" ", "_")
 
+    def has_lambdatest_tag(self, tags):
+        # mais resiliente (evita erro com variações)
+        return any("lambdatest" in tag for tag in tags)
+
     # =========================
     # CUSTOM FIELDS
     # =========================
@@ -87,35 +95,50 @@ class MergeData:
 
             field_name = field_data.get("name")
 
-            # 🔴 FILTRO de campos relevantes
+            # 🔴 FILTRO: só campos relevantes
             if field_name not in self.ALLOWED_FIELDS:
                 continue
 
             clean_name = self.normalize_field_name(field_name)
 
-            # mapa value_id → value
-            allowed_values = {
-                v["value_id"]: v["value"]
-                for v in field_data.get("allowed_values", [])
-            }
+            resolved_values = self.resolve_field_values(field, field_data)
 
-            values = field.get("values", [])
-
-            resolved_values = [
-                allowed_values.get(v["value_id"])
-                for v in values
-                if v.get("value_id") in allowed_values
-            ]
-
-            # 🔴 trata multi-select
             if not resolved_values:
                 continue
-            elif len(resolved_values) == 1:
+
+            # 🔴 trata multi-select
+            if len(resolved_values) == 1:
                 result[clean_name] = resolved_values[0]
             else:
                 result[clean_name] = resolved_values
 
         return result
 
+    # =========================
+    # VALUE RESOLUTION
+    # =========================
+    def resolve_field_values(self, field, field_data):
+        allowed_values_map = self.build_allowed_values_map(field_data)
+        values = field.get("values", [])
+
+        resolved = []
+
+        for v in values:
+            value_id = v.get("value_id")
+
+            if value_id in allowed_values_map:
+                resolved.append(allowed_values_map[value_id])
+
+        return resolved
+
+    def build_allowed_values_map(self, field_data):
+        return {
+            v["value_id"]: v["value"]
+            for v in field_data.get("allowed_values", [])
+        }
+
+    # =========================
+    # NORMALIZATION
+    # =========================
     def normalize_field_name(self, name):
         return name.replace("QA - ", "").strip()

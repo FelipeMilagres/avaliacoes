@@ -74,7 +74,6 @@ class MergeData:
         if not title:
             return None
 
-        # Remove [CODIGO] + " - "
         return re.sub(r"\[.*?\]\s*-\s*", "", title).strip()
 
     # =============================
@@ -100,79 +99,81 @@ class MergeData:
         return any("lambdatest" in tag for tag in tags)
 
     # =============================
-    # DESCRIPTION PARSER (CORE)
+    # DESCRIPTION PARSER (CORRIGIDO)
     # =============================
     def parse_description(self, html):
         soup = BeautifulSoup(html, "html.parser")
 
-        steps = self.extract_gherkin_from_table(soup)
-        links = self.extract_links(soup)
-        desc_data = self.extract_description_and_obs(soup)
-
-        return {
-            "description": desc_data["description"],
-            "figma_links": links,
-            "steps": steps,
-            "observations": desc_data["observations"]
-        }
-
-    # =============================
-    # GHERKIN (TABLE)
-    # =============================
-    def extract_gherkin_from_table(self, soup):
+        description_parts = []
+        observations_parts = []
         steps = []
-
-        tables = soup.find_all("table")
-
-        for table in tables:
-            rows = table.find_all("tr")
-
-            for row in rows:
-                cols = row.find_all("td")
-
-                for col in cols:
-                    text = col.get_text(" ", strip=True)
-
-                    if text:
-                        steps.append(text)
-
-        return steps
-
-    # =============================
-    # LINKS (FIGMA)
-    # =============================
-    def extract_links(self, soup):
         links = []
 
-        for a in soup.find_all("a", href=True):
-            href = a["href"]
+        found_steps_section = False
+        found_table = False
 
-            if "figma.com" in href:
-                links.append(href)
+        for element in soup.find_all(["p", "a", "table"]):
 
-        return links
+            # -----------------------------
+            # LINKS (FIGMA)
+            # -----------------------------
+            if element.name == "a" and element.get("href"):
+                href = element["href"]
+                if "figma.com" in href:
+                    links.append(href)
 
-    # =============================
-    # DESCRIPTION + OBS
-    # =============================
-    def extract_description_and_obs(self, soup):
-        description_parts = []
-        obs_parts = []
+            # -----------------------------
+            # DETECTA "PASSO A PASSO"
+            # -----------------------------
+            if element.name == "p":
+                text_lower = element.get_text(" ", strip=True).lower()
 
-        for p in soup.find_all("p"):
-            text = p.get_text(" ", strip=True)
+                if "passo a passo" in text_lower:
+                    found_steps_section = True
+                    continue
 
-            if not text:
+            # -----------------------------
+            # STEPS (TABLE)
+            # -----------------------------
+            if element.name == "table":
+                found_table = True
+
+                rows = element.find_all("tr")
+
+                for row in rows:
+                    cols = row.find_all("td")
+
+                    for col in cols:
+                        text = col.get_text(" ", strip=True)
+
+                        if text:
+                            steps.append(text)
+
                 continue
 
-            if text.lower().startswith("obs"):
-                obs_parts.append(text)
-            else:
-                description_parts.append(text)
+            # -----------------------------
+            # DESCRIPTION (ANTES DO STEP)
+            # -----------------------------
+            if element.name == "p" and not found_steps_section:
+                text = element.get_text(" ", strip=True)
+
+                if text:
+                    description_parts.append(text)
+
+            # -----------------------------
+            # OBS (DEPOIS DA TABLE)
+            # -----------------------------
+            elif element.name == "p" and found_table:
+                text = element.get_text(" ", strip=True)
+
+                if text:
+                    observations_parts.append(text)
 
         return {
             "description": " ".join(description_parts).strip(),
-            "observations": " ".join(obs_parts).strip()
+            "figma_links": links,
+            "steps": steps,
+            "observations": " ".join(observations_parts).strip()
         }
 
     # =============================

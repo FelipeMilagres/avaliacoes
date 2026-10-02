@@ -1,31 +1,27 @@
-Subject: Issue with Copy-Paste functionality on Android devices (Manual Testing)
+URGENT: App installation delay on real devices (Manual Testing)
 
 Hello LambdaTest Support Team,
 
-I hope you are doing well.
+We need urgent support regarding a critical issue with app installation on real devices.
 
-We would like to report an issue related to the copy-paste functionality during manual testing on real devices.
+During our initial evaluation (software selection), the installation time for both Android and iOS was consistently under 1 minute. However, we are now experiencing significant delays, with installation times reaching up to 5 minutes, especially on iOS, which is currently the most critical case.
 
-Some users are experiencing difficulties when trying to copy content from their local machines and paste it into Android devices within LambdaTest. In these cases, the paste action does not work as expected, forcing users to manually type the required information.
+Key points:
 
-Here are the details of the scenario:
+The issue occurs after selecting device, platform, and build (APK/IPA)
+Device connection is established normally
+The delay happens specifically during the app installation step
+iOS is the most impacted, but some users are also reporting issues on Android
+This is causing blocking and impacting test execution
 
-The issue occurs specifically on Android devices
-The same users are able to use copy-paste normally on iOS devices
-The affected users are using Windows machines
-Other users (e.g., using MacBook) are able to use copy-paste on Android devices without issues
-This suggests the behavior may be related to the local environment or OS
+We need your support to urgently:
 
-We have also attached a video demonstrating the issue for better understanding.
+Identify what may be causing this degradation in installation time
+Confirm if there is any current incident or performance issue
+Provide guidance or workaround to restore expected performance (≤ 1 minute)
 
-Given this context, we would appreciate your support in clarifying:
+This performance is critical for our operation and must be consistent with what was validated during the evaluation phase.
 
-Is there any known limitation or configuration required for copy-paste between Windows machines and Android devices?
-Are there specific permissions, browser settings, or configurations that could be blocking this functionality?
-Is this behavior expected or does it indicate a potential issue on the platform?
-
-Our goal is to understand the root cause and identify the correct configuration or workaround to ensure consistent usage across all users.
-
-Thank you in advance for your support.
+Looking forward to your urgent response.
 
 Best regards,
